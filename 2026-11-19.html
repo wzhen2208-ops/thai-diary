@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026年11月19日 · 去 Amazon 咖啡店喝咖啡</title>
+<style>
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, "Noto Sans Thai", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f6f5ef;
+  color: #193229;
+  --accent: #235741;
+  --line: #dce4da;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; }
+header, main, .nav-inner { max-width: 56rem; margin: auto; padding-inline: clamp(1rem, 4vw, 2rem); }
+header { padding-top: 1.5rem; padding-bottom: 1rem; }
+h1, h2, h3, p { margin: 0; }
+h1 { font-size: clamp(1.9rem, 6vw, 2.8rem); }
+h2 { font-size: clamp(1.35rem, 4vw, 1.8rem); margin: 1rem 0; }
+.tones { color: #405c50; line-height: 1.75; margin-top: .4rem; }
+nav { position: sticky; top: 0; z-index: 1; background: #e6eee4; border-bottom: 1px solid var(--line); }
+.nav-inner { display: flex; gap: .5rem; padding-block: .45rem; }
+.nav-inner button { flex: 1; }
+main { padding-block: 1rem 2rem; }
+label { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem; font-weight: 650; }
+button, select {
+  min-height: 44px; min-width: 44px; padding: .45rem .8rem;
+  border: 1px solid #638575; border-radius: .55rem;
+  color: var(--accent); background: #f8fcf9; font: inherit; font-weight: 650;
+}
+button:enabled { cursor: pointer; }
+button:enabled:hover { background: #e6eee4; }
+button[aria-pressed="true"], button[aria-pressed="true"]:hover { color: white; background: var(--accent); }
+:focus-visible { outline: 3px solid #99680d; outline-offset: 2px; }
+button:disabled, select:disabled { color: #59645f; border-color: #c0c9c3; background: #eef0ee; }
+.tip {
+  margin-bottom: 1rem; padding: .85rem 1rem; color: #493609; background: #fff1bf;
+  border-left: .25rem solid #a87705; border-radius: .5rem; line-height: 1.65;
+  white-space: pre-wrap; overflow-wrap: anywhere;
+}
+.card, .flash-panel {
+  padding: clamp(.9rem, 4vw, 1.5rem); margin-bottom: 1rem;
+  background: white; border: 1px solid var(--line); border-radius: .9rem;
+}
+.sentence-number { color: var(--accent); font-size: .95rem; }
+.sentence-thai { font-size: 2rem; line-height: 1.5; overflow-wrap: anywhere; }
+.sentence-zh { line-height: 1.65; margin: .3rem 0 .8rem; }
+.plays, .flash-actions { display: flex; flex-wrap: wrap; gap: .45rem; }
+.plays button { min-width: 4.4rem; font-size: .95rem; }
+.words { list-style: none; margin: 1rem 0 0; padding: 0; }
+.word { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: .45rem .9rem; padding: .65rem 0; border-top: 1px solid var(--line); }
+.word-text { display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem .55rem;
+  line-height: 1.5; overflow-wrap: anywhere; }
+.word-thai { font-size: 1.4rem; }
+.word-roman, .word-zh, .word-tones { border-inline-start: 1px solid var(--line); padding-inline-start: .55rem; }
+.word-tones { display: inline-flex; flex-wrap: wrap; gap: .22rem; }
+.badge { border-radius: 99px; padding: .1em .55em; color: white; font-size: .85rem; font-weight: 650; }
+.tone-1 { background: #4d6b57; }
+.tone-2 { background: #8a5700; }
+.tone-3 { background: #9a3b2f; }
+.tone-4 { background: #ac462d; }
+.tone-5 { background: #2c5aa0; }
+.flash-panel { margin-top: .85rem; text-align: center; }
+#progress, #flash-day { color: #405c50; font-size: .95rem; }
+#flash-card { display: grid; place-content: center; width: 100%; min-height: 11rem;
+  margin-block: .65rem; padding: 1rem; overflow-wrap: anywhere; }
+#flash-thai { font-size: clamp(2.2rem, 9vw, 3.5rem); line-height: 1.35; }
+#flash-hint { font-size: .9rem; font-weight: 400; margin-top: .4rem; }
+#flash-answer { margin: .7rem 0; }
+#flash-answer .word-text, .flash-panel .plays, .flash-actions { justify-content: center; }
+#flash-answer .word-roman { border: 0; padding: 0; font-size: 1.25rem; }
+#flash-day { margin-top: .35rem; }
+.audio-status:empty { display: none; }
+.audio-status { text-align: center; padding: .35rem; color: #683321; background: #fff1bf; }
+
+[lang="th"] { font-family: "Noto Sans Thai", "Sarabun", system-ui, sans-serif; }
+.back {
+  display: inline-flex; align-items: center; min-height: 44px;
+  color: var(--accent); font-weight: 650; text-underline-offset: .2em;
+}
+.lesson-date { color: var(--accent); margin-top: .4rem; }
+header .audio-status { margin-top: .4rem; }
+#practice-heading { margin-top: 0; }
+#vocabulary, #sentences, #self-check { margin-bottom: 2rem; }
+#vocabulary { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  align-items: start; gap: .75rem; }
+#vocabulary h2 { grid-column: 1 / -1; margin-bottom: .25rem; }
+.vocabulary-card, #self-check .card { margin-bottom: 0; }
+.word-status {
+  display: inline-block; width: fit-content; padding: .15rem .55rem; border-radius: 1rem;
+  color: #365448; background: #e6eee4; font-size: .85rem; font-weight: 650;
+}
+summary { cursor: pointer; }
+.vocabulary-card summary, #self-check summary {
+  display: flex; align-items: center; justify-content: space-between; gap: .6rem;
+  min-height: 44px; list-style: none; color: var(--accent);
+}
+summary::-webkit-details-marker { display: none; }
+.vocabulary-card summary .word-thai {
+  font-size: clamp(2.15rem, 8vw, 2.8rem); line-height: 1.45; overflow-wrap: anywhere;
+}
+.vocabulary-card details { margin-block: .3rem .75rem; }
+.reveal-label, .hide-label { text-decoration: underline; text-underline-offset: .2em; flex-shrink: 0; }
+details:not([open]) .hide-label, details[open] .reveal-label { display: none; }
+.syllables { display: flex; flex-wrap: wrap; gap: .4rem; margin: .6rem 0; }
+.syllable {
+  display: inline-flex; align-items: center; flex-wrap: wrap; gap: .35rem;
+  background: #f1f5ef; border-radius: .5rem; padding: .25rem .45rem;
+}
+.vocabulary-card .word-roman, .vocabulary-card .word-zh,
+.breakdown .word-roman, .breakdown .word-zh { border: 0; padding: 0; overflow-wrap: anywhere; }
+.vocabulary-card .word-roman { font-size: 1.25rem; }
+.vocabulary-card .word-zh { font-size: 1.1rem; }
+.breakdown {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr));
+  gap: .45rem; list-style: none; margin: 1rem 0 0; padding: 0;
+}
+.breakdown li {
+  display: grid; align-content: start; gap: .15rem; padding: .5rem;
+  background: #f1f5ef; border-radius: .5rem; overflow-wrap: anywhere;
+}
+.breakdown .word-roman { color: #405c50; }
+.breakdown .word-status { margin-top: .15rem; }
+#self-check > p { margin-bottom: .7rem; }
+#self-check .sentence-zh { font-size: 1.2rem; }
+#self-check details .plays { margin-top: .5rem; }
+.quiz-actions { display: flex; justify-content: space-between; align-items: center; margin-top: .65rem; }
+</style>
+</head>
+<body>
+<header>
+<a class="back" href="index.html">← 返回日记课入口</a>
+<p class="lesson-date">2026年11月19日</p>
+<h1>去 Amazon 咖啡店喝咖啡</h1>
+<a class="back" href="flashcards.html?day=2026-11-19">复习本课生词闪卡</a>
+<p class="audio-status" role="status"></p>
+</header>
+<main>
+<aside class="tip">แถม = 买……送……：ซื้อสองแก้ว แถม…… 就是“买两杯送……”。
+ใบ 是杯子、碗、纸等的量词：แก้วหนึ่งใบ = 一个杯子。
+ขอ……มาดู = 要……来看：ฉันขอเมนูมาดู = 我要了菜单来看。
+แก้ว 两用：作名词是“杯子”（แก้วใหม่ 新杯子），作量词是“杯”（สองแก้ว 两杯）。
+外来词声调按常见口语标：อเมซอน 首音节有人读平调，มัทฉะ 末音节有人读高调。</aside>
+<section id="vocabulary"><h2>先学生词</h2>
+<article class="card vocabulary-card" data-word="w01_01">
+<span class="word-status">已学</span>
+<details><summary>
+<span class="word-thai" lang="th">วันนี้</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">wān</span><span class="badge tone-1">1平</span></span><span class="syllable"><span class="word-roman">nî</span><span class="badge tone-4">4高</span></span></div>
+<p class="word-zh">今天</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w01_02">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">วันพฤหัสบดี</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">wān</span><span class="badge tone-1">1平</span></span><span class="syllable"><span class="word-roman">phâ</span><span class="badge tone-4">4高</span></span><span class="syllable"><span class="word-roman">rûe</span><span class="badge tone-4">4高</span></span><span class="syllable"><span class="word-roman">hát</span><span class="badge tone-5">5低</span></span><span class="syllable"><span class="word-roman">sá</span><span class="badge tone-5">5低</span></span><span class="syllable"><span class="word-roman">bō</span><span class="badge tone-1">1平</span></span><span class="syllable"><span class="word-roman">dī</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">星期四</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w01_03">
+<span class="word-status">已学</span>
+<details><summary>
+<span class="word-thai" lang="th">ที่</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">thì</span><span class="badge tone-3">3降</span></span></div>
+<p class="word-zh">第（日期前）</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w01_04">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">สิบเก้า</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">síp</span><span class="badge tone-5">5低</span></span><span class="syllable"><span class="word-roman">kào</span><span class="badge tone-3">3降</span></span></div>
+<p class="word-zh">十九</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w01_05">
+<span class="word-status">已学</span>
+<details><summary>
+<span class="word-thai" lang="th">พฤศจิกายน</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">phrûet</span><span class="badge tone-4">4高</span></span><span class="syllable"><span class="word-roman">sá</span><span class="badge tone-5">5低</span></span><span class="syllable"><span class="word-roman">chí</span><span class="badge tone-5">5低</span></span><span class="syllable"><span class="word-roman">kā</span><span class="badge tone-1">1平</span></span><span class="syllable"><span class="word-roman">yōn</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">十一月</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w02_01">
+<span class="word-status">已学</span>
+<details><summary>
+<span class="word-thai" lang="th">ฉัน</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">chǎn</span><span class="badge tone-2">2升</span></span></div>
+<p class="word-zh">我（女性）</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w02_02">
+<span class="word-status">已学</span>
+<details><summary>
+<span class="word-thai" lang="th">กับ</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">káp</span><span class="badge tone-5">5低</span></span></div>
+<p class="word-zh">和</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w02_03">
+<span class="word-status">已学</span>
+<details><summary>
+<span class="word-thai" lang="th">นุ้ย</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">nûi</span><span class="badge tone-4">4高</span></span></div>
+<p class="word-zh">Nui（人名）</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w02_04">
+<span class="word-status">已学</span>
+<details><summary>
+<span class="word-thai" lang="th">ไป</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">pāi</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">去</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w02_05">
+<span class="word-status">已学</span>
+<details><summary>
+<span class="word-thai" lang="th">ร้าน</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">rân</span><span class="badge tone-4">4高</span></span></div>
+<p class="word-zh">店</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w02_06">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">อเมซอน</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">á</span><span class="badge tone-5">5低</span></span><span class="syllable"><span class="word-roman">mē</span><span class="badge tone-1">1平</span></span><span class="syllable"><span class="word-roman">sōn</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">Amazon（咖啡店名）</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_06_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_06_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w02_07">
+<span class="word-status">已学</span>
+<details><summary>
+<span class="word-thai" lang="th">กิน</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">kīn</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">吃（这里指喝）</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_07_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_07_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w02_08">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">กาแฟ</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">kā</span><span class="badge tone-1">1平</span></span><span class="syllable"><span class="word-roman">fāe</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">咖啡</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_08_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_08_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w03_01">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">ขอ</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">khǒ</span><span class="badge tone-2">2升</span></span></div>
+<p class="word-zh">要，请求</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w03_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w03_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w03_02">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">เมนู</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">mē</span><span class="badge tone-1">1平</span></span><span class="syllable"><span class="word-roman">nū</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">菜单</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w03_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w03_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w03_03">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">มา</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">mā</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">来（拿来）</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w03_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w03_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w03_04">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">ดู</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">dū</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">看</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w03_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w03_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w04_01">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">อยาก</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">yák</span><span class="badge tone-5">5低</span></span></div>
+<p class="word-zh">想</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w04_02">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">เรียน</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">rīan</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">学</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w04_03">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">คำ</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">khām</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">词</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w04_04">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">ภาษาไทย</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">phā</span><span class="badge tone-1">1平</span></span><span class="syllable"><span class="word-roman">sǎ</span><span class="badge tone-2">2升</span></span><span class="syllable"><span class="word-roman">thāi</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">泰语</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w04_05">
+<span class="word-status">已学</span>
+<details><summary>
+<span class="word-thai" lang="th">จาก</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">chák</span><span class="badge tone-5">5低</span></span></div>
+<p class="word-zh">从</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w05_01">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">สั่ง</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">sáng</span><span class="badge tone-5">5低</span></span></div>
+<p class="word-zh">点（饮料、菜）</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w05_02">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">มัทฉะ</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">mât</span><span class="badge tone-4">4高</span></span><span class="syllable"><span class="word-roman">chá</span><span class="badge tone-5">5低</span></span></div>
+<p class="word-zh">抹茶</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w05_03">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">ถั่วแดง</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">thúa</span><span class="badge tone-5">5低</span></span><span class="syllable"><span class="word-roman">dāeng</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">红豆</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w05_04">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">แบบ</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">báep</span><span class="badge tone-5">5低</span></span></div>
+<p class="word-zh">……的做法，款式</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w05_05">
+<span class="word-status">已学</span>
+<details><summary>
+<span class="word-thai" lang="th">ไม่</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">mài</span><span class="badge tone-3">3降</span></span></div>
+<p class="word-zh">不</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w05_06">
+<span class="word-status">已学</span>
+<details><summary>
+<span class="word-thai" lang="th">ใส่</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">sái</span><span class="badge tone-5">5低</span></span></div>
+<p class="word-zh">放，加</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_06_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_06_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w05_07">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">น้ำตาล</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">nâm</span><span class="badge tone-4">4高</span></span><span class="syllable"><span class="word-roman">tān</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">糖</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_07_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_07_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w06_01">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">บอกว่า</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">bók</span><span class="badge tone-5">5低</span></span><span class="syllable"><span class="word-roman">wà</span><span class="badge tone-3">3降</span></span></div>
+<p class="word-zh">说（后接内容）</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w06_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w06_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w06_02">
+<span class="word-status">已学</span>
+<details><summary>
+<span class="word-thai" lang="th">ของ</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">khǒng</span><span class="badge tone-2">2升</span></span></div>
+<p class="word-zh">的（……的东西）</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w06_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w06_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w06_03">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">หวาน</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">wǎn</span><span class="badge tone-2">2升</span></span></div>
+<p class="word-zh">甜</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w06_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w06_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w07_01">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">มี</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">mī</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">有</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w07_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w07_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w07_02">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">โปรโมชั่น</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">prō</span><span class="badge tone-1">1平</span></span><span class="syllable"><span class="word-roman">mō</span><span class="badge tone-1">1平</span></span><span class="syllable"><span class="word-roman">chàn</span><span class="badge tone-3">3降</span></span></div>
+<p class="word-zh">促销活动</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w07_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w07_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w08_01">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">ซื้อ</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">sûe</span><span class="badge tone-4">4高</span></span></div>
+<p class="word-zh">买</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w08_02">
+<span class="word-status">已学</span>
+<details><summary>
+<span class="word-thai" lang="th">สอง</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">sǒng</span><span class="badge tone-2">2升</span></span></div>
+<p class="word-zh">二</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w08_03">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">แก้ว</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">kàeo</span><span class="badge tone-3">3降</span></span></div>
+<p class="word-zh">杯（量词）</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w08_04">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">แถม</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">thǎem</span><span class="badge tone-2">2升</span></span></div>
+<p class="word-zh">（买）送，附赠</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w08_05">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">แก้ว</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">kàeo</span><span class="badge tone-3">3降</span></span></div>
+<p class="word-zh">杯子（名词）</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w08_06">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">ใหม่</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">mái</span><span class="badge tone-5">5低</span></span></div>
+<p class="word-zh">新</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_06_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_06_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w08_07">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">หนึ่ง</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">núeng</span><span class="badge tone-5">5低</span></span></div>
+<p class="word-zh">一</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_07_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_07_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w08_08">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">ใบ</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">bāi</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">个（杯子等的量词）</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_08_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_08_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w09_01">
+<span class="word-status">已学</span>
+<details><summary>
+<span class="word-thai" lang="th">เรา</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">rāo</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">我们</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w09_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w09_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w09_02">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">เครื่องดื่ม</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">khrùeang</span><span class="badge tone-3">3降</span></span><span class="syllable"><span class="word-roman">dúem</span><span class="badge tone-5">5低</span></span></div>
+<p class="word-zh">饮料</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w09_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w09_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w10_01">
+<span class="word-status">生词</span>
+<details><summary>
+<span class="word-thai" lang="th">ได้</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">dài</span><span class="badge tone-3">3降</span></span></div>
+<p class="word-zh">得到</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w10_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w10_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w10_02">
+<span class="word-status">已学</span>
+<details><summary>
+<span class="word-thai" lang="th">สี</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">sǐ</span><span class="badge tone-2">2升</span></span></div>
+<p class="word-zh">颜色</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w10_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w10_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="card vocabulary-card" data-word="w10_03">
+<span class="word-status">已学</span>
+<details><summary>
+<span class="word-thai" lang="th">แดง</span>
+<span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<div class="syllables"><span class="syllable"><span class="word-roman">dāeng</span><span class="badge tone-1">1平</span></span></div>
+<p class="word-zh">红</p></details>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w10_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w10_03_mid.mp3">稍慢</button></div>
+</article>
+</section><section id="sentences"><h2>再读句子</h2>
+<article class="card" data-sentence="s01">
+<h3 class="sentence-number">第 1 句</h3>
+<p class="sentence-thai" lang="th">วันนี้วันพฤหัสบดี ที่สิบเก้า พฤศจิกายน</p>
+<p class="sentence-zh">今天是星期四，11月19日。</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s01_mid.mp3">稍慢</button></div>
+<ul class="breakdown">
+<li data-word="w01_01">
+<span class="word-thai" lang="th">วันนี้</span>
+<span class="word-roman">wān-nî</span>
+<span class="word-zh">今天</span>
+<span class="word-status">已学</span>
+</li>
+<li data-word="w01_02">
+<span class="word-thai" lang="th">วันพฤหัสบดี</span>
+<span class="word-roman">wān-phâ-rûe-hát-sá-bō-dī</span>
+<span class="word-zh">星期四</span>
+
+</li>
+<li data-word="w01_03">
+<span class="word-thai" lang="th">ที่</span>
+<span class="word-roman">thì</span>
+<span class="word-zh">第（日期前）</span>
+<span class="word-status">已学</span>
+</li>
+<li data-word="w01_04">
+<span class="word-thai" lang="th">สิบเก้า</span>
+<span class="word-roman">síp-kào</span>
+<span class="word-zh">十九</span>
+
+</li>
+<li data-word="w01_05">
+<span class="word-thai" lang="th">พฤศจิกายน</span>
+<span class="word-roman">phrûet-sá-chí-kā-yōn</span>
+<span class="word-zh">十一月</span>
+<span class="word-status">已学</span>
+</li>
+</ul></article>
+<article class="card" data-sentence="s02">
+<h3 class="sentence-number">第 2 句</h3>
+<p class="sentence-thai" lang="th">ฉันกับนุ้ยไปร้านอเมซอนกินกาแฟ</p>
+<p class="sentence-zh">我和Nui去Amazon咖啡店喝咖啡。</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s02_mid.mp3">稍慢</button></div>
+<ul class="breakdown">
+<li data-word="w02_01">
+<span class="word-thai" lang="th">ฉัน</span>
+<span class="word-roman">chǎn</span>
+<span class="word-zh">我（女性）</span>
+<span class="word-status">已学</span>
+</li>
+<li data-word="w02_02">
+<span class="word-thai" lang="th">กับ</span>
+<span class="word-roman">káp</span>
+<span class="word-zh">和</span>
+<span class="word-status">已学</span>
+</li>
+<li data-word="w02_03">
+<span class="word-thai" lang="th">นุ้ย</span>
+<span class="word-roman">nûi</span>
+<span class="word-zh">Nui（人名）</span>
+<span class="word-status">已学</span>
+</li>
+<li data-word="w02_04">
+<span class="word-thai" lang="th">ไป</span>
+<span class="word-roman">pāi</span>
+<span class="word-zh">去</span>
+<span class="word-status">已学</span>
+</li>
+<li data-word="w02_05">
+<span class="word-thai" lang="th">ร้าน</span>
+<span class="word-roman">rân</span>
+<span class="word-zh">店</span>
+<span class="word-status">已学</span>
+</li>
+<li data-word="w02_06">
+<span class="word-thai" lang="th">อเมซอน</span>
+<span class="word-roman">á-mē-sōn</span>
+<span class="word-zh">Amazon（咖啡店名）</span>
+
+</li>
+<li data-word="w02_07">
+<span class="word-thai" lang="th">กิน</span>
+<span class="word-roman">kīn</span>
+<span class="word-zh">吃（这里指喝）</span>
+<span class="word-status">已学</span>
+</li>
+<li data-word="w02_08">
+<span class="word-thai" lang="th">กาแฟ</span>
+<span class="word-roman">kā-fāe</span>
+<span class="word-zh">咖啡</span>
+
+</li>
+</ul></article>
+<article class="card" data-sentence="s03">
+<h3 class="sentence-number">第 3 句</h3>
+<p class="sentence-thai" lang="th">ฉันขอเมนูมาดู</p>
+<p class="sentence-zh">我要了菜单来看。</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s03_mid.mp3">稍慢</button></div>
+<ul class="breakdown">
+<li data-word="w03_01">
+<span class="word-thai" lang="th">ขอ</span>
+<span class="word-roman">khǒ</span>
+<span class="word-zh">要，请求</span>
+
+</li>
+<li data-word="w03_02">
+<span class="word-thai" lang="th">เมนู</span>
+<span class="word-roman">mē-nū</span>
+<span class="word-zh">菜单</span>
+
+</li>
+<li data-word="w03_03">
+<span class="word-thai" lang="th">มา</span>
+<span class="word-roman">mā</span>
+<span class="word-zh">来（拿来）</span>
+
+</li>
+<li data-word="w03_04">
+<span class="word-thai" lang="th">ดู</span>
+<span class="word-roman">dū</span>
+<span class="word-zh">看</span>
+
+</li>
+</ul></article>
+<article class="card" data-sentence="s04">
+<h3 class="sentence-number">第 4 句</h3>
+<p class="sentence-thai" lang="th">ฉันอยากเรียนคำภาษาไทยจากเมนู</p>
+<p class="sentence-zh">我想从菜单上学泰语词。</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s04_mid.mp3">稍慢</button></div>
+<ul class="breakdown">
+<li data-word="w04_01">
+<span class="word-thai" lang="th">อยาก</span>
+<span class="word-roman">yák</span>
+<span class="word-zh">想</span>
+
+</li>
+<li data-word="w04_02">
+<span class="word-thai" lang="th">เรียน</span>
+<span class="word-roman">rīan</span>
+<span class="word-zh">学</span>
+
+</li>
+<li data-word="w04_03">
+<span class="word-thai" lang="th">คำ</span>
+<span class="word-roman">khām</span>
+<span class="word-zh">词</span>
+
+</li>
+<li data-word="w04_04">
+<span class="word-thai" lang="th">ภาษาไทย</span>
+<span class="word-roman">phā-sǎ-thāi</span>
+<span class="word-zh">泰语</span>
+
+</li>
+<li data-word="w04_05">
+<span class="word-thai" lang="th">จาก</span>
+<span class="word-roman">chák</span>
+<span class="word-zh">从</span>
+<span class="word-status">已学</span>
+</li>
+</ul></article>
+<article class="card" data-sentence="s05">
+<h3 class="sentence-number">第 5 句</h3>
+<p class="sentence-thai" lang="th">ฉันสั่งมัทฉะถั่วแดงแบบไม่ใส่น้ำตาล</p>
+<p class="sentence-zh">我点了红豆抹茶，不加糖。</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s05_mid.mp3">稍慢</button></div>
+<ul class="breakdown">
+<li data-word="w05_01">
+<span class="word-thai" lang="th">สั่ง</span>
+<span class="word-roman">sáng</span>
+<span class="word-zh">点（饮料、菜）</span>
+
+</li>
+<li data-word="w05_02">
+<span class="word-thai" lang="th">มัทฉะ</span>
+<span class="word-roman">mât-chá</span>
+<span class="word-zh">抹茶</span>
+
+</li>
+<li data-word="w05_03">
+<span class="word-thai" lang="th">ถั่วแดง</span>
+<span class="word-roman">thúa-dāeng</span>
+<span class="word-zh">红豆</span>
+
+</li>
+<li data-word="w05_04">
+<span class="word-thai" lang="th">แบบ</span>
+<span class="word-roman">báep</span>
+<span class="word-zh">……的做法，款式</span>
+
+</li>
+<li data-word="w05_05">
+<span class="word-thai" lang="th">ไม่</span>
+<span class="word-roman">mài</span>
+<span class="word-zh">不</span>
+<span class="word-status">已学</span>
+</li>
+<li data-word="w05_06">
+<span class="word-thai" lang="th">ใส่</span>
+<span class="word-roman">sái</span>
+<span class="word-zh">放，加</span>
+<span class="word-status">已学</span>
+</li>
+<li data-word="w05_07">
+<span class="word-thai" lang="th">น้ำตาล</span>
+<span class="word-roman">nâm-tān</span>
+<span class="word-zh">糖</span>
+
+</li>
+</ul></article>
+<article class="card" data-sentence="s06">
+<h3 class="sentence-number">第 6 句</h3>
+<p class="sentence-thai" lang="th">นุ้ยบอกว่าของฉันไม่หวาน</p>
+<p class="sentence-zh">Nui说我的不甜。</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s06_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s06_mid.mp3">稍慢</button></div>
+<ul class="breakdown">
+<li data-word="w06_01">
+<span class="word-thai" lang="th">บอกว่า</span>
+<span class="word-roman">bók-wà</span>
+<span class="word-zh">说（后接内容）</span>
+
+</li>
+<li data-word="w06_02">
+<span class="word-thai" lang="th">ของ</span>
+<span class="word-roman">khǒng</span>
+<span class="word-zh">的（……的东西）</span>
+<span class="word-status">已学</span>
+</li>
+<li data-word="w06_03">
+<span class="word-thai" lang="th">หวาน</span>
+<span class="word-roman">wǎn</span>
+<span class="word-zh">甜</span>
+
+</li>
+</ul></article>
+<article class="card" data-sentence="s07">
+<h3 class="sentence-number">第 7 句</h3>
+<p class="sentence-thai" lang="th">วันนี้ร้านมีโปรโมชั่น</p>
+<p class="sentence-zh">今天店里有促销活动。</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s07_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s07_mid.mp3">稍慢</button></div>
+<ul class="breakdown">
+<li data-word="w07_01">
+<span class="word-thai" lang="th">มี</span>
+<span class="word-roman">mī</span>
+<span class="word-zh">有</span>
+
+</li>
+<li data-word="w07_02">
+<span class="word-thai" lang="th">โปรโมชั่น</span>
+<span class="word-roman">prō-mō-chàn</span>
+<span class="word-zh">促销活动</span>
+
+</li>
+</ul></article>
+<article class="card" data-sentence="s08">
+<h3 class="sentence-number">第 8 句</h3>
+<p class="sentence-thai" lang="th">ซื้อสองแก้ว แถมแก้วใหม่หนึ่งใบ</p>
+<p class="sentence-zh">买两杯，送一个新杯子。</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s08_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s08_mid.mp3">稍慢</button></div>
+<ul class="breakdown">
+<li data-word="w08_01">
+<span class="word-thai" lang="th">ซื้อ</span>
+<span class="word-roman">sûe</span>
+<span class="word-zh">买</span>
+
+</li>
+<li data-word="w08_02">
+<span class="word-thai" lang="th">สอง</span>
+<span class="word-roman">sǒng</span>
+<span class="word-zh">二</span>
+<span class="word-status">已学</span>
+</li>
+<li data-word="w08_03">
+<span class="word-thai" lang="th">แก้ว</span>
+<span class="word-roman">kàeo</span>
+<span class="word-zh">杯（量词）</span>
+
+</li>
+<li data-word="w08_04">
+<span class="word-thai" lang="th">แถม</span>
+<span class="word-roman">thǎem</span>
+<span class="word-zh">（买）送，附赠</span>
+
+</li>
+<li data-word="w08_05">
+<span class="word-thai" lang="th">แก้ว</span>
+<span class="word-roman">kàeo</span>
+<span class="word-zh">杯子（名词）</span>
+
+</li>
+<li data-word="w08_06">
+<span class="word-thai" lang="th">ใหม่</span>
+<span class="word-roman">mái</span>
+<span class="word-zh">新</span>
+
+</li>
+<li data-word="w08_07">
+<span class="word-thai" lang="th">หนึ่ง</span>
+<span class="word-roman">núeng</span>
+<span class="word-zh">一</span>
+
+</li>
+<li data-word="w08_08">
+<span class="word-thai" lang="th">ใบ</span>
+<span class="word-roman">bāi</span>
+<span class="word-zh">个（杯子等的量词）</span>
+
+</li>
+</ul></article>
+<article class="card" data-sentence="s09">
+<h3 class="sentence-number">第 9 句</h3>
+<p class="sentence-thai" lang="th">เราสั่งเครื่องดื่มสองแก้ว</p>
+<p class="sentence-zh">我们点了两杯饮料。</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s09_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s09_mid.mp3">稍慢</button></div>
+<ul class="breakdown">
+<li data-word="w09_01">
+<span class="word-thai" lang="th">เรา</span>
+<span class="word-roman">rāo</span>
+<span class="word-zh">我们</span>
+<span class="word-status">已学</span>
+</li>
+<li data-word="w09_02">
+<span class="word-thai" lang="th">เครื่องดื่ม</span>
+<span class="word-roman">khrùeang-dúem</span>
+<span class="word-zh">饮料</span>
+
+</li>
+</ul></article>
+<article class="card" data-sentence="s10">
+<h3 class="sentence-number">第 10 句</h3>
+<p class="sentence-thai" lang="th">เราได้แก้วสีแดงมาหนึ่งใบ</p>
+<p class="sentence-zh">我们得到了一个红色的杯子。</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s10_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s10_mid.mp3">稍慢</button></div>
+<ul class="breakdown">
+<li data-word="w10_01">
+<span class="word-thai" lang="th">ได้</span>
+<span class="word-roman">dài</span>
+<span class="word-zh">得到</span>
+
+</li>
+<li data-word="w10_02">
+<span class="word-thai" lang="th">สี</span>
+<span class="word-roman">sǐ</span>
+<span class="word-zh">颜色</span>
+<span class="word-status">已学</span>
+</li>
+<li data-word="w10_03">
+<span class="word-thai" lang="th">แดง</span>
+<span class="word-roman">dāeng</span>
+<span class="word-zh">红</span>
+<span class="word-status">已学</span>
+</li>
+</ul></article>
+</section><section id="self-check"><h2>自测</h2><p>看中文，猜泰语。</p>
+<article class="card" data-sentence="s01">
+<p class="sentence-zh">今天是星期四，11月19日。</p>
+<details><summary><span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<p class="sentence-thai" lang="th">วันนี้วันพฤหัสบดี ที่สิบเก้า พฤศจิกายน</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s01_slow.mp3">很慢</button></div>
+</details></article>
+<article class="card" data-sentence="s02" hidden>
+<p class="sentence-zh">我和Nui去Amazon咖啡店喝咖啡。</p>
+<details><summary><span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<p class="sentence-thai" lang="th">ฉันกับนุ้ยไปร้านอเมซอนกินกาแฟ</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s02_slow.mp3">很慢</button></div>
+</details></article>
+<article class="card" data-sentence="s03" hidden>
+<p class="sentence-zh">我要了菜单来看。</p>
+<details><summary><span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<p class="sentence-thai" lang="th">ฉันขอเมนูมาดู</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s03_slow.mp3">很慢</button></div>
+</details></article>
+<article class="card" data-sentence="s04" hidden>
+<p class="sentence-zh">我想从菜单上学泰语词。</p>
+<details><summary><span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<p class="sentence-thai" lang="th">ฉันอยากเรียนคำภาษาไทยจากเมนู</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s04_slow.mp3">很慢</button></div>
+</details></article>
+<article class="card" data-sentence="s05" hidden>
+<p class="sentence-zh">我点了红豆抹茶，不加糖。</p>
+<details><summary><span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<p class="sentence-thai" lang="th">ฉันสั่งมัทฉะถั่วแดงแบบไม่ใส่น้ำตาล</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s05_slow.mp3">很慢</button></div>
+</details></article>
+<article class="card" data-sentence="s06" hidden>
+<p class="sentence-zh">Nui说我的不甜。</p>
+<details><summary><span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<p class="sentence-thai" lang="th">นุ้ยบอกว่าของฉันไม่หวาน</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s06_slow.mp3">很慢</button></div>
+</details></article>
+<article class="card" data-sentence="s07" hidden>
+<p class="sentence-zh">今天店里有促销活动。</p>
+<details><summary><span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<p class="sentence-thai" lang="th">วันนี้ร้านมีโปรโมชั่น</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s07_slow.mp3">很慢</button></div>
+</details></article>
+<article class="card" data-sentence="s08" hidden>
+<p class="sentence-zh">买两杯，送一个新杯子。</p>
+<details><summary><span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<p class="sentence-thai" lang="th">ซื้อสองแก้ว แถมแก้วใหม่หนึ่งใบ</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s08_slow.mp3">很慢</button></div>
+</details></article>
+<article class="card" data-sentence="s09" hidden>
+<p class="sentence-zh">我们点了两杯饮料。</p>
+<details><summary><span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<p class="sentence-thai" lang="th">เราสั่งเครื่องดื่มสองแก้ว</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s09_slow.mp3">很慢</button></div>
+</details></article>
+<article class="card" data-sentence="s10" hidden>
+<p class="sentence-zh">我们得到了一个红色的杯子。</p>
+<details><summary><span class="reveal-label">显示</span><span class="hide-label">隐藏</span></summary>
+<p class="sentence-thai" lang="th">เราได้แก้วสีแดงมาหนึ่งใบ</p>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/s10_slow.mp3">很慢</button></div>
+</details></article>
+<div class="quiz-actions" hidden><button type="button" id="quiz-previous">上一题</button>
+<p id="quiz-count" aria-live="polite"></p>
+<button type="button" id="quiz-next">下一题</button></div></section>
+<section id="practice" class="card" aria-labelledby="practice-heading">
+<h2 id="practice-heading">练习音频</h2>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/11-19_%E8%AF%8D%E6%B1%87_%E5%BE%88%E6%85%A2.mp3">词汇很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/11-19_%E8%AF%8D%E6%B1%87_%E7%A8%8D%E6%85%A2.mp3">词汇稍慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/11-19_%E5%8F%A5%E5%AD%90_%E5%BE%88%E6%85%A2.mp3">句子很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/11-19_%E5%8F%A5%E5%AD%90_%E7%A8%8D%E6%85%A2.mp3">句子稍慢</button></div>
+</section>
+</main>
+<script>
+const audioStatus = document.querySelector(".audio-status");
+let playing = null;
+
+function stopAudio() {
+  if (!playing) return;
+  const { audio, button } = playing;
+  playing = null;
+  audio.pause();
+  button.setAttribute("aria-pressed", "false");
+}
+
+document.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-audio]");
+  if (!button) return;
+
+  const toggleOff = playing?.button === button;
+  stopAudio();
+  audioStatus.textContent = "";
+  if (toggleOff) return;
+
+  const audio = new Audio(button.dataset.audio);
+  playing = { audio, button };
+  button.setAttribute("aria-pressed", "true");
+  audio.addEventListener("ended", () => {
+    if (playing?.audio === audio) stopAudio();
+  }, { once: true });
+  audio.play().catch(() => {
+    if (playing?.audio === audio) {
+      stopAudio();
+      audioStatus.textContent = "无法播放这段音频。";
+    }
+  });
+});
+
+const questions = [...document.querySelectorAll("#self-check article")];
+const quizActions = document.querySelector(".quiz-actions");
+const quizCount = document.getElementById("quiz-count");
+let questionIndex = 0;
+
+function showQuestion(direction) {
+  stopAudio();
+  audioStatus.textContent = "";
+  const previous = questions[questionIndex];
+  previous.querySelector("details").open = false;
+  previous.hidden = true;
+  questionIndex = (questionIndex + direction + questions.length) % questions.length;
+  questions[questionIndex].hidden = false;
+  quizCount.textContent = `${questionIndex + 1} / ${questions.length}`;
+}
+
+if (questions.length > 1) {
+  quizActions.hidden = false;
+  showQuestion(0);
+  document.getElementById("quiz-previous").addEventListener("click", () => showQuestion(-1));
+  document.getElementById("quiz-next").addEventListener("click", () => showQuestion(1));
+}
+
+for (const question of questions) {
+  const answer = question.querySelector("details");
+  answer.addEventListener("toggle", () => {
+    if (!answer.open && playing && answer.contains(playing.button)) stopAudio();
+  });
+}
+</script>
+</body></html>

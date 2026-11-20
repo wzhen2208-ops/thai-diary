@@ -1,0 +1,1456 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>生词闪卡</title>
+<style>
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, "Noto Sans Thai", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f6f5ef;
+  color: #193229;
+  --accent: #235741;
+  --line: #dce4da;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; }
+header, main, .nav-inner { max-width: 56rem; margin: auto; padding-inline: clamp(1rem, 4vw, 2rem); }
+header { padding-top: 1.5rem; padding-bottom: 1rem; }
+h1, h2, h3, p { margin: 0; }
+h1 { font-size: clamp(1.9rem, 6vw, 2.8rem); }
+h2 { font-size: clamp(1.35rem, 4vw, 1.8rem); margin: 1rem 0; }
+.tones { color: #405c50; line-height: 1.75; margin-top: .4rem; }
+nav { position: sticky; top: 0; z-index: 1; background: #e6eee4; border-bottom: 1px solid var(--line); }
+.nav-inner { display: flex; gap: .5rem; padding-block: .45rem; }
+.nav-inner button { flex: 1; }
+main { padding-block: 1rem 2rem; }
+label { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem; font-weight: 650; }
+button, select {
+  min-height: 44px; min-width: 44px; padding: .45rem .8rem;
+  border: 1px solid #638575; border-radius: .55rem;
+  color: var(--accent); background: #f8fcf9; font: inherit; font-weight: 650;
+}
+button:enabled { cursor: pointer; }
+button:enabled:hover { background: #e6eee4; }
+button[aria-pressed="true"], button[aria-pressed="true"]:hover { color: white; background: var(--accent); }
+:focus-visible { outline: 3px solid #99680d; outline-offset: 2px; }
+button:disabled, select:disabled { color: #59645f; border-color: #c0c9c3; background: #eef0ee; }
+.tip {
+  margin-bottom: 1rem; padding: .85rem 1rem; color: #493609; background: #fff1bf;
+  border-left: .25rem solid #a87705; border-radius: .5rem; line-height: 1.65;
+  white-space: pre-wrap; overflow-wrap: anywhere;
+}
+.card, .flash-panel {
+  padding: clamp(.9rem, 4vw, 1.5rem); margin-bottom: 1rem;
+  background: white; border: 1px solid var(--line); border-radius: .9rem;
+}
+.sentence-number { color: var(--accent); font-size: .95rem; }
+.sentence-thai { font-size: 2rem; line-height: 1.5; overflow-wrap: anywhere; }
+.sentence-zh { line-height: 1.65; margin: .3rem 0 .8rem; }
+.plays, .flash-actions { display: flex; flex-wrap: wrap; gap: .45rem; }
+.plays button { min-width: 4.4rem; font-size: .95rem; }
+.words { list-style: none; margin: 1rem 0 0; padding: 0; }
+.word { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: .45rem .9rem; padding: .65rem 0; border-top: 1px solid var(--line); }
+.word-text { display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem .55rem;
+  line-height: 1.5; overflow-wrap: anywhere; }
+.word-thai { font-size: 1.4rem; }
+.word-roman, .word-zh, .word-tones { border-inline-start: 1px solid var(--line); padding-inline-start: .55rem; }
+.word-tones { display: inline-flex; flex-wrap: wrap; gap: .22rem; }
+.badge { border-radius: 99px; padding: .1em .55em; color: white; font-size: .85rem; font-weight: 650; }
+.tone-1 { background: #4d6b57; }
+.tone-2 { background: #8a5700; }
+.tone-3 { background: #9a3b2f; }
+.tone-4 { background: #ac462d; }
+.tone-5 { background: #2c5aa0; }
+.flash-panel { margin-top: .85rem; text-align: center; }
+#progress, #flash-day { color: #405c50; font-size: .95rem; }
+#flash-card { display: grid; place-content: center; width: 100%; min-height: 11rem;
+  margin-block: .65rem; padding: 1rem; overflow-wrap: anywhere; }
+#flash-thai { font-size: clamp(2.2rem, 9vw, 3.5rem); line-height: 1.35; }
+#flash-hint { font-size: .9rem; font-weight: 400; margin-top: .4rem; }
+#flash-answer { margin: .7rem 0; }
+#flash-answer .word-text, .flash-panel .plays, .flash-actions { justify-content: center; }
+#flash-answer .word-roman { border: 0; padding: 0; font-size: 1.25rem; }
+#flash-day { margin-top: .35rem; }
+.audio-status:empty { display: none; }
+.audio-status { text-align: center; padding: .35rem; color: #683321; background: #fff1bf; }
+
+[lang="th"] { font-family: "Noto Sans Thai", "Sarabun", system-ui, sans-serif; }
+.back {
+  display: inline-flex; align-items: center; min-height: 44px;
+  color: var(--accent); font-weight: 650; text-underline-offset: .2em;
+}
+.lesson-date { color: var(--accent); margin-top: .4rem; }
+header .audio-status { margin-top: .4rem; }
+#practice-heading { margin-top: 0; }
+#vocabulary, #sentences, #self-check { margin-bottom: 2rem; }
+#vocabulary { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  align-items: start; gap: .75rem; }
+#vocabulary h2 { grid-column: 1 / -1; margin-bottom: .25rem; }
+.vocabulary-card, #self-check .card { margin-bottom: 0; }
+.word-status {
+  display: inline-block; width: fit-content; padding: .15rem .55rem; border-radius: 1rem;
+  color: #365448; background: #e6eee4; font-size: .85rem; font-weight: 650;
+}
+summary { cursor: pointer; }
+.vocabulary-card summary, #self-check summary {
+  display: flex; align-items: center; justify-content: space-between; gap: .6rem;
+  min-height: 44px; list-style: none; color: var(--accent);
+}
+summary::-webkit-details-marker { display: none; }
+.vocabulary-card summary .word-thai {
+  font-size: clamp(2.15rem, 8vw, 2.8rem); line-height: 1.45; overflow-wrap: anywhere;
+}
+.vocabulary-card details { margin-block: .3rem .75rem; }
+.reveal-label, .hide-label { text-decoration: underline; text-underline-offset: .2em; flex-shrink: 0; }
+details:not([open]) .hide-label, details[open] .reveal-label { display: none; }
+.syllables { display: flex; flex-wrap: wrap; gap: .4rem; margin: .6rem 0; }
+.syllable {
+  display: inline-flex; align-items: center; flex-wrap: wrap; gap: .35rem;
+  background: #f1f5ef; border-radius: .5rem; padding: .25rem .45rem;
+}
+.vocabulary-card .word-roman, .vocabulary-card .word-zh,
+.breakdown .word-roman, .breakdown .word-zh { border: 0; padding: 0; overflow-wrap: anywhere; }
+.vocabulary-card .word-roman { font-size: 1.25rem; }
+.vocabulary-card .word-zh { font-size: 1.1rem; }
+.breakdown {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr));
+  gap: .45rem; list-style: none; margin: 1rem 0 0; padding: 0;
+}
+.breakdown li {
+  display: grid; align-content: start; gap: .15rem; padding: .5rem;
+  background: #f1f5ef; border-radius: .5rem; overflow-wrap: anywhere;
+}
+.breakdown .word-roman { color: #405c50; }
+.breakdown .word-status { margin-top: .15rem; }
+#self-check > p { margin-bottom: .7rem; }
+#self-check .sentence-zh { font-size: 1.2rem; }
+#self-check details .plays { margin-top: .5rem; }
+.quiz-actions { display: flex; justify-content: space-between; align-items: center; margin-top: .65rem; }
+
+#flash-main {
+  display: grid; grid-template-rows: auto minmax(11rem, 1fr) auto auto; gap: .5rem;
+  max-width: 44rem; min-height: 100vh; min-height: 100dvh;
+  padding-block: .4rem max(.75rem, env(safe-area-inset-bottom));
+}
+.flash-header h1 { font-size: clamp(1.4rem, 5vw, 2rem); margin-bottom: .4rem; }
+#flash-count { color: #405c50; min-height: 1.4em; margin-top: .4rem; }
+#flash-deck { display: grid; min-width: 0; touch-action: pan-y pinch-zoom; }
+.flash-entry {
+  display: grid; grid-template-rows: minmax(7rem, 1fr) auto auto; gap: .6rem;
+  min-width: 0; padding: .7rem; border-radius: .9rem; border: 1px solid var(--line); background: white;
+}
+.flash-front {
+  display: grid; place-items: center; min-width: 0; padding: .6rem;
+  width: 100%; overflow: hidden;
+}
+.flash-front .word-thai { display: block; width: max-content; white-space: nowrap; line-height: 1.45; }
+.flash-answer { text-align: center; line-height: 1.45; overflow-wrap: anywhere; }
+.flash-answer .word-roman, .flash-answer .word-zh, .flash-answer .word-tones { border: 0; padding: 0; }
+.flash-answer .word-roman { font-size: 1.35rem; }
+.flash-answer .word-zh { font-size: 1.1rem; }
+.flash-answer .flash-date { color: #405c50; font-size: .9rem; }
+.flash-entry .plays { grid-row: 3; justify-content: center; }
+.flash-actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+</style>
+</head>
+<body>
+<main id="flash-main">
+<div class="flash-header">
+<a class="back" href="index.html">← 返回日记课入口</a>
+<h1>生词闪卡</h1>
+<label>复习日期 <select id="day-filter"><option value="">全部</option><option value="2026-11-19">2026年11月19日</option><option value="2026-11-18">2026年11月18日</option></select></label>
+<p id="flash-count" aria-live="polite"></p></div>
+<div id="flash-deck">
+<p id="empty-deck" hidden>暂无生词</p>
+<article class="flash-entry" data-day="2026-11-19" data-word="w01_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w01_01">
+<span class="word-thai" lang="th">วันนี้</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w01_01" hidden>
+<p class="word-roman">wān-nî</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span><span class="badge tone-4">4高</span></p>
+<p class="word-zh">今天</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w01_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w01_02">
+<span class="word-thai" lang="th">วันพฤหัสบดี</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w01_02" hidden>
+<p class="word-roman">wān-phâ-rûe-hát-sá-bō-dī</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span><span class="badge tone-4">4高</span><span class="badge tone-4">4高</span><span class="badge tone-5">5低</span><span class="badge tone-5">5低</span><span class="badge tone-1">1平</span><span class="badge tone-1">1平</span></p>
+<p class="word-zh">星期四</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w01_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w01_03">
+<span class="word-thai" lang="th">ที่</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w01_03" hidden>
+<p class="word-roman">thì</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-3">3降</span></p>
+<p class="word-zh">第（日期前）</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w01_04" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w01_04">
+<span class="word-thai" lang="th">สิบเก้า</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w01_04" hidden>
+<p class="word-roman">síp-kào</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span><span class="badge tone-3">3降</span></p>
+<p class="word-zh">十九</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w01_05" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w01_05">
+<span class="word-thai" lang="th">พฤศจิกายน</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w01_05" hidden>
+<p class="word-roman">phrûet-sá-chí-kā-yōn</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span><span class="badge tone-5">5低</span><span class="badge tone-5">5低</span><span class="badge tone-1">1平</span><span class="badge tone-1">1平</span></p>
+<p class="word-zh">十一月</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w01_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w02_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w02_01">
+<span class="word-thai" lang="th">ฉัน</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w02_01" hidden>
+<p class="word-roman">chǎn</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-2">2升</span></p>
+<p class="word-zh">我（女性）</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w02_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w02_02">
+<span class="word-thai" lang="th">กับ</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w02_02" hidden>
+<p class="word-roman">káp</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">和</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w02_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w02_03">
+<span class="word-thai" lang="th">นุ้ย</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w02_03" hidden>
+<p class="word-roman">nûi</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span></p>
+<p class="word-zh">Nui（人名）</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w02_04" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w02_04">
+<span class="word-thai" lang="th">ไป</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w02_04" hidden>
+<p class="word-roman">pāi</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">去</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w02_05" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w02_05">
+<span class="word-thai" lang="th">ร้าน</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w02_05" hidden>
+<p class="word-roman">rân</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span></p>
+<p class="word-zh">店</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w02_06" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w02_06">
+<span class="word-thai" lang="th">อเมซอน</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w02_06" hidden>
+<p class="word-roman">á-mē-sōn</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span><span class="badge tone-1">1平</span><span class="badge tone-1">1平</span></p>
+<p class="word-zh">Amazon（咖啡店名）</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_06_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_06_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w02_07" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w02_07">
+<span class="word-thai" lang="th">กิน</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w02_07" hidden>
+<p class="word-roman">kīn</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">吃（这里指喝）</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_07_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_07_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w02_08" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w02_08">
+<span class="word-thai" lang="th">กาแฟ</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w02_08" hidden>
+<p class="word-roman">kā-fāe</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span><span class="badge tone-1">1平</span></p>
+<p class="word-zh">咖啡</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_08_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w02_08_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w03_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w03_01">
+<span class="word-thai" lang="th">ขอ</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w03_01" hidden>
+<p class="word-roman">khǒ</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-2">2升</span></p>
+<p class="word-zh">要，请求</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w03_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w03_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w03_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w03_02">
+<span class="word-thai" lang="th">เมนู</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w03_02" hidden>
+<p class="word-roman">mē-nū</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span><span class="badge tone-1">1平</span></p>
+<p class="word-zh">菜单</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w03_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w03_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w03_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w03_03">
+<span class="word-thai" lang="th">มา</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w03_03" hidden>
+<p class="word-roman">mā</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">来（拿来）</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w03_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w03_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w03_04" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w03_04">
+<span class="word-thai" lang="th">ดู</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w03_04" hidden>
+<p class="word-roman">dū</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">看</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w03_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w03_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w04_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w04_01">
+<span class="word-thai" lang="th">อยาก</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w04_01" hidden>
+<p class="word-roman">yák</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">想</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w04_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w04_02">
+<span class="word-thai" lang="th">เรียน</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w04_02" hidden>
+<p class="word-roman">rīan</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">学</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w04_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w04_03">
+<span class="word-thai" lang="th">คำ</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w04_03" hidden>
+<p class="word-roman">khām</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">词</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w04_04" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w04_04">
+<span class="word-thai" lang="th">ภาษาไทย</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w04_04" hidden>
+<p class="word-roman">phā-sǎ-thāi</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span><span class="badge tone-2">2升</span><span class="badge tone-1">1平</span></p>
+<p class="word-zh">泰语</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w04_05" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w04_05">
+<span class="word-thai" lang="th">จาก</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w04_05" hidden>
+<p class="word-roman">chák</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">从</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w04_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w05_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w05_01">
+<span class="word-thai" lang="th">สั่ง</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w05_01" hidden>
+<p class="word-roman">sáng</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">点（饮料、菜）</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w05_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w05_02">
+<span class="word-thai" lang="th">มัทฉะ</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w05_02" hidden>
+<p class="word-roman">mât-chá</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span><span class="badge tone-5">5低</span></p>
+<p class="word-zh">抹茶</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w05_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w05_03">
+<span class="word-thai" lang="th">ถั่วแดง</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w05_03" hidden>
+<p class="word-roman">thúa-dāeng</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span><span class="badge tone-1">1平</span></p>
+<p class="word-zh">红豆</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w05_04" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w05_04">
+<span class="word-thai" lang="th">แบบ</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w05_04" hidden>
+<p class="word-roman">báep</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">……的做法，款式</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w05_05" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w05_05">
+<span class="word-thai" lang="th">ไม่</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w05_05" hidden>
+<p class="word-roman">mài</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-3">3降</span></p>
+<p class="word-zh">不</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w05_06" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w05_06">
+<span class="word-thai" lang="th">ใส่</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w05_06" hidden>
+<p class="word-roman">sái</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">放，加</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_06_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_06_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w05_07" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w05_07">
+<span class="word-thai" lang="th">น้ำตาล</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w05_07" hidden>
+<p class="word-roman">nâm-tān</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span><span class="badge tone-1">1平</span></p>
+<p class="word-zh">糖</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_07_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w05_07_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w06_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w06_01">
+<span class="word-thai" lang="th">บอกว่า</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w06_01" hidden>
+<p class="word-roman">bók-wà</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span><span class="badge tone-3">3降</span></p>
+<p class="word-zh">说（后接内容）</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w06_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w06_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w06_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w06_02">
+<span class="word-thai" lang="th">ของ</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w06_02" hidden>
+<p class="word-roman">khǒng</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-2">2升</span></p>
+<p class="word-zh">的（……的东西）</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w06_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w06_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w06_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w06_03">
+<span class="word-thai" lang="th">หวาน</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w06_03" hidden>
+<p class="word-roman">wǎn</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-2">2升</span></p>
+<p class="word-zh">甜</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w06_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w06_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w07_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w07_01">
+<span class="word-thai" lang="th">มี</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w07_01" hidden>
+<p class="word-roman">mī</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">有</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w07_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w07_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w07_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w07_02">
+<span class="word-thai" lang="th">โปรโมชั่น</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w07_02" hidden>
+<p class="word-roman">prō-mō-chàn</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span><span class="badge tone-1">1平</span><span class="badge tone-3">3降</span></p>
+<p class="word-zh">促销活动</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w07_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w07_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w08_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w08_01">
+<span class="word-thai" lang="th">ซื้อ</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w08_01" hidden>
+<p class="word-roman">sûe</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span></p>
+<p class="word-zh">买</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w08_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w08_02">
+<span class="word-thai" lang="th">สอง</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w08_02" hidden>
+<p class="word-roman">sǒng</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-2">2升</span></p>
+<p class="word-zh">二</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w08_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w08_03">
+<span class="word-thai" lang="th">แก้ว</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w08_03" hidden>
+<p class="word-roman">kàeo</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-3">3降</span></p>
+<p class="word-zh">杯（量词）</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w08_04" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w08_04">
+<span class="word-thai" lang="th">แถม</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w08_04" hidden>
+<p class="word-roman">thǎem</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-2">2升</span></p>
+<p class="word-zh">（买）送，附赠</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w08_05" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w08_05">
+<span class="word-thai" lang="th">แก้ว</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w08_05" hidden>
+<p class="word-roman">kàeo</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-3">3降</span></p>
+<p class="word-zh">杯子（名词）</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w08_06" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w08_06">
+<span class="word-thai" lang="th">ใหม่</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w08_06" hidden>
+<p class="word-roman">mái</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">新</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_06_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_06_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w08_07" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w08_07">
+<span class="word-thai" lang="th">หนึ่ง</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w08_07" hidden>
+<p class="word-roman">núeng</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">一</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_07_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_07_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w08_08" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w08_08">
+<span class="word-thai" lang="th">ใบ</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w08_08" hidden>
+<p class="word-roman">bāi</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">个（杯子等的量词）</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_08_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w08_08_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w09_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w09_01">
+<span class="word-thai" lang="th">เรา</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w09_01" hidden>
+<p class="word-roman">rāo</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">我们</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w09_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w09_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w09_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w09_02">
+<span class="word-thai" lang="th">เครื่องดื่ม</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w09_02" hidden>
+<p class="word-roman">khrùeang-dúem</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-3">3降</span><span class="badge tone-5">5低</span></p>
+<p class="word-zh">饮料</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w09_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w09_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w10_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w10_01">
+<span class="word-thai" lang="th">ได้</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w10_01" hidden>
+<p class="word-roman">dài</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-3">3降</span></p>
+<p class="word-zh">得到</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w10_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w10_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w10_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w10_02">
+<span class="word-thai" lang="th">สี</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w10_02" hidden>
+<p class="word-roman">sǐ</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-2">2升</span></p>
+<p class="word-zh">颜色</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w10_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w10_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-19" data-word="w10_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-19-w10_03">
+<span class="word-thai" lang="th">แดง</span></button>
+<div class="flash-answer" id="answer-2026-11-19-w10_03" hidden>
+<p class="word-roman">dāeng</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">红</p>
+<p class="flash-date">2026年11月19日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w10_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-19/w10_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w01_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w01_01">
+<span class="word-thai" lang="th">วันนี้</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w01_01" hidden>
+<p class="word-roman">wān-nî</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span><span class="badge tone-4">4高</span></p>
+<p class="word-zh">今天</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w01_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w01_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w01_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w01_02">
+<span class="word-thai" lang="th">วันพุธ</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w01_02" hidden>
+<p class="word-roman">wān-phût</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span><span class="badge tone-4">4高</span></p>
+<p class="word-zh">星期三</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w01_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w01_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w01_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w01_03">
+<span class="word-thai" lang="th">ที่</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w01_03" hidden>
+<p class="word-roman">thì</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-3">3降</span></p>
+<p class="word-zh">第（日期前）</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w01_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w01_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w01_04" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w01_04">
+<span class="word-thai" lang="th">สิบแปด</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w01_04" hidden>
+<p class="word-roman">síp-páet</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span><span class="badge tone-5">5低</span></p>
+<p class="word-zh">十八</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w01_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w01_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w01_05" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w01_05">
+<span class="word-thai" lang="th">พฤศจิกายน</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w01_05" hidden>
+<p class="word-roman">phrûet-sá-chí-kā-yōn</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span><span class="badge tone-5">5低</span><span class="badge tone-5">5低</span><span class="badge tone-1">1平</span><span class="badge tone-1">1平</span></p>
+<p class="word-zh">十一月</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w01_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w01_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w02_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w02_01">
+<span class="word-thai" lang="th">ฉัน</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w02_01" hidden>
+<p class="word-roman">chǎn</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-2">2升</span></p>
+<p class="word-zh">我（女性）</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w02_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w02_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w02_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w02_02">
+<span class="word-thai" lang="th">ไป</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w02_02" hidden>
+<p class="word-roman">pāi</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">去</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w02_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w02_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w02_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w02_03">
+<span class="word-thai" lang="th">กิน</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w02_03" hidden>
+<p class="word-roman">kīn</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">吃</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w02_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w02_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w02_04" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w02_04">
+<span class="word-thai" lang="th">หม่าล่าทั่ง</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w02_04" hidden>
+<p class="word-roman">má-là-thàng</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span><span class="badge tone-3">3降</span><span class="badge tone-3">3降</span></p>
+<p class="word-zh">麻辣烫</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w02_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w02_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w02_05" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w02_05">
+<span class="word-thai" lang="th">กับ</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w02_05" hidden>
+<p class="word-roman">káp</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">和</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w02_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w02_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w02_06" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w02_06">
+<span class="word-thai" lang="th">นุ้ย</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w02_06" hidden>
+<p class="word-roman">nûi</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span></p>
+<p class="word-zh">Nui（人名）</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w02_06_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w02_06_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w02_07" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w02_07">
+<span class="word-thai" lang="th">ค่ะ</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w02_07" hidden>
+<p class="word-roman">khà</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-3">3降</span></p>
+<p class="word-zh">（女性陈述句结尾）</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w02_07_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w02_07_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w03_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w03_01">
+<span class="word-thai" lang="th">ร้าน</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w03_01" hidden>
+<p class="word-roman">rân</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span></p>
+<p class="word-zh">店</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w03_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w03_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w03_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w03_02">
+<span class="word-thai" lang="th">อยู่</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w03_02" hidden>
+<p class="word-roman">yú</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">在</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w03_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w03_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w03_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w03_03">
+<span class="word-thai" lang="th">ไม่</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w03_03" hidden>
+<p class="word-roman">mài</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-3">3降</span></p>
+<p class="word-zh">不</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w03_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w03_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w03_04" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w03_04">
+<span class="word-thai" lang="th">ไกล</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w03_04" hidden>
+<p class="word-roman">klāi</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">远</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w03_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w03_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w03_05" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w03_05">
+<span class="word-thai" lang="th">จาก</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w03_05" hidden>
+<p class="word-roman">chák</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">从，离</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w03_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w03_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w03_06" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w03_06">
+<span class="word-thai" lang="th">บริษัท</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w03_06" hidden>
+<p class="word-roman">bō-rî-sát</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span><span class="badge tone-4">4高</span><span class="badge tone-5">5低</span></p>
+<p class="word-zh">公司</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w03_06_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w03_06_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w04_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w04_01">
+<span class="word-thai" lang="th">แต่</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w04_01" hidden>
+<p class="word-roman">táe</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">但是</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w04_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w04_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w04_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w04_02">
+<span class="word-thai" lang="th">ที่</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w04_02" hidden>
+<p class="word-roman">thì</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-3">3降</span></p>
+<p class="word-zh">在（地点）</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w04_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w04_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w04_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w04_03">
+<span class="word-thai" lang="th">คน</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w04_03" hidden>
+<p class="word-roman">khōn</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">人</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w04_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w04_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w04_04" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w04_04">
+<span class="word-thai" lang="th">เยอะ</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w04_04" hidden>
+<p class="word-roman">yôe</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span></p>
+<p class="word-zh">多</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w04_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w04_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w04_05" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w04_05">
+<span class="word-thai" lang="th">มาก</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w04_05" hidden>
+<p class="word-roman">màk</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-3">3降</span></p>
+<p class="word-zh">很</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w04_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w04_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w04_06" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w04_06">
+<span class="word-thai" lang="th">แล้วก็</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w04_06" hidden>
+<p class="word-roman">lâeo-kò</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span><span class="badge tone-3">3降</span></p>
+<p class="word-zh">然后，而且</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w04_06_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w04_06_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w04_07" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w04_07">
+<span class="word-thai" lang="th">ร้อน</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w04_07" hidden>
+<p class="word-roman">rôn</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span></p>
+<p class="word-zh">热</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w04_07_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w04_07_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w05_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w05_01">
+<span class="word-thai" lang="th">คราวหน้า</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w05_01" hidden>
+<p class="word-roman">khrāo-nà</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span><span class="badge tone-3">3降</span></p>
+<p class="word-zh">下次</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w05_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w05_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w05_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w05_02">
+<span class="word-thai" lang="th">นั่ง</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w05_02" hidden>
+<p class="word-roman">nàng</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-3">3降</span></p>
+<p class="word-zh">坐</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w05_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w05_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w05_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w05_03">
+<span class="word-thai" lang="th">ตรงกลาง</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w05_03" hidden>
+<p class="word-roman">trōng-klāng</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span><span class="badge tone-1">1平</span></p>
+<p class="word-zh">中间</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w05_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w05_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w05_04" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w05_04">
+<span class="word-thai" lang="th">กัน</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w05_04" hidden>
+<p class="word-roman">kān</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">一起</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w05_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w05_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w05_05" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w05_05">
+<span class="word-thai" lang="th">นะคะ</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w05_05" hidden>
+<p class="word-roman">nâ-khâ</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span><span class="badge tone-4">4高</span></p>
+<p class="word-zh">……吧（女性，商量语气）</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w05_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w05_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w05_06" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w05_06">
+<span class="word-thai" lang="th">ตรงนั้น</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w05_06" hidden>
+<p class="word-roman">trōng-nân</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span><span class="badge tone-4">4高</span></p>
+<p class="word-zh">那里</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w05_06_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w05_06_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w05_07" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w05_07">
+<span class="word-thai" lang="th">เย็น</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w05_07" hidden>
+<p class="word-roman">yēn</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">凉快</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w05_07_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w05_07_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w05_08" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w05_08">
+<span class="word-thai" lang="th">กว่า</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w05_08" hidden>
+<p class="word-roman">kwá</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">更</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w05_08_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w05_08_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w06_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w06_01">
+<span class="word-thai" lang="th">นิดเดียว</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w06_01" hidden>
+<p class="word-roman">nît-dīao</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span><span class="badge tone-1">1平</span></p>
+<p class="word-zh">一点点</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w06_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w06_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w07_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w07_01">
+<span class="word-thai" lang="th">ชาม</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w07_01" hidden>
+<p class="word-roman">chām</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">碗</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w07_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w07_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w07_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w07_02">
+<span class="word-thai" lang="th">ของ</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w07_02" hidden>
+<p class="word-roman">khǒng</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-2">2升</span></p>
+<p class="word-zh">的</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w07_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w07_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w07_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w07_03">
+<span class="word-thai" lang="th">ใหญ่</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w07_03" hidden>
+<p class="word-roman">yái</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">大</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w07_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w07_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w07_04" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w07_04">
+<span class="word-thai" lang="th">เล็ก</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w07_04" hidden>
+<p class="word-roman">lêk</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span></p>
+<p class="word-zh">小</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w07_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w07_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w08_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w08_01">
+<span class="word-thai" lang="th">ใช้</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w08_01" hidden>
+<p class="word-roman">châi</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span></p>
+<p class="word-zh">用</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w08_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w08_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w08_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w08_02">
+<span class="word-thai" lang="th">ตะเกียบ</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w08_02" hidden>
+<p class="word-roman">tá-kíap</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span><span class="badge tone-5">5低</span></p>
+<p class="word-zh">筷子</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w08_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w08_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w08_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w08_03">
+<span class="word-thai" lang="th">สี</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w08_03" hidden>
+<p class="word-roman">sǐ</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-2">2升</span></p>
+<p class="word-zh">颜色</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w08_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w08_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w08_04" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w08_04">
+<span class="word-thai" lang="th">แดง</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w08_04" hidden>
+<p class="word-roman">dāeng</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">红</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w08_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w08_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w08_05" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w08_05">
+<span class="word-thai" lang="th">ดำ</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w08_05" hidden>
+<p class="word-roman">dām</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">黑</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w08_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w08_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w09_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w09_01">
+<span class="word-thai" lang="th">ยัง</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w09_01" hidden>
+<p class="word-roman">yāng</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">还，也</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w09_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w09_02">
+<span class="word-thai" lang="th">ผสม</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w09_02" hidden>
+<p class="word-roman">phá-sǒm</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span><span class="badge tone-2">2升</span></p>
+<p class="word-zh">调，混合</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w09_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w09_03">
+<span class="word-thai" lang="th">น้ำจิ้ม</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w09_03" hidden>
+<p class="word-roman">nâm-chìm</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span><span class="badge tone-3">3降</span></p>
+<p class="word-zh">蘸料</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w09_04" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w09_04">
+<span class="word-thai" lang="th">เอง</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w09_04" hidden>
+<p class="word-roman">ēng</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">自己</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w09_05" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w09_05">
+<span class="word-thai" lang="th">ด้วย</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w09_05" hidden>
+<p class="word-roman">dùai</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-3">3降</span></p>
+<p class="word-zh">也，还</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w09_06" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w09_06">
+<span class="word-thai" lang="th">ใส่</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w09_06" hidden>
+<p class="word-roman">sái</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">放，加</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_06_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_06_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w09_07" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w09_07">
+<span class="word-thai" lang="th">กระเทียม</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w09_07" hidden>
+<p class="word-roman">krá-thīam</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span><span class="badge tone-1">1平</span></p>
+<p class="word-zh">蒜</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_07_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_07_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w09_08" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w09_08">
+<span class="word-thai" lang="th">ซีอิ๊ว</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w09_08" hidden>
+<p class="word-roman">sī-îu</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span><span class="badge tone-4">4高</span></p>
+<p class="word-zh">酱油</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_08_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_08_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w09_09" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w09_09">
+<span class="word-thai" lang="th">น้ำมันงา</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w09_09" hidden>
+<p class="word-roman">nâm-mān-ngā</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span><span class="badge tone-1">1平</span><span class="badge tone-1">1平</span></p>
+<p class="word-zh">芝麻油</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_09_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_09_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w09_10" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w09_10">
+<span class="word-thai" lang="th">งาขาว</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w09_10" hidden>
+<p class="word-roman">ngā-khǎo</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span><span class="badge tone-2">2升</span></p>
+<p class="word-zh">白芝麻</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_10_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w09_10_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w10_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w10_01">
+<span class="word-thai" lang="th">เรา</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w10_01" hidden>
+<p class="word-roman">rāo</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-1">1平</span></p>
+<p class="word-zh">我们</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w10_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w10_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w10_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w10_02">
+<span class="word-thai" lang="th">สอง</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w10_02" hidden>
+<p class="word-roman">sǒng</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-2">2升</span></p>
+<p class="word-zh">二</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w10_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w10_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w10_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w10_03">
+<span class="word-thai" lang="th">หนัก</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w10_03" hidden>
+<p class="word-roman">nák</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">重</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w10_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w10_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w10_04" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w10_04">
+<span class="word-thai" lang="th">เกือบ</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w10_04" hidden>
+<p class="word-roman">kúeap</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">差不多，将近</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w10_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w10_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w10_05" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w10_05">
+<span class="word-thai" lang="th">หกสิบ</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w10_05" hidden>
+<p class="word-roman">hók-síp</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span><span class="badge tone-5">5低</span></p>
+<p class="word-zh">六十</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w10_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w10_05_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w10_06" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w10_06">
+<span class="word-thai" lang="th">กิโล</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w10_06" hidden>
+<p class="word-roman">kí-lō</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span><span class="badge tone-1">1平</span></p>
+<p class="word-zh">公斤</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w10_06_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w10_06_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w10_07" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w10_07">
+<span class="word-thai" lang="th">แล้ว</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w10_07" hidden>
+<p class="word-roman">lâeo</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span></p>
+<p class="word-zh">了，已经</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w10_07_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w10_07_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w11_01" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w11_01">
+<span class="word-thai" lang="th">เพราะฉะนั้น</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w11_01" hidden>
+<p class="word-roman">phrô-chá-nân</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span><span class="badge tone-5">5低</span><span class="badge tone-4">4高</span></p>
+<p class="word-zh">所以</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w11_01_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w11_01_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w11_02" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w11_02">
+<span class="word-thai" lang="th">มื้อเย็น</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w11_02" hidden>
+<p class="word-roman">mûe-yēn</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span><span class="badge tone-1">1平</span></p>
+<p class="word-zh">晚饭</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w11_02_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w11_02_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w11_03" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w11_03">
+<span class="word-thai" lang="th">ต้อง</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w11_03" hidden>
+<p class="word-roman">tòng</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-3">3降</span></p>
+<p class="word-zh">必须</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w11_03_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w11_03_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w11_04" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w11_04">
+<span class="word-thai" lang="th">น้อย</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w11_04" hidden>
+<p class="word-roman">nôi</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-4">4高</span></p>
+<p class="word-zh">少</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w11_04_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w11_04_mid.mp3">稍慢</button></div>
+</article>
+<article class="flash-entry" data-day="2026-11-18" data-word="w11_05" hidden>
+<button type="button" class="flash-front" aria-expanded="false" aria-controls="answer-2026-11-18-w11_05">
+<span class="word-thai" lang="th">หน่อย</span></button>
+<div class="flash-answer" id="answer-2026-11-18-w11_05" hidden>
+<p class="word-roman">nói</p>
+<p class="word-tones" aria-label="调号"><span class="badge tone-5">5低</span></p>
+<p class="word-zh">一点</p>
+<p class="flash-date">2026年11月18日</p></div>
+<div class="plays"><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w11_05_slow.mp3">很慢</button><button type="button" aria-pressed="false" data-audio="audio/2026-11-18/w11_05_mid.mp3">稍慢</button></div>
+</article>
+</div>
+<p class="audio-status" role="status"></p>
+<div class="flash-actions"><button type="button" id="previous">上一张</button>
+<button type="button" id="reveal" aria-expanded="false">显示</button>
+<button type="button" id="next">下一张</button></div>
+</main>
+<script>
+const audioStatus = document.querySelector(".audio-status");
+let playing = null;
+
+function stopAudio() {
+  if (!playing) return;
+  const { audio, button } = playing;
+  playing = null;
+  audio.pause();
+  button.setAttribute("aria-pressed", "false");
+}
+
+document.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-audio]");
+  if (!button) return;
+
+  const toggleOff = playing?.button === button;
+  stopAudio();
+  audioStatus.textContent = "";
+  if (toggleOff) return;
+
+  const audio = new Audio(button.dataset.audio);
+  playing = { audio, button };
+  button.setAttribute("aria-pressed", "true");
+  audio.addEventListener("ended", () => {
+    if (playing?.audio === audio) stopAudio();
+  }, { once: true });
+  audio.play().catch(() => {
+    if (playing?.audio === audio) {
+      stopAudio();
+      audioStatus.textContent = "无法播放这段音频。";
+    }
+  });
+});
+
+const deck = document.getElementById("flash-deck");
+const filter = document.getElementById("day-filter");
+const count = document.getElementById("flash-count");
+const empty = document.getElementById("empty-deck");
+const previous = document.getElementById("previous");
+const reveal = document.getElementById("reveal");
+const next = document.getElementById("next");
+const entries = [...deck.querySelectorAll(".flash-entry")];
+const cards = entries.map((entry) => ({
+  entry,
+  front: entry.querySelector(".flash-front"),
+  word: entry.querySelector(".word-thai"),
+  answer: entry.querySelector(".flash-answer"),
+}));
+
+let available = [];
+let index = 0;
+let current;
+let swipeStart;
+let suppressClick = false;
+
+function fitWord() {
+  if (!current) return;
+  const { front, word } = current;
+  word.style.fontSize = "100px";
+  const bounds = word.getBoundingClientRect();
+  const style = getComputedStyle(front);
+  const width = front.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
+  const height = front.clientHeight - parseFloat(style.paddingTop) - parseFloat(style.paddingBottom);
+  const scale = Math.min(width / bounds.width, height / bounds.height);
+  word.style.fontSize = `${Math.max(1, Math.floor(Math.min(240, 100 * scale)))}px`;
+}
+
+const observer = new ResizeObserver(fitWord);
+
+function showAnswer(visible) {
+  if (!current) return;
+  current.answer.hidden = !visible;
+  current.front.setAttribute("aria-expanded", String(visible));
+  reveal.setAttribute("aria-expanded", String(visible));
+  reveal.textContent = visible ? "隐藏" : "显示";
+  fitWord();
+}
+
+function showCard() {
+  stopAudio();
+  audioStatus.textContent = "";
+  const restoreFocus = current?.front === document.activeElement;
+  if (current) {
+    showAnswer(false);
+    observer.unobserve(current.front);
+    current.entry.hidden = true;
+  }
+
+  current = available[index];
+  empty.hidden = Boolean(current);
+  for (const button of [previous, reveal, next]) button.disabled = !current;
+  count.textContent = current ? `${index + 1} / ${available.length}` : "";
+  if (current) {
+    current.entry.hidden = false;
+    reveal.setAttribute("aria-controls", current.answer.id);
+    showAnswer(false);
+    observer.observe(current.front);
+    if (restoreFocus) current.front.focus();
+  } else {
+    reveal.removeAttribute("aria-controls");
+  }
+}
+
+function selectDay() {
+  available = cards.filter(({ entry }) => !filter.value || entry.dataset.day === filter.value);
+  index = 0;
+  showCard();
+}
+
+function move(direction) {
+  if (!current) return;
+  index = (index + direction + available.length) % available.length;
+  showCard();
+}
+
+const requested = new URLSearchParams(location.search).get("day");
+if ([...filter.options].some((option) => option.value === requested)) filter.value = requested;
+filter.addEventListener("change", selectDay);
+previous.addEventListener("click", () => move(-1));
+next.addEventListener("click", () => move(1));
+reveal.addEventListener("click", () => showAnswer(current.answer.hidden));
+
+deck.addEventListener("click", (event) => {
+  if (suppressClick && event.detail !== 0) {
+    suppressClick = false;
+    event.stopPropagation();
+    return;
+  }
+  if (event.target.closest(".flash-front")) showAnswer(current.answer.hidden);
+}, { capture: true });
+
+document.addEventListener("keydown", (event) => {
+  if (event.target === filter || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+  if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+    event.preventDefault();
+    move(event.key === "ArrowLeft" ? -1 : 1);
+  }
+});
+
+deck.addEventListener("pointerdown", (event) => {
+  suppressClick = false;
+  swipeStart = event.isPrimary && event.pointerType !== "mouse"
+    ? { id: event.pointerId, x: event.clientX, y: event.clientY }
+    : null;
+});
+deck.addEventListener("pointerup", (event) => {
+  if (swipeStart?.id !== event.pointerId) return;
+  const dx = event.clientX - swipeStart.x;
+  const dy = event.clientY - swipeStart.y;
+  swipeStart = null;
+  if (Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+    suppressClick = true;
+    move(dx < 0 ? 1 : -1);
+  }
+});
+deck.addEventListener("pointercancel", () => { swipeStart = null; });
+
+selectDay();
+document.fonts.ready.then(fitWord);
+</script>
+</body></html>

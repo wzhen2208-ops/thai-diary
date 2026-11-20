@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🇹🇭 Lily 的泰语日记课</title>
+<style>
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, "PingFang SC", "Noto Sans SC", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: linear-gradient(160deg,#312e81,#0f766e); }
+main { max-width: 560px; margin: auto; padding: 32px 16px; }
+h1 { margin: 0; color: white; font-size: clamp(1.7rem, 6vw, 2.25rem); }
+.intro { color: #c7d2fe; margin: 8px 0 24px; line-height: 1.6; }
+.lesson-card { position: relative; }
+.hub-card {
+  display: block; margin-bottom: 14px; padding: 18px; border-radius: 18px;
+  background: white; text-decoration: none; box-shadow: 0 6px 20px #10153830;
+}
+.lesson-card:has(.star:not([hidden])) .hub-card { padding-inline-end: 68px; }
+.hub-card strong { display: block; font-size: 19px; color: #3730a3; overflow-wrap: anywhere; }
+.hub-card span { display: block; margin-top: 4px; color: #475569; font-size: 14px; line-height: 1.6; }
+.star {
+  position: absolute; inset: 12px 12px auto auto; width: 44px; height: 44px;
+  color: #3730a3; background: #eef2ff; border: 0; border-radius: 12px;
+  cursor: pointer; font: inherit; font-size: 1.35rem;
+}
+.star[aria-pressed="true"] { color: #854d0e; background: #fef3c7; }
+:focus-visible { outline: 3px solid #f4b942; outline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+<h1>🇹🇭 Lily 的泰语日记课</h1>
+<p class="intro">每天一篇日记，先学生词再读句子。星标保存在本机浏览器里。</p>
+<div class="lesson-card" data-day="2026-11-19">
+<a class="hub-card" href="2026-11-19.html">
+<strong>📅 2026-11-19 · 去 Amazon 咖啡店喝咖啡</strong>
+<span>10 句 · 47 个词 · 很慢/稍慢音频 · 闪卡</span></a>
+<button class="star" type="button" aria-label="星标课程" aria-pressed="false" hidden>☆</button>
+</div>
+<div class="lesson-card" data-day="2026-11-18">
+<a class="hub-card" href="2026-11-18.html">
+<strong>📅 2026-11-18 · 去吃麻辣烫</strong>
+<span>11 句 · 65 个词 · 很慢/稍慢音频 · 闪卡</span></a>
+<button class="star" type="button" aria-label="星标课程" aria-pressed="false" hidden>☆</button>
+</div>
+<a class="hub-card" href="flashcards.html">
+<strong>🃏 全部生词闪卡复习</strong><span>共 112 个生词</span></a>
+</main>
+<script>
+const key = "thai-diary-progress";
+let starred = new Set();
+try {
+  const saved = JSON.parse(localStorage.getItem(key));
+  if (Array.isArray(saved)) starred = new Set(saved);
+} catch {}
+
+for (const lesson of document.querySelectorAll(".lesson-card")) {
+  const button = lesson.querySelector(".star");
+  const day = lesson.dataset.day;
+  function updateStar() {
+    const selected = starred.has(day);
+    button.setAttribute("aria-pressed", String(selected));
+    button.textContent = selected ? "★" : "☆";
+  }
+  updateStar();
+  button.hidden = false;
+  button.addEventListener("click", () => {
+    if (starred.has(day)) starred.delete(day);
+    else starred.add(day);
+    updateStar();
+    try {
+      localStorage.setItem(key, JSON.stringify([...starred]));
+    } catch {}
+  });
+}
+</script>
+</body></html>
