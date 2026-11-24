@@ -1102,37 +1102,80 @@ details:not([open]) .hide-label, details[open] .reveal-label { display: none; }
 </main>
 <script>
 const audioStatus = document.querySelector(".audio-status");
-let playing = null;
+const player = document.createElement("audio");
+player.playsInline = true;
+player.setAttribute("playsinline", "");
+player.setAttribute("webkit-playsinline", "");
+player.preload = "none";
+player.hidden = true;
+document.body.appendChild(player);
 
-function stopAudio() {
-  if (!playing) return;
-  const { audio, button } = playing;
-  playing = null;
-  audio.pause();
-  button.setAttribute("aria-pressed", "false");
+let playing = null;
+let audioSessionInitialized = false;
+
+function clearPlaying() {
+  if (playing) {
+    playing.button.setAttribute("aria-pressed", "false");
+    playing = null;
+  }
 }
+
+window.stopAudio = function () {
+  clearPlaying();
+  player.pause();
+};
+
+function reportAudioError() {
+  window.stopAudio();
+  if (audioStatus) audioStatus.textContent = "没有声音？请确认音量已调大、手机没有连着蓝牙耳机，再点一次。";
+}
+
+// Queued media events can arrive after a different clip has been selected.
+player.addEventListener("pause", () => {
+  if (player.paused) clearPlaying();
+});
+player.addEventListener("ended", () => {
+  if (player.ended) clearPlaying();
+});
+player.addEventListener("error", () => {
+  if (player.error) reportAudioError();
+});
+player.addEventListener("playing", () => {
+  if (audioStatus && playing && !player.paused) audioStatus.textContent = "";
+});
+
+window.playAudioFrom = function (button) {
+  if (!button?.dataset.audio || button.disabled) return;
+
+  if (!audioSessionInitialized) {
+    audioSessionInitialized = true;
+    try {
+      if (navigator.audioSession) navigator.audioSession.type = "playback";
+    } catch {}
+  }
+
+  const toggleOff = playing?.button === button;
+  window.stopAudio();
+  if (toggleOff) return;
+
+  player.src = new URL(button.dataset.audio, document.baseURI).href;
+  player.load();
+  const request = { button };
+  playing = request;
+  button.setAttribute("aria-pressed", "true");
+  player.play().catch((error) => {
+    if (playing !== request) return;
+    if (error.name === "AbortError") {
+      clearPlaying();
+      return;
+    }
+    reportAudioError();
+  });
+};
 
 document.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-audio]");
-  if (!button) return;
-
-  const toggleOff = playing?.button === button;
-  stopAudio();
-  audioStatus.textContent = "";
-  if (toggleOff) return;
-
-  const audio = new Audio(button.dataset.audio);
-  playing = { audio, button };
-  button.setAttribute("aria-pressed", "true");
-  audio.addEventListener("ended", () => {
-    if (playing?.audio === audio) stopAudio();
-  }, { once: true });
-  audio.play().catch(() => {
-    if (playing?.audio === audio) {
-      stopAudio();
-      audioStatus.textContent = "无法播放这段音频。";
-    }
-  });
+  if (button) window.playAudioFrom(button);
 });
 
 const questions = [...document.querySelectorAll("#self-check article")];
@@ -1141,8 +1184,7 @@ const quizCount = document.getElementById("quiz-count");
 let questionIndex = 0;
 
 function showQuestion(direction) {
-  stopAudio();
-  audioStatus.textContent = "";
+  window.stopAudio();
   const previous = questions[questionIndex];
   previous.querySelector("details").open = false;
   previous.hidden = true;
@@ -1161,7 +1203,17 @@ if (questions.length > 1) {
 for (const question of questions) {
   const answer = question.querySelector("details");
   answer.addEventListener("toggle", () => {
-    if (!answer.open && playing && answer.contains(playing.button)) stopAudio();
+    if (!answer.open && playing && answer.contains(playing.button)) window.stopAudio();
+  });
+}
+
+for (const card of document.querySelectorAll(".vocabulary-card")) {
+  const answer = card.querySelector("details");
+  answer.querySelector("summary").addEventListener("click", (event) => {
+    event.preventDefault();
+    answer.open = !answer.open;
+    if (playing && card.contains(playing.button)) window.stopAudio();
+    if (answer.open) window.playAudioFrom(card.querySelector("button[data-audio]"));
   });
 }
 </script>

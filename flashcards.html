@@ -1860,37 +1860,80 @@ details:not([open]) .hide-label, details[open] .reveal-label { display: none; }
 </main>
 <script>
 const audioStatus = document.querySelector(".audio-status");
-let playing = null;
+const player = document.createElement("audio");
+player.playsInline = true;
+player.setAttribute("playsinline", "");
+player.setAttribute("webkit-playsinline", "");
+player.preload = "none";
+player.hidden = true;
+document.body.appendChild(player);
 
-function stopAudio() {
-  if (!playing) return;
-  const { audio, button } = playing;
-  playing = null;
-  audio.pause();
-  button.setAttribute("aria-pressed", "false");
+let playing = null;
+let audioSessionInitialized = false;
+
+function clearPlaying() {
+  if (playing) {
+    playing.button.setAttribute("aria-pressed", "false");
+    playing = null;
+  }
 }
+
+window.stopAudio = function () {
+  clearPlaying();
+  player.pause();
+};
+
+function reportAudioError() {
+  window.stopAudio();
+  if (audioStatus) audioStatus.textContent = "没有声音？请确认音量已调大、手机没有连着蓝牙耳机，再点一次。";
+}
+
+// Queued media events can arrive after a different clip has been selected.
+player.addEventListener("pause", () => {
+  if (player.paused) clearPlaying();
+});
+player.addEventListener("ended", () => {
+  if (player.ended) clearPlaying();
+});
+player.addEventListener("error", () => {
+  if (player.error) reportAudioError();
+});
+player.addEventListener("playing", () => {
+  if (audioStatus && playing && !player.paused) audioStatus.textContent = "";
+});
+
+window.playAudioFrom = function (button) {
+  if (!button?.dataset.audio || button.disabled) return;
+
+  if (!audioSessionInitialized) {
+    audioSessionInitialized = true;
+    try {
+      if (navigator.audioSession) navigator.audioSession.type = "playback";
+    } catch {}
+  }
+
+  const toggleOff = playing?.button === button;
+  window.stopAudio();
+  if (toggleOff) return;
+
+  player.src = new URL(button.dataset.audio, document.baseURI).href;
+  player.load();
+  const request = { button };
+  playing = request;
+  button.setAttribute("aria-pressed", "true");
+  player.play().catch((error) => {
+    if (playing !== request) return;
+    if (error.name === "AbortError") {
+      clearPlaying();
+      return;
+    }
+    reportAudioError();
+  });
+};
 
 document.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-audio]");
-  if (!button) return;
-
-  const toggleOff = playing?.button === button;
-  stopAudio();
-  audioStatus.textContent = "";
-  if (toggleOff) return;
-
-  const audio = new Audio(button.dataset.audio);
-  playing = { audio, button };
-  button.setAttribute("aria-pressed", "true");
-  audio.addEventListener("ended", () => {
-    if (playing?.audio === audio) stopAudio();
-  }, { once: true });
-  audio.play().catch(() => {
-    if (playing?.audio === audio) {
-      stopAudio();
-      audioStatus.textContent = "无法播放这段音频。";
-    }
-  });
+  if (button) window.playAudioFrom(button);
 });
 
 const deck = document.getElementById("flash-deck");
@@ -1937,9 +1980,16 @@ function showAnswer(visible) {
   fitWord();
 }
 
+function toggleAnswer() {
+  if (!current) return;
+  const visible = current.answer.hidden;
+  window.stopAudio();
+  showAnswer(visible);
+  if (visible) window.playAudioFrom(current.entry.querySelector("button[data-audio]"));
+}
+
 function showCard() {
-  stopAudio();
-  audioStatus.textContent = "";
+  window.stopAudio();
   const restoreFocus = current?.front === document.activeElement;
   if (current) {
     showAnswer(false);
@@ -1979,7 +2029,7 @@ if ([...filter.options].some((option) => option.value === requested)) filter.val
 filter.addEventListener("change", selectDay);
 previous.addEventListener("click", () => move(-1));
 next.addEventListener("click", () => move(1));
-reveal.addEventListener("click", () => showAnswer(current.answer.hidden));
+reveal.addEventListener("click", toggleAnswer);
 
 deck.addEventListener("click", (event) => {
   if (suppressClick && event.detail !== 0) {
@@ -1987,7 +2037,7 @@ deck.addEventListener("click", (event) => {
     event.stopPropagation();
     return;
   }
-  if (event.target.closest(".flash-front")) showAnswer(current.answer.hidden);
+  if (event.target.closest(".flash-front")) toggleAnswer();
 }, { capture: true });
 
 document.addEventListener("keydown", (event) => {
