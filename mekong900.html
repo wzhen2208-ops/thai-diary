@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="泰语学习">
+<meta name="theme-color" content="#312e81">
+<link rel="manifest" href="manifest.json">
+<title>湄公河泰语900词</title>
+<style>
+.badge { border-radius: 99px; padding: .1em .55em; background: var(--tone); color: white; font-size: .85rem; font-weight: 650; }
+.tone-1 { --tone: #4d6b57; }
+.tone-2 { --tone: #8a5700; }
+.tone-3 { --tone: #9a3b2f; }
+.tone-4 { --tone: #ac462d; }
+.tone-5 { --tone: #2c5aa0; }
+
+:root {
+  color-scheme: light; background: #f6f5ef; color: #193229;
+  font-family: system-ui, -apple-system, "PingFang SC", sans-serif;
+  --accent: #235741; --line: #dce4da; --muted: #496157;
+}
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; }
+[lang="th"] { font-family: "Noto Sans Thai", "Sarabun", Thonburi, system-ui, sans-serif; }
+#freq-main {
+  max-width: 44rem; margin: auto;
+  padding: max(.45rem, env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right))
+           max(1rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
+}
+.back { display: inline-flex; min-height: 44px; align-items: center; color: var(--accent); }
+h1 { font-size: clamp(1.55rem, 6vw, 2.2rem); line-height: 1.25; margin: .2rem 0 .8rem; }
+h2 { font-size: 1.2rem; margin: .65rem 0 .25rem; }
+button {
+  min-height: 44px; min-width: 44px; padding: .45rem .7rem;
+  font: inherit; font-weight: 650; line-height: 1.25; color: inherit;
+  background: white; border: 1px solid var(--line); border-radius: .7rem;
+  cursor: pointer; touch-action: manipulation;
+}
+:focus-visible { outline: 2px solid #235741; outline-offset: 2px; }
+button:disabled { opacity: .55; cursor: default; }
+#overall { color: var(--muted); margin: 0 0 .3rem; font-variant-numeric: tabular-nums; }
+#overall-bar { width: 100%; height: .65rem; accent-color: var(--accent); display: block; }
+#resume { margin-top: .75rem; }
+#load-status:empty { display: none; }
+#audio-status { position: sticky; top: env(safe-area-inset-top); z-index: 2; margin: 0; }
+#audio-status:not(:empty) { padding: .35rem 0; color: #843e18; background: #f6f5ef; }
+#groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+  gap: .5rem; margin-top: .9rem; }
+.group-choice { display: grid; align-content: center; gap: .3rem; text-align: left; min-height: 60px; }
+.group-choice span { font-size: .85rem; color: var(--muted); font-weight: 500; }
+.group-nav, .settings, .card-meta, #markers, #summary { display: flex; flex-wrap: wrap; gap: .4rem; }
+.group-nav { justify-content: space-between; }
+#view[aria-pressed="true"] { background: #e6eee4; }
+.settings { gap: 0 .65rem; }
+.settings label { display: flex; align-items: center; min-height: 44px; font-size: .9rem; cursor: pointer; }
+.settings input { width: 1.15rem; height: 1.15rem; margin: 0 .35rem 0 0; accent-color: var(--accent); }
+#study { display: flex; flex-direction: column; min-height: max(21rem, calc(100vh - 16rem));
+  min-height: max(21rem, calc(100svh - 16rem)); }
+.card-meta { justify-content: space-between; align-items: center; min-height: 2rem; }
+#position { color: var(--muted); margin: 0; font-variant-numeric: tabular-nums; }
+.marker { border-radius: 1rem; padding: .12em .5em; font-size: .8rem; background: #e6eee4; }
+.marker.flag { background: #ececec; color: #4e4e4e; }
+.study-card {
+  display: flex; flex: 1; flex-direction: column; min-width: 0; overflow-wrap: anywhere;
+  border: 1px solid var(--line); border-radius: 1rem; background: white; text-align: center; touch-action: pan-y pinch-zoom;
+}
+#card { display: grid; place-content: center; justify-items: center; flex: 1; min-height: 7rem;
+  width: 100%; padding: .65rem; background: transparent; border: 0; touch-action: pan-y pinch-zoom; }
+#front { font-size: clamp(1.85rem, 8vw, 3rem); line-height: 1.35; }
+#front[lang="th"] { font-size: clamp(2.55rem, 11vw, 3.9rem); }
+#reveal-label { color: var(--muted); font-size: .85rem; font-weight: 500; }
+#answer { padding: 0 .75rem .55rem; }
+#translation { display: grid; gap: .45rem; font-size: 1.2rem; }
+#translation > [lang="th"] { font-size: clamp(1.9rem, 8vw, 2.8rem); font-weight: 650; line-height: 1.35; }
+.roman { display: flex; flex-wrap: wrap; align-items: baseline; gap: .18em; font-weight: 650; }
+#translation .roman { justify-content: center; }
+.compound, #deck-videos { border: 1px solid var(--line); border-radius: .6rem; padding: .35rem .65rem; }
+#deck-videos { margin-bottom: .75rem; }
+.compound { margin-top: .35rem; text-align: start; font-size: .9rem; }
+.compound summary, #deck-videos summary { cursor: pointer; font-weight: 650; padding-block: .4rem; }
+.compound ul { margin: .3rem 0; padding-inline-start: 1.25rem; }
+.compound li + li { margin-top: .4rem; }
+#translation .compound .roman { justify-content: start; }
+.word-row .compound [lang="th"] { font-size: inherit; }
+.word-markers { display: flex; flex-wrap: wrap; gap: .3rem; margin-block: .3rem; }
+.review-note, .video-time, .deck-notice { font-size: .875rem; }
+.review-note { margin: .3rem 0; color: var(--muted); }
+.video-time, #deck-videos a { color: var(--accent); text-underline-offset: .2em; }
+#deck-videos a { display: inline-flex; margin-inline-end: .85rem; min-height: 44px; align-items: center; }
+.syllable { display: inline-flex; align-items: baseline; gap: .2em; color: var(--tone); }
+.syllable .badge { font-size: .62em; }
+.speak { margin-top: .3rem; }
+.study-actions {
+  position: sticky; bottom: 0; z-index: 1; background: #f6f5ef;
+  padding: .2rem 0 max(.45rem, env(safe-area-inset-bottom));
+}
+#previous { background: transparent; border-color: transparent; color: var(--accent); }
+.ratings { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; }
+.ratings button { min-height: 52px; color: white; border: 0; }
+#known { background: #216244; }
+#unknown { background: #a24a16; }
+#summary { align-items: start; margin-top: .8rem; }
+#summary h3, #summary p { flex-basis: 100%; margin: 0 0 .3rem; }
+#word-list { list-style: none; padding: 0; margin: .65rem 0; }
+.word-row {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: .5rem; align-items: center;
+  padding: .4rem 0; border-top: 1px solid var(--line); overflow-wrap: anywhere;
+}
+.word-row [lang="th"] { font-size: 1.25rem; font-weight: 650; }
+.word-row .speak { margin: 0; }
+.dot { display: inline-block; width: .65rem; height: .65rem; border-radius: 50%; background: #bac5bd; }
+.dot.k { background: #216244; }
+.dot.u { background: #a24a16; }
+footer { margin-top: 1.15rem; padding-top: .6rem; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .8rem; white-space: pre-line; }
+</style>
+</head>
+<body>
+<main id="freq-main">
+<header><a class="back" href="index.html">← 返回学习入口</a><h1>湄公河泰语900词</h1></header>
+<details id="deck-videos"><summary>视频</summary>
+<a class="resource-link" href="https://drive.google.com/file/d/1Yx9E_3uPrQs8-4hb0hRcjtVtrs1jAf1H/view" target="_blank" rel="noopener">完整视频</a>
+<a class="resource-link" href="https://drive.google.com/drive/folders/1euUUeetlVTVCuKeuvzI5E6AhF_kXe4Um" target="_blank" rel="noopener">Drive 视频文件夹</a>
+<a class="resource-link" href="https://drive.google.com/file/d/1w6_NP0GJ6qN4rrTgqXb4NvqVmV5xmrL8/view" target="_blank" rel="noopener">第1段 · 1–100词</a>
+<a class="resource-link" href="https://drive.google.com/file/d/1f_qr6Ey_mHd4usrEkoMYJkHepGNgL_5E/view" target="_blank" rel="noopener">第2段 · 101–200词</a>
+<a class="resource-link" href="https://drive.google.com/file/d/1iOlVAhxIvXkEJ85G5IIUwSoXO_2Zr4zX/view" target="_blank" rel="noopener">第3段 · 201–300词</a>
+<a class="resource-link" href="https://drive.google.com/file/d/1rPqqRWGG_nUouqzdOJUAHQNHZvJZflVU/view" target="_blank" rel="noopener">第4段 · 301–400词</a>
+<a class="resource-link" href="https://drive.google.com/file/d/1ksRGMSb78ppYYipBPz4sUV_us10JKBnO/view" target="_blank" rel="noopener">第5段 · 401–500词</a>
+<a class="resource-link" href="https://drive.google.com/file/d/1Pp5u9fCRlt3YZzuFU5DxeMJ4Z64vDpQY/view" target="_blank" rel="noopener">第6段 · 501–600词</a>
+<a class="resource-link" href="https://drive.google.com/file/d/1p9hOvP9pzRcfNYlJ4aPiQ5P7kqATGPyi/view" target="_blank" rel="noopener">第7段 · 601–700词</a>
+<a class="resource-link" href="https://drive.google.com/file/d/1aayRA-fxeDbf1OuHvmZ6fdtamHU5cb49/view" target="_blank" rel="noopener">第8段 · 701–800词</a>
+<a class="resource-link" href="https://drive.google.com/file/d/1eFWt1Fz4YgjLl9cCpdBSpYDbLhV2oZBw/view" target="_blank" rel="noopener">第9段 · 801–900词</a>
+<a class="resource-link" href="https://drive.google.com/file/d/1GNDRtmGU1uGg6U1hwjIpgXFelA03rteF/view" target="_blank" rel="noopener">第10段 · 901–953词</a>
+</details>
+<section id="picker" aria-label="组列表">
+<p id="overall"></p><progress id="overall-bar" aria-label="总进度"></progress>
+<button id="resume" type="button" hidden></button>
+<p id="load-status" role="status"></p><div id="groups"></div></section>
+<section id="group" aria-labelledby="group-title" hidden>
+<nav class="group-nav" aria-label="本组操作">
+<button id="back" type="button">组列表</button>
+<button id="view" type="button" aria-pressed="false">词表</button></nav>
+<h2 id="group-title" tabindex="-1"></h2>
+<div class="settings">
+<label><input id="reverse" type="checkbox">中文在前</label>
+<label><input id="autoplay" type="checkbox" checked>自动发音</label>
+<label><input id="unknown-only" type="checkbox">只刷没印象的</label></div>
+<p id="audio-status" role="status"></p>
+<div id="study" hidden>
+<div class="card-meta"><p id="position" aria-live="polite"></p>
+<div id="markers"></div></div>
+<div class="study-card">
+<button id="card" type="button" aria-expanded="false" aria-controls="answer">
+<span id="front"></span><span id="reveal-label">点卡片看答案</span></button>
+<div id="answer" hidden><div id="translation"></div>
+<button id="speak" class="speak" type="button" aria-label="播放发音">🔊</button>
+</div></div>
+<div class="study-actions">
+<button id="previous" type="button" disabled>上一个</button>
+<div class="ratings"><button id="known" type="button">认识/有印象</button>
+<button id="unknown" type="button">没印象</button></div></div></div>
+<div id="summary" hidden><h3>本组小结</h3><p id="results" aria-live="polite" tabindex="-1"></p>
+<button id="summary-previous" type="button">上一个</button>
+<button id="retry" type="button">再刷没印象的</button>
+<button id="next" type="button">下一组</button>
+<button id="done" type="button">返回组列表</button></div>
+<ul id="word-list" aria-label="本组词表" hidden></ul></section>
+<noscript>请启用 JavaScript 使用闪卡。</noscript>
+<footer id="freq-source">视频及中文来源：<a href="https://www.douyin.com/video/7415900672513690906" target="_blank" rel="noopener">湄公河泰语-ภาษาไทย</a></footer>
+<audio id="audio" preload="none" playsinline webkit-playsinline hidden></audio></main>
+<script id="freq-config" type="application/json">{"groups":[{"file":"g01","first":1,"count":100},{"file":"g02","first":101,"count":100},{"file":"g03","first":201,"count":100},{"file":"g04","first":301,"count":100},{"file":"g05","first":401,"count":100},{"file":"g06","first":501,"count":100},{"file":"g07","first":601,"count":100},{"file":"g08","first":701,"count":100},{"file":"g09","first":801,"count":100},{"file":"g10","first":901,"count":53}],"thaiByRank":["ภาษาจีน","ภาษาไทย","ภาษาอังกฤษ","ครับ","ค่ะ","ไม่","มี","ไม่มี","ใช่","ไม่ใช่","คือ","ได้","ไม่ได้","ไหม","อะไร","เมื่อไหร่","เท่าไหร่","ทำไม","ไหน","ใคร","ยังไง","อย่างไร","หรือเปล่า","หรือยัง","ผม","ฉัน","คุณ","เขา","มัน","เรา","พวกคุณ","พวกเขา","ตัวเอง","เธอ","นิดหน่อย","มาก","ไม่ค่อย","บ่อยๆ","ค่อนข้าง","ที่สุด","จริง","เก่ง","กับ","และ","เหมือนกัน","งั้น","ก็","น่าจะ","คง","อันนี้","อันนั้น","แบบนี้","แบบนั้น","เหล่านี้","เหล่านั้น","อย่างนี้","อย่างนั้น","อันอื่น","คน","อยู่","กำลัง","เคย","ปกติ","แล้ว","ยัง","หรือ","วีซ่า","เวลา","อายุ","ธุระ","ชื่อ","เสื้อ","ยี่ห้อ","เถ้าแก่","ทะเล","ไกด์","โชว์","น้ำ","เกาะ","นาที","รู้","เข้าใจ","ไม่เข้าใจ","พ่อ","แม่","ผัว","เมีย","ไฟ","ชา","ตั๋ว","พ่อค้า","แม่ค้า","กำไร","กิโล","มือ","โทรศัพน์","ทำ","พูด","ขอ","ใช้","จะ","เอา","หา","เช่า","พา","ไป","มา","ใส่","ให้","รอ","ราคา","ดู","เชื่อ","เจอ","ข้า","ดี","เสีย","โง่","เบื่อ","เมา","พอ","พอใช้ได้","พอดี","พอใจ","เยอะ","หลาย","แต่ว่า","มีแต่","เกี่ยวกับ","ทำให้","นี่","ที่นี่","ปนี๊","เมื่อกี้","ถ้า","กี่","ตัว","บ้าน","เช้า","คู่","แท้","แวะ","เถอะ","สิ","นะ","กล้า","แตร","เปล่า","เผลอ","ฟรี","ผม","ฉัน","คุณ","ท่าน","มัน","อื่น","ตัวเอง","คน","อาจารย์","ครู","บางคน","เพื่อน","แฟน","ผู้ชาย","ผู้หญิง","พี่","น้อง","จีน","ลาว","ไทย","สาว","แถวนี้","เงิน","ลงทุน","เรือง","กินข้าว","ท้องเสีย","ห้องน้ำ","โรงเรียน","โรงงาน","โรงแรม","โรงพยาบาล","ห้าง","ห้อง","ห้องเดียว","ห้องคู่","อาหาร","อาหารไทย","ร้านอาหาร","กุ้ง","ซื้อ","ขาย","การค้า","ชั่วโมง","ร่วมมือ","ผลไม้","ดอกไม้","ต้นไม้","หญ้า","ต้นทุน","ทุน","เงินเดือน","ค่าขนส่ง","มวยไทย","ลิง","ลุง","วิง","แกง","แข่ง","เจ๊ง","จ้าง","ล้าง","โค้ง","ทะเลาะ","ร้าน","บิน","รุ่น","ก้อนหิน","ยิน","ชื้น","ตื่นนอน","เรียน","ด่วน","ล้าน","นิสัย","หรูหรา","เหงา","ไฟไหม้","ป่วย","ของ","ฝนตก","จาน","ไม่เป็นไร","ทำงาน","งาน","กิน","ถึง","จ่าย","ชำระ","จอง","ดื่ม","ฟัง","พูด","อ่าน","เขียน","ยืม","ส่ง","เล่น","เที่ยว","ท่องเที่ยว","นัง","ยืน","คุย","คุยกัน","ทิ้ง","ช่วย","เชิญ","ยอม","เมื่อวาน","วันนี้","พรุ่งนี้","ช่วงนี้","ตอนนี้","ตอนเช้า","ตอนเที่ยง","ตอนบ่าย","ตอนเย็น","กลางคืน","เดือน","ทันที","บ่อย","ปกติ","บางที","บาง","หนา","อ้วน","ผอม","สูง","ต่ำ","เตี้ย","ยาว","สั้น","นาน","แพง","สวย","หล่อ","ง่าย","ไม่เลว","เร็ว","แน่นอน","ตั้งใจ","อิ่ม","หิว","สำคัญ","ก่อน","เคย","ไม่งั้น","ไม่ค่อย","ฉะนั้น","จึง","ถึง","ยัง","งั้นก็","เป็น","แล้ว","ร้อย","พัน","หมื่น","แสน","ล้าน","สิบร้าน","ปืน","ซ้อน","ส้อม","ชาม","จาน","นิ่ม","แข็ง","ชิม","ยิ้ม","เกม","ซ่อม","ทีมงาน","หอม","เหม็น","ทั้งนั้น","เรื่อยๆ","ด้วยกัน","ขึ้น","ลง","บน","ล่าง","ซ้าย","ขวา","ข้าง","เดียว","ต้อง","ต้องการ","ควร","ทาง","รวม","ตาย","บ้าน","เมือง","น้อย","ถาม","ห้าม","แถว","คิว","คิ้ว","นิ้ว","สิว","วิว","ดาว","พระจันทร์","พระอาทิตย์","แมว","เคี้ยว","ร่างกาย","ร้อน","หนาว","เหนื่อย","หนังสือ","หน่อย","ขอถามหน่อย","หมุน","แหวน","หน่วยงาน","หลาน","กลิ่น","กลุ่ม","ครึ่ง","เครื่องบิน","แม่น้ำ","เตรียม","ประชุม","เปรี้ยว","หวาน","แปรง","แปรงฟัน","เปลี่ยน","ปากกา","ชีวิต","ขอโทษ","คนขับ","รถติด","ขับรถ","แท็คซี","รถตู้","พัก","พักผ่อน","บาท","มังคุด","เหตุผล","เอกชน","ส่วนตัว","นวด","เงินมัดจำ","ธุรกิจ","เมตร","พักเที่ยง","ลาพัก","ระดับ","ปาก","รับ","รับปาก","รับรอง","พริก","ผัก","ค่าปรับ","สำเร็จ","เสร็จ","ตก","คิด","พูด","เรียก","นัด","บอก","แยก","ออก","ผัด","ทอด","ฝึกหัด","เปิด","ปิด","สวิตสช์","สัมผัส","เจ็บ","ปวด","พบ","สูบ","ขอบ","รู้สึก","รู้จัก","ยาก","ราบรื่น","รบกวน","สุดสัปดาห์","วันหยุด","วันทำงาน","แป๊บนึง","มาก","จัง","พิเศษ","ถูก","ถูกต้อง","จบ","เผ็ด","สุก","ดิบ","สะดวก","รีบ","ฉุกเฉิน","ดึก","ใหญ่","เล็ก","ผิด","รัก","ชัดเจน","เนื่องจาก","เกือบ","แทบ","นอก","ใน","ยืนยัน","ยกเลิก","เลิกกัน","เลิกงาน","เลิกเรียน","ตึก","จุด","เม็ด","เขต","ตกลง","บวก","ลบ","คูณ","หาร","เท่ากับ","เปอร์เซ็นต์","ทุก","เล็ก","นก","นึก","เปียก","แลก","แขก","ตาก","อ้วก","ฉีก","กด","วัด","กัด","สด","นัด","เห็ด","เช็ด","เกิด","ขวด","โดด","จอดรถ","มืด","โสด","เก็บ","คบ","ตับ","เล็บ","จิบ","สอบ","ศพ","แอบ","เงียบ","เสียงดัง","ทบทวน","คุณภาพ","ชนบท","เทศกาล","มิตรภาพ","รัฐบาล","อุบัติเหตุ","อัตรา","กรุณา","โฆษณา","ปริมาณ","ฝรั่ง","สมาชิก","ฤดู","กรณี","ทรมาน","มณฑล","สามารถ","ความสามารถ","บริษัท","บริการ","ตลาด","หนัง","บุหรี่","เหล้า","ของปลอม","ประโยชน์","กล่อง","สถานที่","จังหวัด","ประเทศ","สยาม","สนามบิน","สถานทูต","ประตู","หน้าต่าง","เกลือ","เพลง","หมู","ความเร็ว","แปล","ล่าม","ประสบการณ์","รอสักครู่","กระดาษ","ประโยค","จำหน่าย","อร่อย","หลาย","ใหม่","สบาย","เกลียด","ครบ","แปลก","สนิท","ทันสมัย","นิดหน่อย","ประมาณ","กลางวัน","กลางคืน","พรุ่งนี้","ปีที่แล้ว","ปีนี้","ปีหน้า","ขณะนี้","ตลอด","เฉพาะ","อย่า","อยู่","อย่าง","อยาก","หรือ","ไหม","ไหน","หมายถึง","ปรึกษา","อธิบาย","กว่า","เหมือน","เหมือนกัน","เหล่านี้","เหมาะสม","บริษัททัวร์","อากาศ","เหมา","เหลือ","ไหว","หน้า","ขยะ","ขยาย","สมอง","สมาคม","สวัสดิการ","หมวก","หมอก","เหยียบ","เหล็ก","หยุด","จังหวัด","หยิบ","กระดาษ","เกรด","เกลียด","ตรวจ","ปรากฏ","เปลือก","พลาด","ผลิต","ผลิตภัณฑ์","พลาด","กระป๋อง","บรรยากาศ","ประหยัด","กรอก","กระจก","กรุณา","กล้วย","ปล่อย","ปลูก","ปรับ","สรุป","อนุญาต","หนัก","เบา","เสนอ","ถนัด","จมูก","ตลก","ปลา","ปู","ไกล","ใกล้","กลาง","ตรง","ผลัก","ครั้ง","คราว","คล่อง","พระ","ควาย","เหี้ย","ขวา","แขวน","กว้าง","เศร้า","สร้าง","สระ","อดิต","อนาคต","สร้อย","เสริม","เจริญ","จรวด","ทราบ","กระทรวง","องค์กร","ทราย","แทรก","พุทรา","อินทรี","ทรัพ","ทฤษฎี","สีดำ","สีขาว","สีฟ้า","สีน้ำเงิน","สีแดง","สีชมพู","สีส้ม","สีเหลือง","สีเทา","สีน้ำตาล","สีกาแฟ","สีเขียว","สีม่วง","สีกากี","สีทอง","สีเงิน","สีเข้ม","สีอ่อน","ตอนนี้","เมื่อกี้","รอสักครู่","เดี๋ยว","ช่วงนี้","วันนี้","เมื่อวาน","พรุ่งนี้","มะรีนนี้","เมื่อก่อน","วันหลัง","ก่อนหน้านี้","อีกไม่นาน","นานๆ","ตอนเช้า","ตอนเที่ยง","ตอนบ่าย","ตอนเย็น","กลางวัน","กลางคืน","คืนนี้","คืนพรุ่งนี้","วัน","ทุกวัน","หลายวัน","อีก 2 วัน","อีกไม่กีวัน","หลายเดือน","หลายปี","วินาที","นาที","ชั่วโมง","โมง","วัน","เดือน","ปี","ตลอด","มกรา","กุมภา","มีนา","เมษา","พฤษภา","มิถุนา","กรกฎา","สิงหา","กันยา","ตุลา","พฤศจิกา","ธันวา","วันจันทร์","วันอังคาร","วันพุธ","วันพฤหัสฯ","วันศุกร์","วันเสาร์","วันอาทิตย์","สัปดาห์","อาทิตย์","เกาะ","ท่าเรือ","สวน","ห้องน้ำ","ปั๊มน้ำมัน","โรงพยาบาล","ร้านยา","ที่แลกเงิน","ชายหาด","พิพิธภัณฑ์","สถานีตำรวจ","ใจกลางเมือง","ที่จอดรถ","ธนาคาร","สนามบิน","ตลาดน้ำ","บริษัท","สถานที่ท่องเที่ยว","ซูปอร์มาเก็ต","ไนท์บาซาร์","กรุงเทพฯ","เชียงไหม่","เชียงราย","อยุธยา","พัทยา","ภูเก็ต","เลี้ยวซ้าย","เลี้ยวขวา","ตรงไป","อ้อมไป","ถอยหลัง","ย้อนกลับ","ข้าม","ข้างบน","ข้างล่าง","ขึ้นไป","ลงไป","ข้างหน้า","ข้างหลัง","ข้างใน","ข้างนอก","ตรงกลาง","ติดกับ","ข้างๆ","แถวนี้","ตรงข้าม","เลย","ห่างจาก...","ถนน","ที่อยู่","ที่ว่าง","ที่อื่น","ที่จอดรถ","ที่หนึ่ง","ที่นี่","ที่นั่น","ที่ไหน","สถานีรถไฟ","ครั้งที่แล้ว","สองวันที่แล้ว","ก่อนที่...","ที่สุด","ร้อนที่สุด","อร่อยที่สุด","ที่รัก","ที่นั่ง","ที่เขี่ยบุหรี่","ที่จริง","ที่ทำการ","ที่พัก","ของกิน","ของใช้","ของเล่น","ของขวัญ","ของแท้","ของปลอม","ของดี","ของหวาน","ความคิด","ความสุข","ความพยายาม","ความงาม","การเรียน","การอยู่","การนอน","การอ่าน","การกิน","การเดินทาง","ความคิด","ความฝัน","ความเข้าใจ","ความรัก","ความสูง","ความยาว","ความเร็ว","การเมือง","การงาน","การบ้าน","การเงิน","แอลกอฮอล์","ยา","เป็นไข้","ไอ","อ่อนเพลีย","เป็นหวัด","เสมหะ","ร้อนใน","ปวดหัว","น้ำมูกไหล","จาม","เจ็บคอ","ปวดเมื่อย","นอนไม่หลับ","เป็นตะคริว","บวม","ค้น","ผื่น","เลือดคั่ง","แผล","แผลถลอก","แผลไหม้","แผลถูกลวก","นิ่วในถุงน้ำดี","ท้องผูก","ไมเกรน","หกล้ม","ปวดท้อง","ท้องเสีย","งดอาหาร","ถูกพิษ","ปวดฟัน","ผิวหนังอักเสบ","กระดูกหัก","แคปซูล","โรคเกาต์","ฉีดยา","ภูมิแพ้","ถุงยาง","ยาคุมกำเนิด","วัคซีน","ผลข้างเคียง","โรคหัวใจ","มะเร็ง","รถพยาบาล","ตรวจสุขภาพ","ตรวจเลือด","เน็ตไอดอล","แฟนคลับ","บิวตี้","เซลฟี่","สติ๊กเกอร์","ฟิลเตอร์","คิวอาร์โค้ด","แอพพลิเคชัน","โพสต์","คอมเม้นท์","กดไลค์","แพ็คเกจ","ถ่ายรูป","ถ่ายคลิป","เน็ต","สัญญาณ","คอนเฟิร์ม","โครงการ","โปรเจคต์","โปรโมท","แบรนด์","แชร์","โลเคชั่น","ชาร์จแบตเตอรี่","คอมพิวเตอร์","คีย์บอร์ด","พิมพ์","พาวเวอร์แบงค์","ไมโครโฟน","บลูทูธ","แอร์","เซฟ","เหล้า","เบียร์","วิสกี้","กาแฟ","ลาเต้","คาปูชิโน","อเมริกาโน","เอสเพรสโซ","โซดา","ดีเซล","แก๊ส","มอเตอร์ไซค์","บิ๊กไบค์","แท็กซี่","เกียร์ออโต้","เบรค","โปรแกรม","เคาน์เตอร์","เฟอร์นิเจอร์","คีย์การ์ด","ลิฟท์","อาพาร์ทเม็นท์","เซอร์วิส","เกสต์เฮาส์"],"missingAudio":[],"dataPath":"mekong900","storagePrefix":"mekong900:","progressByRank":true}</script>
+<script>
+"use strict";
+const byId = id => document.getElementById(id);
+const {groups, thaiByRank, missingAudio, dataPath = "freq2000", storagePrefix = "freq2000:",
+       legacyPath = "freq2000/legacy_v1.json", progressByRank} =
+  JSON.parse(byId("freq-config").textContent);
+const unavailable = new Set(missingAudio);
+const cache = new Map();
+const wordKey = thai => "w:" + thai;
+const progressKey = rank => progressByRank ? "card:" + rank : wordKey(thaiByRank[rank - 1]);
+const progress = new Map();
+const audio = byId("audio");
+const audioStatus = byId("audio-status");
+let activeGroup = null;
+let lastGroup = read("last-group");
+let request = 0;
+let playback = null;
+let audioSessionInitialized = false;
+let words = [];
+let deck = [];
+let history = [];
+let position = 0;
+let listView = false;
+
+function read(key) {
+  try { return localStorage.getItem(storagePrefix + key); } catch { return null; }
+}
+
+function save(key, value) {
+  try {
+    if (value === null) localStorage.removeItem(storagePrefix + key);
+    else localStorage.setItem(storagePrefix + key, value);
+  } catch {}
+}
+
+async function migrateProgress() {
+  try {
+    if (progressByRank || read("migrated") === "1") return;
+    const ranks = [];
+    for (let index = 0; index < localStorage.length; index++) {
+      const key = localStorage.key(index);
+      if (key?.startsWith(storagePrefix) && /^[1-9][0-9]*$/.test(key.slice(storagePrefix.length))) {
+        ranks.push(key.slice(storagePrefix.length));
+      }
+    }
+    if (!ranks.length) return;
+    const response = await fetch(legacyPath);
+    if (!response.ok) return;
+    const legacy = await response.json();
+    if (ranks.some(rank => typeof legacy[rank] !== "string" || !legacy[rank])) return;
+
+    for (const rank of ranks) {
+      const status = localStorage.getItem(storagePrefix + rank);
+      const target = storagePrefix + wordKey(legacy[rank]);
+      if ((status === "k" || status === "u") && localStorage.getItem(target) === null) {
+        localStorage.setItem(target, status);
+      }
+    }
+    for (const rank of ranks) localStorage.removeItem(storagePrefix + rank);
+    localStorage.setItem(storagePrefix + "migrated", "1");
+  } catch {
+    // A failed fetch or blocked write leaves any unconverted progress available for a later load.
+  }
+}
+
+function loadProgress() {
+  for (let rank = 1; rank <= thaiByRank.length; rank++) {
+    const key = progressKey(rank);
+    const status = read(key);
+    if (status === "k" || status === "u") progress.set(key, status);
+  }
+}
+
+function node(tag, text = "", className = "") {
+  const element = document.createElement(tag);
+  element.textContent = text;
+  element.className = className;
+  return element;
+}
+
+function label(group) {
+  return `第${groups.indexOf(group) + 1}组 · ${group.first}–${group.first + group.count - 1}`;
+}
+
+function counts(group) {
+  let known = 0;
+  let unknown = 0;
+  for (let rank = group.first; rank < group.first + group.count; rank++) {
+    const status = progress.get(progressKey(rank));
+    if (status === "k") known++;
+    if (status === "u") unknown++;
+  }
+  return {known, unknown};
+}
+
+function renderPicker() {
+  let knownTotal = 0;
+  let seenTotal = 0;
+  let wordTotal = 0;
+  const choices = groups.map(group => {
+    const {known, unknown} = counts(group);
+    const seen = known + unknown;
+    knownTotal += known;
+    seenTotal += seen;
+    wordTotal += group.count;
+    const button = node("button", "", "group-choice");
+    button.type = "button";
+    button.dataset.file = group.file;
+    button.append(node("strong", label(group)),
+                  node("span", `✓ ${known} 认识 · ${seen}/${group.count} 已刷`));
+    button.addEventListener("click", () => openGroup(group));
+    return button;
+  });
+  byId("groups").replaceChildren(...choices);
+  byId("overall").textContent = `总进度 · 认识 ${knownTotal} · 已刷 ${seenTotal} / ${wordTotal}`;
+  byId("overall-bar").max = wordTotal;
+  byId("overall-bar").value = seenTotal;
+  const resume = groups.find(group => group.file === lastGroup);
+  byId("resume").hidden = !resume;
+  if (resume) {
+    byId("resume").textContent = `继续 · ${label(resume)}`;
+    byId("resume").onclick = () => openGroup(resume);
+  }
+}
+
+function showPicker(focus = true) {
+  request++;
+  stopAudio();
+  byId("group").hidden = true;
+  byId("picker").hidden = false;
+  byId("load-status").textContent = "";
+  renderPicker();
+  if (focus && activeGroup) {
+    byId("groups").querySelector(`[data-file="${activeGroup.file}"]`).focus();
+  }
+}
+
+async function openGroup(group) {
+  const loading = ++request;
+  byId("load-status").textContent = `正在加载${label(group)}…`;
+  let items = cache.get(group.file);
+  try {
+    if (!items) {
+      const response = await fetch(`${dataPath}/${group.file}.json`);
+      if (!response.ok) throw new Error("Group request failed");
+      items = await response.json();
+      if (!Array.isArray(items) || items.length !== group.count) {
+        throw new Error("Group response has an invalid word count");
+      }
+      cache.set(group.file, items);
+    }
+    await progressReady;
+  } catch {
+    if (request === loading) byId("load-status").textContent = "词表加载失败，请再点一次。";
+    return;
+  }
+  if (request !== loading) return;
+
+  activeGroup = group;
+  words = items;
+  lastGroup = group.file;
+  save("last-group", lastGroup);
+  byId("load-status").textContent = "";
+  byId("picker").hidden = true;
+  byId("group").hidden = false;
+  byId("group-title").textContent = label(group);
+  byId("next").disabled = groups.indexOf(group) === groups.length - 1;
+  listView = false;
+  startDeck(byId("unknown-only").checked);
+  window.scrollTo(0, 0);
+  byId("group-title").focus({preventScroll: true});
+}
+
+function startDeck(onlyUnknown) {
+  deck = onlyUnknown ? words.filter(word => progress.get(progressKey(word.rank)) !== "k") : words;
+  position = 0;
+  history = [];
+  renderCard();
+}
+
+function romanization(word) {
+  if (!word.roman) return node("div", "读音待核实", "review-note");
+  const roman = node("div", "", "roman");
+  word.roman.split("·").forEach((syllable, index) => {
+    const tone = word.tones[index];
+    const part = node("span", syllable, `syllable tone-${tone}`);
+    part.append(node("span", tone, "badge"));
+    if (index > 0) roman.append(node("span", "·"));
+    roman.append(part);
+  });
+  return roman;
+}
+
+function markersFor(word) {
+  const markers = [];
+  if (word.diary) markers.push(node("span", "日记已学", "marker"));
+  if (word.freq2000) markers.push(node("span", "2000词里有", "marker"));
+  if (word.duplicate_of) markers.push(node("span", `重复 · #${word.duplicate_of}`, "marker"));
+  if (word.flag) {
+    const flag = node("span", "待核实", "marker flag");
+    flag.title = word.flag;
+    markers.push(flag);
+  }
+  return markers;
+}
+
+function appendDetails(container, word, expanded) {
+  if (word.flag && progressByRank) container.append(node("p", word.flag, "review-note"));
+  if (word.review_note) container.append(node("p", word.review_note, "review-note"));
+  if (word.part) {
+    const seconds = Math.floor(word.offset);
+    const time = `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
+    const timestamp = node(word.video ? "a" : "span", `第${word.part}段 · ${time}`, "video-time");
+    if (word.video) {
+      timestamp.href = word.video;
+      timestamp.target = "_blank";
+      timestamp.rel = "noopener";
+    }
+    container.append(timestamp);
+  }
+  if (!word.compound) return;
+  const details = node("details", "", "compound");
+  details.open = expanded;
+  details.append(node("summary", word.compound.flag ? "拆解 · 拆解待核实" : "拆解"));
+  const parts = node("ul");
+  for (const part of word.compound.components) {
+    const row = node("li");
+    const thai = node("strong", part.thai);
+    thai.lang = "th";
+    row.append(thai, document.createTextNode(" · " + part.zh), romanization(part));
+    parts.append(row);
+  }
+  details.append(parts);
+  container.append(details);
+}
+
+function canPlay(word) {
+  return !unavailable.has(word.audio.split("/").pop());
+}
+
+function stopAudio() {
+  playback = null;
+  audio.pause();
+  audioStatus.textContent = "";
+}
+
+function reportAudioError() {
+  stopAudio();
+  audioStatus.textContent = "没有声音？请确认音量已调大、手机没有连着蓝牙耳机，再点一次。";
+}
+
+audio.addEventListener("error", () => {
+  if (playback && audio.error) reportAudioError();
+});
+
+function play(word) {
+  stopAudio();
+  if (!canPlay(word)) return;
+  if (!audioSessionInitialized) {
+    audioSessionInitialized = true;
+    try {
+      if (navigator.audioSession) navigator.audioSession.type = "playback";
+    } catch {}
+  }
+
+  if (audio.getAttribute("src") !== word.audio || audio.error) {
+    audio.src = word.audio;
+    audio.load();
+  } else {
+    audio.currentTime = 0;
+  }
+  const current = {};
+  playback = current;
+  audio.play().catch(error => {
+    if (playback === current && error.name !== "AbortError") reportAudioError();
+  });
+}
+
+function showView() {
+  byId("study").hidden = listView || position === deck.length;
+  byId("summary").hidden = listView || position !== deck.length;
+  byId("word-list").hidden = !listView;
+  byId("view").setAttribute("aria-pressed", listView);
+  byId("view").textContent = listView ? "闪卡" : "词表";
+}
+
+function renderCard() {
+  const focusedInStudy = byId("study").contains(document.activeElement);
+  stopAudio();
+  showView();
+  byId("previous").disabled = !history.length;
+  byId("summary-previous").disabled = !history.length;
+  const word = deck[position];
+  if (!word) {
+    const {known, unknown} = counts(activeGroup);
+    byId("results").textContent = `认识 ${known} / 没印象 ${unknown}`;
+    byId("retry").disabled = known === words.length;
+    if (!listView && focusedInStudy) byId("results").focus();
+    return;
+  }
+  const reverse = byId("reverse").checked;
+  const front = byId("front");
+  front.textContent = reverse ? (word.zh || "中文待核实") : word.thai;
+  front.lang = reverse ? "zh-CN" : "th";
+  byId("position").textContent = `${position + 1} / ${deck.length}`;
+  byId("markers").replaceChildren(...markersFor(word));
+  byId("card").setAttribute("aria-expanded", "false");
+  byId("reveal-label").hidden = false;
+  byId("answer").hidden = true;
+  byId("speak").disabled = !canPlay(word);
+}
+
+function reveal() {
+  const word = deck[position];
+  if (!word || !byId("answer").hidden) return;
+  const reverse = byId("reverse").checked;
+  const answer = node("div", reverse ? word.thai : (word.zh || "中文待核实"));
+  answer.lang = reverse ? "th" : "zh-CN";
+  byId("translation").replaceChildren(answer, romanization(word));
+  appendDetails(byId("translation"), word, true);
+  byId("answer").hidden = false;
+  byId("reveal-label").hidden = true;
+  byId("card").setAttribute("aria-expanded", "true");
+  if (byId("autoplay").checked) play(word);
+}
+
+function rate(status) {
+  if (byId("study").hidden || byId("group").hidden) return;
+  const key = progressKey(deck[position].rank);
+  history.push(progress.get(key) ?? null);
+  progress.set(key, status);
+  save(key, status);
+  position++;
+  renderCard();
+}
+
+function previous() {
+  if (!history.length) return;
+  position--;
+  const key = progressKey(deck[position].rank);
+  const status = history.pop();
+  if (status === null) progress.delete(key);
+  else progress.set(key, status);
+  save(key, status);
+  renderCard();
+  if (document.activeElement === document.body || document.activeElement.disabled) {
+    byId("card").focus({preventScroll: true});
+  }
+}
+
+function renderList() {
+  const names = {k: "认识", u: "没印象"};
+  byId("word-list").replaceChildren(...words.map(word => {
+    const row = node("li", "", "word-row");
+    const status = progress.get(progressKey(word.rank));
+    const dot = node("span", "", status ? `dot ${status}` : "dot");
+    dot.setAttribute("role", "img");
+    dot.setAttribute("aria-label", names[status] || "未刷");
+    const text = node("div");
+    const thai = node("div", word.thai);
+    thai.lang = "th";
+    text.append(thai, romanization(word), node("div", word.zh || "中文待核实"));
+    const markers = markersFor(word);
+    if (markers.length) {
+      const badges = node("div", "", "word-markers");
+      badges.append(...markers);
+      text.append(badges);
+    }
+    appendDetails(text, word, false);
+    const speak = node("button", "🔊", "speak");
+    speak.type = "button";
+    speak.setAttribute("aria-label", `播放发音 · ${word.thai}`);
+    speak.disabled = !canPlay(word);
+    speak.addEventListener("click", () => play(word));
+    row.append(dot, text, speak);
+    return row;
+  }));
+}
+
+for (const [id, fallback] of [["reverse", false], ["autoplay", true], ["unknown-only", false]]) {
+  const setting = byId(id);
+  const stored = read(id);
+  setting.checked = stored === null ? fallback : stored === "1";
+  setting.addEventListener("change", () => {
+    save(id, setting.checked ? "1" : "0");
+    if (id === "unknown-only") startDeck(setting.checked);
+    if (id === "reverse") renderCard();
+  });
+}
+
+for (const id of ["back", "done"]) byId(id).onclick = () => showPicker();
+byId("view").onclick = () => {
+  stopAudio();
+  listView = !listView;
+  if (listView) renderList();
+  showView();
+};
+byId("known").onclick = () => rate("k");
+byId("unknown").onclick = () => rate("u");
+for (const id of ["previous", "summary-previous"]) byId(id).onclick = previous;
+byId("retry").onclick = () => {
+  startDeck(true);
+  byId("card").focus({preventScroll: true});
+};
+byId("next").onclick = () => {
+  const next = groups[groups.indexOf(activeGroup) + 1];
+  if (next) {
+    showPicker(false);
+    window.scrollTo(0, 0);
+    openGroup(next);
+  }
+};
+byId("speak").onclick = () => play(deck[position]);
+
+let gesture = null;
+let swiped = false;
+const card = byId("card");
+const surface = card.closest(".study-card");
+surface.addEventListener("pointerdown", event => {
+  if (!event.isPrimary || event.button !== 0) return;
+  swiped = false;
+  if (event.target.closest("a, summary, #speak")) return;
+  gesture = {id: event.pointerId, x: event.clientX, y: event.clientY};
+});
+surface.addEventListener("pointercancel", () => { gesture = null; });
+surface.addEventListener("pointerup", event => {
+  if (gesture?.id !== event.pointerId) return;
+  const dx = event.clientX - gesture.x;
+  const dy = event.clientY - gesture.y;
+  gesture = null;
+  if (Math.abs(dx) >= 45 && Math.abs(dx) > 1.4 * Math.abs(dy)) {
+    swiped = true;
+    rate(dx > 0 ? "k" : "u");
+  }
+});
+card.onclick = event => {
+  if (!swiped || event.detail === 0) reveal();
+  swiped = false;
+};
+document.addEventListener("keydown", event => {
+  if (event.defaultPrevented || event.repeat || event.altKey || event.ctrlKey ||
+      event.metaKey || event.shiftKey || event.target.closest("input") ||
+      byId("group").hidden || byId("study").hidden) return;
+  if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+  event.preventDefault();
+  rate(event.key === "ArrowRight" ? "k" : "u");
+});
+
+loadProgress();
+showPicker(false);
+const progressReady = migrateProgress().then(() => {
+  loadProgress();
+  renderPicker();
+});
+</script>
+</body></html>
