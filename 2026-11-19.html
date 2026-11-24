@@ -65,12 +65,14 @@ button:disabled, select:disabled { color: #59645f; border-color: #c0c9c3; backgr
 .word-thai { font-size: 1.4rem; }
 .word-roman, .word-zh, .word-tones { border-inline-start: 1px solid var(--line); padding-inline-start: .55rem; }
 .word-tones { display: inline-flex; flex-wrap: wrap; gap: .22rem; }
-.badge { border-radius: 99px; padding: .1em .55em; color: white; font-size: .85rem; font-weight: 650; }
-.tone-1 { background: #4d6b57; }
-.tone-2 { background: #8a5700; }
-.tone-3 { background: #9a3b2f; }
-.tone-4 { background: #ac462d; }
-.tone-5 { background: #2c5aa0; }
+
+.badge { border-radius: 99px; padding: .1em .55em; background: var(--tone); color: white; font-size: .85rem; font-weight: 650; }
+.tone-1 { --tone: #4d6b57; }
+.tone-2 { --tone: #8a5700; }
+.tone-3 { --tone: #9a3b2f; }
+.tone-4 { --tone: #ac462d; }
+.tone-5 { --tone: #2c5aa0; }
+
 .flash-panel { margin-top: .85rem; text-align: center; }
 #progress, #flash-day { color: #405c50; font-size: .95rem; }
 #flash-card { display: grid; place-content: center; width: 100%; min-height: 11rem;
