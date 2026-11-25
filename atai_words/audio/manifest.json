@@ -1,0 +1,4086 @@
+{
+  "นี่คือกาแฟ": {
+    "slow": "atai_words/audio/992e3ac40830_s.mp3",
+    "normal": "atai_words/audio/992e3ac40830_n.mp3"
+  },
+  "นี่คือน้ำ": {
+    "slow": "atai_words/audio/b9a17f0fa5a7_s.mp3",
+    "normal": "atai_words/audio/b9a17f0fa5a7_n.mp3"
+  },
+  "นี่คือชา": {
+    "slow": "atai_words/audio/8895cbf2e24c_s.mp3",
+    "normal": "atai_words/audio/8895cbf2e24c_n.mp3"
+  },
+  "นี่คือซุป": {
+    "slow": "atai_words/audio/8c345fe3dd61_s.mp3",
+    "normal": "atai_words/audio/8c345fe3dd61_n.mp3"
+  },
+  "นี่คือโจ๊ก": {
+    "slow": "atai_words/audio/3e5e6416d315_s.mp3",
+    "normal": "atai_words/audio/3e5e6416d315_n.mp3"
+  },
+  "นี่คือน้ำร้อน": {
+    "slow": "atai_words/audio/0ff9b237dd3b_s.mp3",
+    "normal": "atai_words/audio/0ff9b237dd3b_n.mp3"
+  },
+  "ข้าวและเต้าหู้": {
+    "slow": "atai_words/audio/28e9eed3ba91_s.mp3",
+    "normal": "atai_words/audio/28e9eed3ba91_n.mp3"
+  },
+  "ชานมสองแก้ว ขอบคุณค่ะ": {
+    "slow": "atai_words/audio/808489821c49_s.mp3",
+    "normal": "atai_words/audio/808489821c49_n.mp3"
+  },
+  "ฉันก็เอากาแฟหนึ่งแก้ว ขอบคุณค่ะ": {
+    "slow": "atai_words/audio/947a6e783cab_s.mp3",
+    "normal": "atai_words/audio/947a6e783cab_n.mp3"
+  },
+  "คุณชอบชานมไหม": {
+    "slow": "atai_words/audio/c02fb7e924cf_s.mp3",
+    "normal": "atai_words/audio/c02fb7e924cf_n.mp3"
+  },
+  "ใช่ ฉันชอบชานม": {
+    "slow": "atai_words/audio/bb3aeeef00bb_s.mp3",
+    "normal": "atai_words/audio/bb3aeeef00bb_n.mp3"
+  },
+  "ไม่ ฉันชอบกาแฟ": {
+    "slow": "atai_words/audio/d3250ddc2ce6_s.mp3",
+    "normal": "atai_words/audio/d3250ddc2ce6_n.mp3"
+  },
+  "คุณชอบกาแฟไหม": {
+    "slow": "atai_words/audio/e9f43e3ae8fd_s.mp3",
+    "normal": "atai_words/audio/e9f43e3ae8fd_n.mp3"
+  },
+  "ฉันเอาน้ำร้อนหนึ่งแก้วค่ะ": {
+    "slow": "atai_words/audio/bfba06fc30bd_s.mp3",
+    "normal": "atai_words/audio/bfba06fc30bd_n.mp3"
+  },
+  "ประเทศจีนและประเทศไทย": {
+    "slow": "atai_words/audio/3bb722f95343_s.mp3",
+    "normal": "atai_words/audio/3bb722f95343_n.mp3"
+  },
+  "นี่คือประเทศไทย": {
+    "slow": "atai_words/audio/64c0d5b75616_s.mp3",
+    "normal": "atai_words/audio/64c0d5b75616_n.mp3"
+  },
+  "ฉันเป็นคนจีน คุณล่ะ": {
+    "slow": "atai_words/audio/2bd27cffdd2b_s.mp3",
+    "normal": "atai_words/audio/2bd27cffdd2b_n.mp3"
+  },
+  "ฉันเป็นคนญี่ปุ่น": {
+    "slow": "atai_words/audio/ef56dafc5cd6_s.mp3",
+    "normal": "atai_words/audio/ef56dafc5cd6_n.mp3"
+  },
+  "สวัสดี ฉันเป็นคนเกาหลี": {
+    "slow": "atai_words/audio/031fc48d3b86_s.mp3",
+    "normal": "atai_words/audio/031fc48d3b86_n.mp3"
+  },
+  "ฉันเป็นคนไทย": {
+    "slow": "atai_words/audio/5d9369b42c36_s.mp3",
+    "normal": "atai_words/audio/5d9369b42c36_n.mp3"
+  },
+  "ฉันเป็นครูภาษาไทย": {
+    "slow": "atai_words/audio/6c69190923ca_s.mp3",
+    "normal": "atai_words/audio/6c69190923ca_n.mp3"
+  },
+  "คุณเป็นหมอใช่ไหม": {
+    "slow": "atai_words/audio/ee5accb4842c_s.mp3",
+    "normal": "atai_words/audio/ee5accb4842c_n.mp3"
+  },
+  "ฉันเป็นครู": {
+    "slow": "atai_words/audio/50d37285fb86_s.mp3",
+    "normal": "atai_words/audio/50d37285fb86_n.mp3"
+  },
+  "ฉันเป็นนักร้อง": {
+    "slow": "atai_words/audio/960d19352111_s.mp3",
+    "normal": "atai_words/audio/960d19352111_n.mp3"
+  },
+  "คุณเป็นครูไหม": {
+    "slow": "atai_words/audio/353d84935a6d_s.mp3",
+    "normal": "atai_words/audio/353d84935a6d_n.mp3"
+  },
+  "ไม่ ฉันเป็นนักเรียน": {
+    "slow": "atai_words/audio/3488fcbd1e83_s.mp3",
+    "normal": "atai_words/audio/3488fcbd1e83_n.mp3"
+  },
+  "คุณเป็นนักศึกษาใช่ไหม": {
+    "slow": "atai_words/audio/da96afca355a_s.mp3",
+    "normal": "atai_words/audio/da96afca355a_n.mp3"
+  },
+  "ใช่ ฉันเป็นนักศึกษา": {
+    "slow": "atai_words/audio/b444b639990d_s.mp3",
+    "normal": "atai_words/audio/b444b639990d_n.mp3"
+  },
+  "เขาพูดภาษาจีน": {
+    "slow": "atai_words/audio/f65a778dd78f_s.mp3",
+    "normal": "atai_words/audio/f65a778dd78f_n.mp3"
+  },
+  "เขาเรียนคาบคณิตศาสตร์": {
+    "slow": "atai_words/audio/6b5fec8813b3_s.mp3",
+    "normal": "atai_words/audio/6b5fec8813b3_n.mp3"
+  },
+  "เธอเรียนคาบดนตรี": {
+    "slow": "atai_words/audio/0067ab0fa31b_s.mp3",
+    "normal": "atai_words/audio/0067ab0fa31b_n.mp3"
+  },
+  "ของฉัน": {
+    "slow": "atai_words/audio/0113d83c6e70_s.mp3",
+    "normal": "atai_words/audio/0113d83c6e70_n.mp3"
+  },
+  "ของเขา": {
+    "slow": "atai_words/audio/63f778687da6_s.mp3",
+    "normal": "atai_words/audio/63f778687da6_n.mp3"
+  },
+  "ของเธอ": {
+    "slow": "atai_words/audio/010102dc0e37_s.mp3",
+    "normal": "atai_words/audio/010102dc0e37_n.mp3"
+  },
+  "นี่คือภรรยาของเขาใช่ไหม": {
+    "slow": "atai_words/audio/8259ebfc6214_s.mp3",
+    "normal": "atai_words/audio/8259ebfc6214_n.mp3"
+  },
+  "ใช่ นี่คือลูกชายของฉัน": {
+    "slow": "atai_words/audio/f92dee694e80_s.mp3",
+    "normal": "atai_words/audio/f92dee694e80_n.mp3"
+  },
+  "พ่อของเขาเป็นคนแคนาดา": {
+    "slow": "atai_words/audio/610082815726_s.mp3",
+    "normal": "atai_words/audio/610082815726_n.mp3"
+  },
+  "แม่ของเธอเป็นคนจีน": {
+    "slow": "atai_words/audio/62d098aa3fb6_s.mp3",
+    "normal": "atai_words/audio/62d098aa3fb6_n.mp3"
+  },
+  "คุณชื่ออะไร": {
+    "slow": "atai_words/audio/67a90461c874_s.mp3",
+    "normal": "atai_words/audio/67a90461c874_n.mp3"
+  },
+  "ฉันชื่อมะม่วง": {
+    "slow": "atai_words/audio/3974bf50c3a0_s.mp3",
+    "normal": "atai_words/audio/3974bf50c3a0_n.mp3"
+  },
+  "ยินดีที่ได้รู้จัก": {
+    "slow": "atai_words/audio/517356fa3305_s.mp3",
+    "normal": "atai_words/audio/517356fa3305_n.mp3"
+  },
+  "สวัสดีค่ะ ฉันเป็นคนเกาหลี": {
+    "slow": "atai_words/audio/d061741c6fa3_s.mp3",
+    "normal": "atai_words/audio/d061741c6fa3_n.mp3"
+  },
+  "ฉันเป็นนักเรียนใหม่": {
+    "slow": "atai_words/audio/a5e2df37c60f_s.mp3",
+    "normal": "atai_words/audio/a5e2df37c60f_n.mp3"
+  },
+  "นี่คือเพื่อนร่วมชั้นใหม่ของฉัน": {
+    "slow": "atai_words/audio/7f144ae474d1_s.mp3",
+    "normal": "atai_words/audio/7f144ae474d1_n.mp3"
+  },
+  "เขาเป็นครูใหม่ของฉัน": {
+    "slow": "atai_words/audio/93890bab1aa0_s.mp3",
+    "normal": "atai_words/audio/93890bab1aa0_n.mp3"
+  },
+  "คุณชอบไปเที่ยวที่ไหน": {
+    "slow": "atai_words/audio/7989f0b606e6_s.mp3",
+    "normal": "atai_words/audio/7989f0b606e6_n.mp3"
+  },
+  "ฉันชอบไปทะเล": {
+    "slow": "atai_words/audio/2e8094b411fc_s.mp3",
+    "normal": "atai_words/audio/2e8094b411fc_n.mp3"
+  },
+  "ฉันชอบไปสวนสาธารณะ": {
+    "slow": "atai_words/audio/23d12afeb94f_s.mp3",
+    "normal": "atai_words/audio/23d12afeb94f_n.mp3"
+  },
+  "ฉันไปซูเปอร์มาร์เก็ตจีนบ่อยๆ": {
+    "slow": "atai_words/audio/6f33105c5111_s.mp3",
+    "normal": "atai_words/audio/6f33105c5111_n.mp3"
+  },
+  "ร้านหนังสือภาษาอังกฤษ": {
+    "slow": "atai_words/audio/70bd3cea0521_s.mp3",
+    "normal": "atai_words/audio/70bd3cea0521_n.mp3"
+  },
+  "ฉันชอบอยู่บ้าน": {
+    "slow": "atai_words/audio/5e33326dbb29_s.mp3",
+    "normal": "atai_words/audio/5e33326dbb29_n.mp3"
+  },
+  "เขาชอบร้านอาหารจีน": {
+    "slow": "atai_words/audio/a98a9fd809d7_s.mp3",
+    "normal": "atai_words/audio/a98a9fd809d7_n.mp3"
+  },
+  "ฉันชอบว่ายน้ำ": {
+    "slow": "atai_words/audio/41f1e7c7121a_s.mp3",
+    "normal": "atai_words/audio/41f1e7c7121a_n.mp3"
+  },
+  "ออกกำลังกาย": {
+    "slow": "atai_words/audio/adc03b632f2d_s.mp3",
+    "normal": "atai_words/audio/adc03b632f2d_n.mp3"
+  },
+  "ฉันชอบเล่นบาสเกตบอล": {
+    "slow": "atai_words/audio/f041fca76bb0_s.mp3",
+    "normal": "atai_words/audio/f041fca76bb0_n.mp3"
+  },
+  "พวกเราชอบวิ่งมาก": {
+    "slow": "atai_words/audio/6acdd74916ed_s.mp3",
+    "normal": "atai_words/audio/6acdd74916ed_n.mp3"
+  },
+  "คุณชอบเตะฟุตบอลไหม": {
+    "slow": "atai_words/audio/a902a52d7efd_s.mp3",
+    "normal": "atai_words/audio/a902a52d7efd_n.mp3"
+  },
+  "คุณไปฟิตเนสบ่อยใช่ไหม": {
+    "slow": "atai_words/audio/c1f8c6f16444_s.mp3",
+    "normal": "atai_words/audio/c1f8c6f16444_n.mp3"
+  },
+  "ห้องน้ำอยู่ที่ไหน": {
+    "slow": "atai_words/audio/69508282c7f7_s.mp3",
+    "normal": "atai_words/audio/69508282c7f7_n.mp3"
+  },
+  "สถานีรถไฟอยู่ที่นี่": {
+    "slow": "atai_words/audio/dca7c0eebed1_s.mp3",
+    "normal": "atai_words/audio/dca7c0eebed1_n.mp3"
+  },
+  "โรงพยาบาลอยู่ที่ไหน": {
+    "slow": "atai_words/audio/28b90f555b1e_s.mp3",
+    "normal": "atai_words/audio/28b90f555b1e_n.mp3"
+  },
+  "นี่คือกระเป๋าเดินทางของคุณใช่ไหม": {
+    "slow": "atai_words/audio/bd2da75de080_s.mp3",
+    "normal": "atai_words/audio/bd2da75de080_n.mp3"
+  },
+  "นี่ของใคร": {
+    "slow": "atai_words/audio/a9c07f4ea675_s.mp3",
+    "normal": "atai_words/audio/a9c07f4ea675_n.mp3"
+  },
+  "คุณจะไปไหน": {
+    "slow": "atai_words/audio/961a67f88571_s.mp3",
+    "normal": "atai_words/audio/961a67f88571_n.mp3"
+  },
+  "ใหม่ / ใหญ่ / เล็ก / สูง / เตี้ย / สวย / ดูดี / ยาว / สั้น": {
+    "slow": "atai_words/audio/00004322d0e1_s.mp3",
+    "normal": "atai_words/audio/00004322d0e1_n.mp3"
+  },
+  "ใหม่": {
+    "slow": "atai_words/audio/63ca13d9c374_s.mp3",
+    "normal": "atai_words/audio/63ca13d9c374_n.mp3"
+  },
+  "ใหญ่": {
+    "slow": "atai_words/audio/33bd1fdb7fa9_s.mp3",
+    "normal": "atai_words/audio/33bd1fdb7fa9_n.mp3"
+  },
+  "เล็ก": {
+    "slow": "atai_words/audio/998bc0c1ca45_s.mp3",
+    "normal": "atai_words/audio/998bc0c1ca45_n.mp3"
+  },
+  "สูง": {
+    "slow": "atai_words/audio/91e1ecaaa4bc_s.mp3",
+    "normal": "atai_words/audio/91e1ecaaa4bc_n.mp3"
+  },
+  "เตี้ย": {
+    "slow": "atai_words/audio/dc086870d9f3_s.mp3",
+    "normal": "atai_words/audio/dc086870d9f3_n.mp3"
+  },
+  "สวย": {
+    "slow": "atai_words/audio/6c58398217dd_s.mp3",
+    "normal": "atai_words/audio/6c58398217dd_n.mp3"
+  },
+  "ดูดี": {
+    "slow": "atai_words/audio/3b67553d11cc_s.mp3",
+    "normal": "atai_words/audio/3b67553d11cc_n.mp3"
+  },
+  "ยาว": {
+    "slow": "atai_words/audio/39442275a123_s.mp3",
+    "normal": "atai_words/audio/39442275a123_n.mp3"
+  },
+  "สั้น": {
+    "slow": "atai_words/audio/8afdfd7c4ca9_s.mp3",
+    "normal": "atai_words/audio/8afdfd7c4ca9_n.mp3"
+  },
+  "ดอกไม้นี้สวยมาก": {
+    "slow": "atai_words/audio/76686e61ab73_s.mp3",
+    "normal": "atai_words/audio/76686e61ab73_n.mp3"
+  },
+  "โทรทัศน์ของเธอใหญ่ไหม": {
+    "slow": "atai_words/audio/b1bf3db1c771_s.mp3",
+    "normal": "atai_words/audio/b1bf3db1c771_n.mp3"
+  },
+  "บ้านของคุณใหม่มาก": {
+    "slow": "atai_words/audio/8e2bf4ef39fa_s.mp3",
+    "normal": "atai_words/audio/8e2bf4ef39fa_n.mp3"
+  },
+  "เทศกาลไหว้บ๊ะจ่าง": {
+    "slow": "atai_words/audio/d79800965e51_s.mp3",
+    "normal": "atai_words/audio/d79800965e51_n.mp3"
+  },
+  "กินบ๊ะจ่าง": {
+    "slow": "atai_words/audio/e10087d3a86c_s.mp3",
+    "normal": "atai_words/audio/e10087d3a86c_n.mp3"
+  },
+  "คุณชอบไปพิพิธภัณฑ์ไหม": {
+    "slow": "atai_words/audio/ab25849205fa_s.mp3",
+    "normal": "atai_words/audio/ab25849205fa_n.mp3"
+  },
+  "วันนี้ฉันว่าง คุณล่ะ": {
+    "slow": "atai_words/audio/4165e66ffda2_s.mp3",
+    "normal": "atai_words/audio/4165e66ffda2_n.mp3"
+  },
+  "สุดสัปดาห์นี้พวกเราไปพิพิธภัณฑ์กันเถอะ": {
+    "slow": "atai_words/audio/74840d63451e_s.mp3",
+    "normal": "atai_words/audio/74840d63451e_n.mp3"
+  },
+  "พวกเราไปดื่มกาแฟกันเถอะ": {
+    "slow": "atai_words/audio/72b2bc66635f_s.mp3",
+    "normal": "atai_words/audio/72b2bc66635f_n.mp3"
+  },
+  "พวกเราไปดูหนังกันเถอะ": {
+    "slow": "atai_words/audio/f060a83ab3a4_s.mp3",
+    "normal": "atai_words/audio/f060a83ab3a4_n.mp3"
+  },
+  "พวกเราไปกินข้าวกันเถอะ": {
+    "slow": "atai_words/audio/d1763263a541_s.mp3",
+    "normal": "atai_words/audio/d1763263a541_n.mp3"
+  },
+  "กินผักเยอะๆ": {
+    "slow": "atai_words/audio/68b9e44d1617_s.mp3",
+    "normal": "atai_words/audio/68b9e44d1617_n.mp3"
+  },
+  "ดื่มน้ำเยอะๆ": {
+    "slow": "atai_words/audio/4cb9fa742a0e_s.mp3",
+    "normal": "atai_words/audio/4cb9fa742a0e_n.mp3"
+  },
+  "พักผ่อนเยอะๆ": {
+    "slow": "atai_words/audio/260e7b6701ba_s.mp3",
+    "normal": "atai_words/audio/260e7b6701ba_n.mp3"
+  },
+  "ระวัง": {
+    "slow": "atai_words/audio/fa5a1550f4d1_s.mp3",
+    "normal": "atai_words/audio/fa5a1550f4d1_n.mp3"
+  },
+  "อย่าเล่นโทรศัพท์": {
+    "slow": "atai_words/audio/d0e2cf195dcc_s.mp3",
+    "normal": "atai_words/audio/d0e2cf195dcc_n.mp3"
+  },
+  "อย่าพูดเสียงดัง": {
+    "slow": "atai_words/audio/00023dc4437d_s.mp3",
+    "normal": "atai_words/audio/00023dc4437d_n.mp3"
+  },
+  "คุณเล่นเปียโนได้ไหม": {
+    "slow": "atai_words/audio/94577a778e7d_s.mp3",
+    "normal": "atai_words/audio/94577a778e7d_n.mp3"
+  },
+  "ฉันเล่นกีตาร์ได้": {
+    "slow": "atai_words/audio/79c997c8c810_s.mp3",
+    "normal": "atai_words/audio/79c997c8c810_n.mp3"
+  },
+  "พวกเรามาร้องเพลงกันเถอะ": {
+    "slow": "atai_words/audio/2d6012390357_s.mp3",
+    "normal": "atai_words/audio/2d6012390357_n.mp3"
+  },
+  "หน้า / หลัง / ซ้าย / ขวา / ข้าง / ใกล้": {
+    "slow": "atai_words/audio/ea9d9b9b9f4e_s.mp3",
+    "normal": "atai_words/audio/ea9d9b9b9f4e_n.mp3"
+  },
+  "หน้า": {
+    "slow": "atai_words/audio/c6d432aa6bf2_s.mp3",
+    "normal": "atai_words/audio/c6d432aa6bf2_n.mp3"
+  },
+  "หลัง": {
+    "slow": "atai_words/audio/bc74b11a5ca9_s.mp3",
+    "normal": "atai_words/audio/bc74b11a5ca9_n.mp3"
+  },
+  "ซ้าย": {
+    "slow": "atai_words/audio/9bb0d0531bae_s.mp3",
+    "normal": "atai_words/audio/9bb0d0531bae_n.mp3"
+  },
+  "ขวา": {
+    "slow": "atai_words/audio/4bd1fc4f3d39_s.mp3",
+    "normal": "atai_words/audio/4bd1fc4f3d39_n.mp3"
+  },
+  "ข้าง": {
+    "slow": "atai_words/audio/6e5a1d3a91e8_s.mp3",
+    "normal": "atai_words/audio/6e5a1d3a91e8_n.mp3"
+  },
+  "ใกล้": {
+    "slow": "atai_words/audio/15e149be49e5_s.mp3",
+    "normal": "atai_words/audio/15e149be49e5_n.mp3"
+  },
+  "สวนสาธารณะอยู่หลังโรงเรียน": {
+    "slow": "atai_words/audio/b415c024fb98_s.mp3",
+    "normal": "atai_words/audio/b415c024fb98_n.mp3"
+  },
+  "สถานีรถไฟฟ้าใต้ดินอยู่หน้าโรงเรียน": {
+    "slow": "atai_words/audio/99bbebcc6be6_s.mp3",
+    "normal": "atai_words/audio/99bbebcc6be6_n.mp3"
+  },
+  "ห้องสมุดอยู่ทางซ้าย": {
+    "slow": "atai_words/audio/ea91730b8b92_s.mp3",
+    "normal": "atai_words/audio/ea91730b8b92_n.mp3"
+  },
+  "รถไฟเร็วกว่ารถเมล์": {
+    "slow": "atai_words/audio/ad4069b465a8_s.mp3",
+    "normal": "atai_words/audio/ad4069b465a8_n.mp3"
+  },
+  "พี่สาวสูงกว่าน้องสาว": {
+    "slow": "atai_words/audio/02c4adfe2227_s.mp3",
+    "normal": "atai_words/audio/02c4adfe2227_n.mp3"
+  },
+  "อันนี้ถูกกว่า": {
+    "slow": "atai_words/audio/62a393a5c5b6_s.mp3",
+    "normal": "atai_words/audio/62a393a5c5b6_n.mp3"
+  },
+  "อันนี้แพงกว่า": {
+    "slow": "atai_words/audio/a69245e4ff46_s.mp3",
+    "normal": "atai_words/audio/a69245e4ff46_n.mp3"
+  },
+  "พรุ่งนี้ฉันจะพักผ่อนอยู่บ้าน": {
+    "slow": "atai_words/audio/8294f50038b1_s.mp3",
+    "normal": "atai_words/audio/8294f50038b1_n.mp3"
+  },
+  "พรุ่งนี้ฉันจะไปทำงาน": {
+    "slow": "atai_words/audio/b6aa662706d9_s.mp3",
+    "normal": "atai_words/audio/b6aa662706d9_n.mp3"
+  },
+  "พรุ่งนี้ฉันจะไปซื้อของ": {
+    "slow": "atai_words/audio/bd8a98faa772_s.mp3",
+    "normal": "atai_words/audio/bd8a98faa772_n.mp3"
+  },
+  "ตอนนี้กี่โมง": {
+    "slow": "atai_words/audio/5a9a5cc0e588_s.mp3",
+    "normal": "atai_words/audio/5a9a5cc0e588_n.mp3"
+  },
+  "ฉันตื่นเจ็ดโมง": {
+    "slow": "atai_words/audio/96eeeefc9304_s.mp3",
+    "normal": "atai_words/audio/96eeeefc9304_n.mp3"
+  },
+  "ฉันนอนสี่ทุ่ม": {
+    "slow": "atai_words/audio/20ac215830a5_s.mp3",
+    "normal": "atai_words/audio/20ac215830a5_n.mp3"
+  },
+  "ฉันอยากซื้อรองเท้า": {
+    "slow": "atai_words/audio/8416de7bf812_s.mp3",
+    "normal": "atai_words/audio/8416de7bf812_n.mp3"
+  },
+  "ฉันอยากซื้อกางเกง": {
+    "slow": "atai_words/audio/eca6e60651d2_s.mp3",
+    "normal": "atai_words/audio/eca6e60651d2_n.mp3"
+  },
+  "ห้องลองเสื้อผ้าอยู่ที่ไหน": {
+    "slow": "atai_words/audio/5018796881c6_s.mp3",
+    "normal": "atai_words/audio/5018796881c6_n.mp3"
+  },
+  "พวกเราไปดูคอนเสิร์ตกันเถอะ": {
+    "slow": "atai_words/audio/278e3a456d79_s.mp3",
+    "normal": "atai_words/audio/278e3a456d79_n.mp3"
+  },
+  "คุณซื้อตั๋วออนไลน์หรือเปล่า": {
+    "slow": "atai_words/audio/95689a7afa04_s.mp3",
+    "normal": "atai_words/audio/95689a7afa04_n.mp3"
+  },
+  "คอนเสิร์ตเริ่มกี่โมง": {
+    "slow": "atai_words/audio/f8b1b453329d_s.mp3",
+    "normal": "atai_words/audio/f8b1b453329d_n.mp3"
+  },
+  "คุณกลัวอะไรที่สุด": {
+    "slow": "atai_words/audio/2b265a50df86_s.mp3",
+    "normal": "atai_words/audio/2b265a50df86_n.mp3"
+  },
+  "ฉันกลัวหมาที่สุด": {
+    "slow": "atai_words/audio/60347e816758_s.mp3",
+    "normal": "atai_words/audio/60347e816758_n.mp3"
+  },
+  "ฉันไม่กลัวงู": {
+    "slow": "atai_words/audio/5ff6a1b2acf6_s.mp3",
+    "normal": "atai_words/audio/5ff6a1b2acf6_n.mp3"
+  },
+  "ครอบครัว / พ่อ / แม่ / พี่ชาย / น้องสาว / คนในครอบครัว": {
+    "slow": "atai_words/audio/b3f7d433674b_s.mp3",
+    "normal": "atai_words/audio/b3f7d433674b_n.mp3"
+  },
+  "ครอบครัว": {
+    "slow": "atai_words/audio/03895b26b939_s.mp3",
+    "normal": "atai_words/audio/03895b26b939_n.mp3"
+  },
+  "พ่อ": {
+    "slow": "atai_words/audio/74b8d3d45335_s.mp3",
+    "normal": "atai_words/audio/74b8d3d45335_n.mp3"
+  },
+  "แม่": {
+    "slow": "atai_words/audio/665791fb69c4_s.mp3",
+    "normal": "atai_words/audio/665791fb69c4_n.mp3"
+  },
+  "พี่ชาย": {
+    "slow": "atai_words/audio/47e82d51904e_s.mp3",
+    "normal": "atai_words/audio/47e82d51904e_n.mp3"
+  },
+  "น้องสาว": {
+    "slow": "atai_words/audio/006f04bca55b_s.mp3",
+    "normal": "atai_words/audio/006f04bca55b_n.mp3"
+  },
+  "คนในครอบครัว": {
+    "slow": "atai_words/audio/0af31f48caf2_s.mp3",
+    "normal": "atai_words/audio/0af31f48caf2_n.mp3"
+  },
+  "ฉันมีพี่ชายหนึ่งคน": {
+    "slow": "atai_words/audio/457b97559832_s.mp3",
+    "normal": "atai_words/audio/457b97559832_n.mp3"
+  },
+  "ครอบครัวคุณมีกี่คน": {
+    "slow": "atai_words/audio/88d74a43a963_s.mp3",
+    "normal": "atai_words/audio/88d74a43a963_n.mp3"
+  },
+  "ฉันมีน้องสาวหนึ่งคน": {
+    "slow": "atai_words/audio/1ffbd669a250_s.mp3",
+    "normal": "atai_words/audio/1ffbd669a250_n.mp3"
+  },
+  "ตื่นนอน / แปรงฟัน / กินข้าว / ไปทำงาน / เข้านอน": {
+    "slow": "atai_words/audio/c1e7c7cafdb8_s.mp3",
+    "normal": "atai_words/audio/c1e7c7cafdb8_n.mp3"
+  },
+  "ตื่นนอน": {
+    "slow": "atai_words/audio/d98e9b513291_s.mp3",
+    "normal": "atai_words/audio/d98e9b513291_n.mp3"
+  },
+  "แปรงฟัน": {
+    "slow": "atai_words/audio/c72b2e392b9f_s.mp3",
+    "normal": "atai_words/audio/c72b2e392b9f_n.mp3"
+  },
+  "กินข้าว": {
+    "slow": "atai_words/audio/0bc7f34cc29a_s.mp3",
+    "normal": "atai_words/audio/0bc7f34cc29a_n.mp3"
+  },
+  "ไปทำงาน": {
+    "slow": "atai_words/audio/80d910936e82_s.mp3",
+    "normal": "atai_words/audio/80d910936e82_n.mp3"
+  },
+  "เข้านอน": {
+    "slow": "atai_words/audio/339bad9daea0_s.mp3",
+    "normal": "atai_words/audio/339bad9daea0_n.mp3"
+  },
+  "ปกติคุณเข้านอนกี่โมง": {
+    "slow": "atai_words/audio/f2b651d3d792_s.mp3",
+    "normal": "atai_words/audio/f2b651d3d792_n.mp3"
+  },
+  "ฉันเข้านอนสี่ทุ่ม": {
+    "slow": "atai_words/audio/4a2b2343d3e1_s.mp3",
+    "normal": "atai_words/audio/4a2b2343d3e1_n.mp3"
+  },
+  "คุณไปทำงานกี่โมง": {
+    "slow": "atai_words/audio/0416464740a3_s.mp3",
+    "normal": "atai_words/audio/0416464740a3_n.mp3"
+  },
+  "ซื้อของออนไลน์ / บัตรเครดิต / เฟอร์นิเจอร์ / เว็บไซต์ / บัญชี": {
+    "slow": "atai_words/audio/7cd8d13bf966_s.mp3",
+    "normal": "atai_words/audio/7cd8d13bf966_n.mp3"
+  },
+  "ซื้อของออนไลน์": {
+    "slow": "atai_words/audio/caec485e6c17_s.mp3",
+    "normal": "atai_words/audio/caec485e6c17_n.mp3"
+  },
+  "บัตรเครดิต": {
+    "slow": "atai_words/audio/dcbbfe2eb41e_s.mp3",
+    "normal": "atai_words/audio/dcbbfe2eb41e_n.mp3"
+  },
+  "เฟอร์นิเจอร์": {
+    "slow": "atai_words/audio/eeb2a88670e8_s.mp3",
+    "normal": "atai_words/audio/eeb2a88670e8_n.mp3"
+  },
+  "เว็บไซต์": {
+    "slow": "atai_words/audio/c5212b54fce8_s.mp3",
+    "normal": "atai_words/audio/c5212b54fce8_n.mp3"
+  },
+  "บัญชี": {
+    "slow": "atai_words/audio/48a9fd5b3750_s.mp3",
+    "normal": "atai_words/audio/48a9fd5b3750_n.mp3"
+  },
+  "คุณมีบัญชีไหม": {
+    "slow": "atai_words/audio/5daa788e0da9_s.mp3",
+    "normal": "atai_words/audio/5daa788e0da9_n.mp3"
+  },
+  "เว็บไซต์นี้ดี": {
+    "slow": "atai_words/audio/de22e3b4e0c7_s.mp3",
+    "normal": "atai_words/audio/de22e3b4e0c7_n.mp3"
+  },
+  "ฉันอยากซื้อเฟอร์นิเจอร์ใหม่": {
+    "slow": "atai_words/audio/e3fc5d5f3de2_s.mp3",
+    "normal": "atai_words/audio/e3fc5d5f3de2_n.mp3"
+  },
+  "ฉันอยากเช่าบ้าน": {
+    "slow": "atai_words/audio/24094ecfbfbc_s.mp3",
+    "normal": "atai_words/audio/24094ecfbfbc_n.mp3"
+  },
+  "ค่าเช่าเท่าไหร่": {
+    "slow": "atai_words/audio/348de70b55f0_s.mp3",
+    "normal": "atai_words/audio/348de70b55f0_n.mp3"
+  },
+  "ฉันชอบห้องนี้": {
+    "slow": "atai_words/audio/064533681204_s.mp3",
+    "normal": "atai_words/audio/064533681204_n.mp3"
+  },
+  "รวมค่าน้ำค่าไฟไหม": {
+    "slow": "atai_words/audio/dbd0a290189d_s.mp3",
+    "normal": "atai_words/audio/dbd0a290189d_n.mp3"
+  },
+  "ฉันอ่านหนังสือ": {
+    "slow": "atai_words/audio/6a0ab9027b75_s.mp3",
+    "normal": "atai_words/audio/6a0ab9027b75_n.mp3"
+  },
+  "คุณส่งการบ้านกี่โมง": {
+    "slow": "atai_words/audio/605850c9f179_s.mp3",
+    "normal": "atai_words/audio/605850c9f179_n.mp3"
+  },
+  "วิชาภาษาไทยยากมาก": {
+    "slow": "atai_words/audio/c9fba1360579_s.mp3",
+    "normal": "atai_words/audio/c9fba1360579_n.mp3"
+  },
+  "ขอโทษนะคะ ร้านสะดวกซื้ออยู่ที่ไหน": {
+    "slow": "atai_words/audio/9be5d924b280_s.mp3",
+    "normal": "atai_words/audio/9be5d924b280_n.mp3"
+  },
+  "เลี้ยวซ้ายแล้วเดินตรงไป": {
+    "slow": "atai_words/audio/ff71b574cb24_s.mp3",
+    "normal": "atai_words/audio/ff71b574cb24_n.mp3"
+  },
+  "ใช้เวลาเดินกี่นาที": {
+    "slow": "atai_words/audio/6bc71458f479_s.mp3",
+    "normal": "atai_words/audio/6bc71458f479_n.mp3"
+  },
+  "ผลไม้ขายยังไง": {
+    "slow": "atai_words/audio/6b48f6f2d774_s.mp3",
+    "normal": "atai_words/audio/6b48f6f2d774_n.mp3"
+  },
+  "ผลไม้ถุงละ 20 บาท": {
+    "slow": "atai_words/audio/26ec74192adb_s.mp3",
+    "normal": "atai_words/audio/26ec74192adb_n.mp3"
+  },
+  "เอามะม่วง 1 ถุง": {
+    "slow": "atai_words/audio/c4e4cf762b2d_s.mp3",
+    "normal": "atai_words/audio/c4e4cf762b2d_n.mp3"
+  },
+  "เอากล้วย 1 ถุง": {
+    "slow": "atai_words/audio/8549b6b80eef_s.mp3",
+    "normal": "atai_words/audio/8549b6b80eef_n.mp3"
+  },
+  "ฉันกินเผ็ดไม่ได้": {
+    "slow": "atai_words/audio/38798f853f5a_s.mp3",
+    "normal": "atai_words/audio/38798f853f5a_n.mp3"
+  },
+  "รสชาติดีมาก": {
+    "slow": "atai_words/audio/95265f0385bf_s.mp3",
+    "normal": "atai_words/audio/95265f0385bf_n.mp3"
+  },
+  "ฉันชอบกินหวานๆ": {
+    "slow": "atai_words/audio/10b6a693950b_s.mp3",
+    "normal": "atai_words/audio/10b6a693950b_n.mp3"
+  },
+  "คุณเข้าใจไหม": {
+    "slow": "atai_words/audio/c0d7341e9cf8_s.mp3",
+    "normal": "atai_words/audio/c0d7341e9cf8_n.mp3"
+  },
+  "ฉันไม่เข้าใจ": {
+    "slow": "atai_words/audio/ed151447f736_s.mp3",
+    "normal": "atai_words/audio/ed151447f736_n.mp3"
+  },
+  "คำนี้หมายความว่ายังไง": {
+    "slow": "atai_words/audio/a16a9f4ee897_s.mp3",
+    "normal": "atai_words/audio/a16a9f4ee897_n.mp3"
+  },
+  "คุณช่วยยกตัวอย่างได้ไหม": {
+    "slow": "atai_words/audio/ddbd6df5e0b1_s.mp3",
+    "normal": "atai_words/audio/ddbd6df5e0b1_n.mp3"
+  },
+  "ฉันชอบบรรยากาศที่นี่": {
+    "slow": "atai_words/audio/c7ea11d11f70_s.mp3",
+    "normal": "atai_words/audio/c7ea11d11f70_n.mp3"
+  },
+  "กรุงเทพคึกคักเป็นพิเศษ": {
+    "slow": "atai_words/audio/7c652afbf25d_s.mp3",
+    "normal": "atai_words/audio/7c652afbf25d_n.mp3"
+  },
+  "คนเยอะแต่สนุกมาก": {
+    "slow": "atai_words/audio/8cd9d0ec948b_s.mp3",
+    "normal": "atai_words/audio/8cd9d0ec948b_n.mp3"
+  },
+  "ไอ": {
+    "slow": "atai_words/audio/f8bc831dec11_s.mp3",
+    "normal": "atai_words/audio/f8bc831dec11_n.mp3"
+  },
+  "ไอหนักมาก": {
+    "slow": "atai_words/audio/c27de8d32557_s.mp3",
+    "normal": "atai_words/audio/c27de8d32557_n.mp3"
+  },
+  "ไอมาหนึ่งเดือนแล้ว": {
+    "slow": "atai_words/audio/9d71a384ca12_s.mp3",
+    "normal": "atai_words/audio/9d71a384ca12_n.mp3"
+  },
+  "คุณน่ารักมาก": {
+    "slow": "atai_words/audio/d2c67e437df2_s.mp3",
+    "normal": "atai_words/audio/d2c67e437df2_n.mp3"
+  },
+  "คุณสวยมาก": {
+    "slow": "atai_words/audio/ffc999428370_s.mp3",
+    "normal": "atai_words/audio/ffc999428370_n.mp3"
+  },
+  "คุณหล่อมาก": {
+    "slow": "atai_words/audio/a5914958973f_s.mp3",
+    "normal": "atai_words/audio/a5914958973f_n.mp3"
+  },
+  "คุณหุ่นดีมาก": {
+    "slow": "atai_words/audio/e171aef8d2c1_s.mp3",
+    "normal": "atai_words/audio/e171aef8d2c1_n.mp3"
+  },
+  "ขอวีแชทของคุณได้ไหม": {
+    "slow": "atai_words/audio/c151c0a4fb6a_s.mp3",
+    "normal": "atai_words/audio/c151c0a4fb6a_n.mp3"
+  },
+  "โทรหาฉันได้ไหม": {
+    "slow": "atai_words/audio/e0fb0a63a353_s.mp3",
+    "normal": "atai_words/audio/e0fb0a63a353_n.mp3"
+  },
+  "ฉันเห็นในโต่วอิน": {
+    "slow": "atai_words/audio/3aa9d6196000_s.mp3",
+    "normal": "atai_words/audio/3aa9d6196000_n.mp3"
+  },
+  "คุณมีแฟนไหม": {
+    "slow": "atai_words/audio/35b17902fc29_s.mp3",
+    "normal": "atai_words/audio/35b17902fc29_n.mp3"
+  },
+  "ฉันโสด": {
+    "slow": "atai_words/audio/0de60722a072_s.mp3",
+    "normal": "atai_words/audio/0de60722a072_n.mp3"
+  },
+  "ฉันมีแฟนแล้ว": {
+    "slow": "atai_words/audio/5fdba4b22dab_s.mp3",
+    "normal": "atai_words/audio/5fdba4b22dab_n.mp3"
+  },
+  "ฉันชอบคุณ": {
+    "slow": "atai_words/audio/981478716c3c_s.mp3",
+    "normal": "atai_words/audio/981478716c3c_n.mp3"
+  },
+  "ฉันคิดถึงคุณ": {
+    "slow": "atai_words/audio/e345de4019d7_s.mp3",
+    "normal": "atai_words/audio/e345de4019d7_n.mp3"
+  },
+  "ฉันรักคุณ": {
+    "slow": "atai_words/audio/b745afcd3eeb_s.mp3",
+    "normal": "atai_words/audio/b745afcd3eeb_n.mp3"
+  },
+  "พรุ่งนี้ว่างไหม": {
+    "slow": "atai_words/audio/8ae9b5c740de_s.mp3",
+    "normal": "atai_words/audio/8ae9b5c740de_n.mp3"
+  },
+  "ว่างค่ะ": {
+    "slow": "atai_words/audio/1f66a6ab58d6_s.mp3",
+    "normal": "atai_words/audio/1f66a6ab58d6_n.mp3"
+  },
+  "ไปกินข้าวด้วยกันไหม": {
+    "slow": "atai_words/audio/b98d4c5a7ca9_s.mp3",
+    "normal": "atai_words/audio/b98d4c5a7ca9_n.mp3"
+  },
+  "คุณชอบสัตว์เลี้ยงอะไร": {
+    "slow": "atai_words/audio/af5f4ffd1f03_s.mp3",
+    "normal": "atai_words/audio/af5f4ffd1f03_n.mp3"
+  },
+  "ฉันชอบแมว": {
+    "slow": "atai_words/audio/afd530da21e3_s.mp3",
+    "normal": "atai_words/audio/afd530da21e3_n.mp3"
+  },
+  "ฉันชอบหมา": {
+    "slow": "atai_words/audio/5b01814933ac_s.mp3",
+    "normal": "atai_words/audio/5b01814933ac_n.mp3"
+  },
+  "ฉันจะบ้าตาย": {
+    "slow": "atai_words/audio/dba50de619b4_s.mp3",
+    "normal": "atai_words/audio/dba50de619b4_n.mp3"
+  },
+  "ไม่ไหวแล้ว": {
+    "slow": "atai_words/audio/072ea1889a3e_s.mp3",
+    "normal": "atai_words/audio/072ea1889a3e_n.mp3"
+  },
+  "ช่วยด้วย": {
+    "slow": "atai_words/audio/a1d4cce0fd3d_s.mp3",
+    "normal": "atai_words/audio/a1d4cce0fd3d_n.mp3"
+  },
+  "อร่อยไหม": {
+    "slow": "atai_words/audio/9495a2421e2a_s.mp3",
+    "normal": "atai_words/audio/9495a2421e2a_n.mp3"
+  },
+  "อร่อยมาก": {
+    "slow": "atai_words/audio/562146cbfc1b_s.mp3",
+    "normal": "atai_words/audio/562146cbfc1b_n.mp3"
+  },
+  "ไม่อร่อย": {
+    "slow": "atai_words/audio/6fc8ec55a380_s.mp3",
+    "normal": "atai_words/audio/6fc8ec55a380_n.mp3"
+  },
+  "ไม่เอาต้นหอม": {
+    "slow": "atai_words/audio/23ee60ad1f62_s.mp3",
+    "normal": "atai_words/audio/23ee60ad1f62_n.mp3"
+  },
+  "เอาเผ็ดน้อย": {
+    "slow": "atai_words/audio/43572740efc7_s.mp3",
+    "normal": "atai_words/audio/43572740efc7_n.mp3"
+  },
+  "ไม่เอาผักชี": {
+    "slow": "atai_words/audio/4bb87374e9c2_s.mp3",
+    "normal": "atai_words/audio/4bb87374e9c2_n.mp3"
+  },
+  "คุณกลัวผีไหม": {
+    "slow": "atai_words/audio/f0cff0fbb7b4_s.mp3",
+    "normal": "atai_words/audio/f0cff0fbb7b4_n.mp3"
+  },
+  "ฉันกลัวผีมาก": {
+    "slow": "atai_words/audio/813992278df7_s.mp3",
+    "normal": "atai_words/audio/813992278df7_n.mp3"
+  },
+  "ฉันไม่กลัวผี": {
+    "slow": "atai_words/audio/97121725e6a2_s.mp3",
+    "normal": "atai_words/audio/97121725e6a2_n.mp3"
+  },
+  "คุณชอบสีอะไร": {
+    "slow": "atai_words/audio/6c2b69887a71_s.mp3",
+    "normal": "atai_words/audio/6c2b69887a71_n.mp3"
+  },
+  "ฉันชอบสีแดง": {
+    "slow": "atai_words/audio/d147f91db583_s.mp3",
+    "normal": "atai_words/audio/d147f91db583_n.mp3"
+  },
+  "ฉันชอบสีฟ้า": {
+    "slow": "atai_words/audio/632e7ee18f43_s.mp3",
+    "normal": "atai_words/audio/632e7ee18f43_n.mp3"
+  },
+  "ฉันดีใจมาก": {
+    "slow": "atai_words/audio/4434d53be01a_s.mp3",
+    "normal": "atai_words/audio/4434d53be01a_n.mp3"
+  },
+  "ฉันเสียใจ": {
+    "slow": "atai_words/audio/db05dd448551_s.mp3",
+    "normal": "atai_words/audio/db05dd448551_n.mp3"
+  },
+  "อยากจะร้องไห้": {
+    "slow": "atai_words/audio/760b79c65771_s.mp3",
+    "normal": "atai_words/audio/760b79c65771_n.mp3"
+  },
+  "ช่วยลดให้หน่อยได้ไหม": {
+    "slow": "atai_words/audio/a2b0dc7630cf_s.mp3",
+    "normal": "atai_words/audio/a2b0dc7630cf_n.mp3"
+  },
+  "แพงไปหน่อย": {
+    "slow": "atai_words/audio/1093ee18c257_s.mp3",
+    "normal": "atai_words/audio/1093ee18c257_n.mp3"
+  },
+  "ถูกกว่านี้มีไหม": {
+    "slow": "atai_words/audio/832705e19a94_s.mp3",
+    "normal": "atai_words/audio/832705e19a94_n.mp3"
+  },
+  "ฉันอยากกินขนม": {
+    "slow": "atai_words/audio/00ff7c3cdbfd_s.mp3",
+    "normal": "atai_words/audio/00ff7c3cdbfd_n.mp3"
+  },
+  "ฉันอยากกินไก่ทอด": {
+    "slow": "atai_words/audio/3c16c4e02b2a_s.mp3",
+    "normal": "atai_words/audio/3c16c4e02b2a_n.mp3"
+  },
+  "คุณอยากกินอะไร": {
+    "slow": "atai_words/audio/04482267b67f_s.mp3",
+    "normal": "atai_words/audio/04482267b67f_n.mp3"
+  },
+  "ช่วยเปิดไฟหน่อย": {
+    "slow": "atai_words/audio/6abcf4188090_s.mp3",
+    "normal": "atai_words/audio/6abcf4188090_n.mp3"
+  },
+  "เปิดประตูหน่อย": {
+    "slow": "atai_words/audio/1b4a72b1bf5f_s.mp3",
+    "normal": "atai_words/audio/1b4a72b1bf5f_n.mp3"
+  },
+  "ปิดหน้าต่างหน่อย": {
+    "slow": "atai_words/audio/10f6982046c0_s.mp3",
+    "normal": "atai_words/audio/10f6982046c0_n.mp3"
+  },
+  "รอหน่อย": {
+    "slow": "atai_words/audio/2f7140593656_s.mp3",
+    "normal": "atai_words/audio/2f7140593656_n.mp3"
+  },
+  "ดูหน่อย": {
+    "slow": "atai_words/audio/182fa9c4699c_s.mp3",
+    "normal": "atai_words/audio/182fa9c4699c_n.mp3"
+  },
+  "ฟังหน่อย": {
+    "slow": "atai_words/audio/b259c9c93528_s.mp3",
+    "normal": "atai_words/audio/b259c9c93528_n.mp3"
+  },
+  "ไปสนามบิน": {
+    "slow": "atai_words/audio/b1694b3cd786_s.mp3",
+    "normal": "atai_words/audio/b1694b3cd786_n.mp3"
+  },
+  "จอดตรงนี้": {
+    "slow": "atai_words/audio/58a2f876eb5d_s.mp3",
+    "normal": "atai_words/audio/58a2f876eb5d_n.mp3"
+  },
+  "ค่าโดยสารเท่าไหร่": {
+    "slow": "atai_words/audio/7f33f3842d05_s.mp3",
+    "normal": "atai_words/audio/7f33f3842d05_n.mp3"
+  },
+  "ไม่ใส่กระเทียม": {
+    "slow": "atai_words/audio/179f7d81286f_s.mp3",
+    "normal": "atai_words/audio/179f7d81286f_n.mp3"
+  },
+  "ไม่เอากระเทียม": {
+    "slow": "atai_words/audio/c3cc5adb58aa_s.mp3",
+    "normal": "atai_words/audio/c3cc5adb58aa_n.mp3"
+  },
+  "ไม่ใส่กระเทียมได้ไหม": {
+    "slow": "atai_words/audio/82c4713a53d6_s.mp3",
+    "normal": "atai_words/audio/82c4713a53d6_n.mp3"
+  },
+  "ง่วงแล้ว": {
+    "slow": "atai_words/audio/239882913c56_s.mp3",
+    "normal": "atai_words/audio/239882913c56_n.mp3"
+  },
+  "ฉันง่วงมาก": {
+    "slow": "atai_words/audio/571dd5592dd3_s.mp3",
+    "normal": "atai_words/audio/571dd5592dd3_n.mp3"
+  },
+  "ฝันดี": {
+    "slow": "atai_words/audio/31800644b565_s.mp3",
+    "normal": "atai_words/audio/31800644b565_n.mp3"
+  },
+  "ตอบข้อความหน่อย": {
+    "slow": "atai_words/audio/3fef3d3a0215_s.mp3",
+    "normal": "atai_words/audio/3fef3d3a0215_n.mp3"
+  },
+  "เดี๋ยวตอบนะ": {
+    "slow": "atai_words/audio/67dfa2d9b8a2_s.mp3",
+    "normal": "atai_words/audio/67dfa2d9b8a2_n.mp3"
+  },
+  "อยู่ไม่ไหวแล้ว": {
+    "slow": "atai_words/audio/42a4d3d02eda_s.mp3",
+    "normal": "atai_words/audio/42a4d3d02eda_n.mp3"
+  },
+  "ที่ไหน": {
+    "slow": "atai_words/audio/9feec3cf081c_s.mp3",
+    "normal": "atai_words/audio/9feec3cf081c_n.mp3"
+  },
+  "ที่นี่": {
+    "slow": "atai_words/audio/ef29d7d8b467_s.mp3",
+    "normal": "atai_words/audio/ef29d7d8b467_n.mp3"
+  },
+  "ที่นั่น": {
+    "slow": "atai_words/audio/c3234d775f37_s.mp3",
+    "normal": "atai_words/audio/c3234d775f37_n.mp3"
+  },
+  "วันดีๆ": {
+    "slow": "atai_words/audio/13866f467b3a_s.mp3",
+    "normal": "atai_words/audio/13866f467b3a_n.mp3"
+  },
+  "กลับมา": {
+    "slow": "atai_words/audio/aacf66687f5a_s.mp3",
+    "normal": "atai_words/audio/aacf66687f5a_n.mp3"
+  },
+  "คนเดิม": {
+    "slow": "atai_words/audio/a0098d332d62_s.mp3",
+    "normal": "atai_words/audio/a0098d332d62_n.mp3"
+  },
+  "เจ็บ": {
+    "slow": "atai_words/audio/0d7ff26fb3df_s.mp3",
+    "normal": "atai_words/audio/0d7ff26fb3df_n.mp3"
+  },
+  "เจ็บตรงไหน": {
+    "slow": "atai_words/audio/24269ed8e932_s.mp3",
+    "normal": "atai_words/audio/24269ed8e932_n.mp3"
+  },
+  "เจ็บนิดหน่อย": {
+    "slow": "atai_words/audio/3340c1fe74b3_s.mp3",
+    "normal": "atai_words/audio/3340c1fe74b3_n.mp3"
+  },
+  "นี่คือต้นไม้": {
+    "slow": "atai_words/audio/e15a48531d44_s.mp3",
+    "normal": "atai_words/audio/e15a48531d44_n.mp3"
+  },
+  "นี่คือแมว": {
+    "slow": "atai_words/audio/a90ae8691104_s.mp3",
+    "normal": "atai_words/audio/a90ae8691104_n.mp3"
+  },
+  "นี่คือสุนัข": {
+    "slow": "atai_words/audio/ec58fe96d408_s.mp3",
+    "normal": "atai_words/audio/ec58fe96d408_n.mp3"
+  },
+  "นี่คือกระเป๋า": {
+    "slow": "atai_words/audio/8b6287772cd8_s.mp3",
+    "normal": "atai_words/audio/8b6287772cd8_n.mp3"
+  },
+  "นี่คือปากกา": {
+    "slow": "atai_words/audio/d23f88450c05_s.mp3",
+    "normal": "atai_words/audio/d23f88450c05_n.mp3"
+  },
+  "นี่คือบ้าน": {
+    "slow": "atai_words/audio/604d14b0e1e5_s.mp3",
+    "normal": "atai_words/audio/604d14b0e1e5_n.mp3"
+  },
+  "ฉันไม่รู้": {
+    "slow": "atai_words/audio/6c585fbd1da9_s.mp3",
+    "normal": "atai_words/audio/6c585fbd1da9_n.mp3"
+  },
+  "ไม่รู้ค่ะ": {
+    "slow": "atai_words/audio/0b7247a67c7f_s.mp3",
+    "normal": "atai_words/audio/0b7247a67c7f_n.mp3"
+  },
+  "ไม่รู้เหมือนกัน": {
+    "slow": "atai_words/audio/c8bfe47b0318_s.mp3",
+    "normal": "atai_words/audio/c8bfe47b0318_n.mp3"
+  },
+  "ไม่รู้จริงๆ": {
+    "slow": "atai_words/audio/d6c8cb049cc0_s.mp3",
+    "normal": "atai_words/audio/d6c8cb049cc0_n.mp3"
+  },
+  "ยากมาก": {
+    "slow": "atai_words/audio/0dca05aad65d_s.mp3",
+    "normal": "atai_words/audio/0dca05aad65d_n.mp3"
+  },
+  "ยากไหม": {
+    "slow": "atai_words/audio/499683f480fd_s.mp3",
+    "normal": "atai_words/audio/499683f480fd_n.mp3"
+  },
+  "ไม่ยาก": {
+    "slow": "atai_words/audio/56a60c1cbb24_s.mp3",
+    "normal": "atai_words/audio/56a60c1cbb24_n.mp3"
+  },
+  "ยากนิดหน่อย": {
+    "slow": "atai_words/audio/ade84c343b63_s.mp3",
+    "normal": "atai_words/audio/ade84c343b63_n.mp3"
+  },
+  "คิดอะไร": {
+    "slow": "atai_words/audio/62f431341b39_s.mp3",
+    "normal": "atai_words/audio/62f431341b39_n.mp3"
+  },
+  "คิดอะไรอยู่": {
+    "slow": "atai_words/audio/916dfc981e1e_s.mp3",
+    "normal": "atai_words/audio/916dfc981e1e_n.mp3"
+  },
+  "คิดอะไรอยู่เหรอ": {
+    "slow": "atai_words/audio/dfaa891f90ed_s.mp3",
+    "normal": "atai_words/audio/dfaa891f90ed_n.mp3"
+  },
+  "ไม่ได้คิดอะไร": {
+    "slow": "atai_words/audio/b097b83e507e_s.mp3",
+    "normal": "atai_words/audio/b097b83e507e_n.mp3"
+  },
+  "ต้องทำอย่างไร": {
+    "slow": "atai_words/audio/b646e527d1dd_s.mp3",
+    "normal": "atai_words/audio/b646e527d1dd_n.mp3"
+  },
+  "ต้องกินอย่างไร": {
+    "slow": "atai_words/audio/1417989376af_s.mp3",
+    "normal": "atai_words/audio/1417989376af_n.mp3"
+  },
+  "ต้องพูดอย่างไร": {
+    "slow": "atai_words/audio/7902e19afe4b_s.mp3",
+    "normal": "atai_words/audio/7902e19afe4b_n.mp3"
+  },
+  "เช้านี้ / พี่ / สามี": {
+    "slow": "atai_words/audio/762c10ae6c04_s.mp3",
+    "normal": "atai_words/audio/762c10ae6c04_n.mp3"
+  },
+  "เช้านี้": {
+    "slow": "atai_words/audio/830057e8e6f6_s.mp3",
+    "normal": "atai_words/audio/830057e8e6f6_n.mp3"
+  },
+  "พี่": {
+    "slow": "atai_words/audio/2fbbc5027b56_s.mp3",
+    "normal": "atai_words/audio/2fbbc5027b56_n.mp3"
+  },
+  "สามี": {
+    "slow": "atai_words/audio/c228e7783f73_s.mp3",
+    "normal": "atai_words/audio/c228e7783f73_n.mp3"
+  },
+  "แปรงฟัน / อาบน้ำ / ซักผ้า": {
+    "slow": "atai_words/audio/207b5908a6d5_s.mp3",
+    "normal": "atai_words/audio/207b5908a6d5_n.mp3"
+  },
+  "อาบน้ำ": {
+    "slow": "atai_words/audio/bf03edf3c5f3_s.mp3",
+    "normal": "atai_words/audio/bf03edf3c5f3_n.mp3"
+  },
+  "ซักผ้า": {
+    "slow": "atai_words/audio/75a9d0cab4ff_s.mp3",
+    "normal": "atai_words/audio/75a9d0cab4ff_n.mp3"
+  },
+  "อยาก / ยาก / อย่า": {
+    "slow": "atai_words/audio/45bc58933087_s.mp3",
+    "normal": "atai_words/audio/45bc58933087_n.mp3"
+  },
+  "อยาก": {
+    "slow": "atai_words/audio/9693f2f70775_s.mp3",
+    "normal": "atai_words/audio/9693f2f70775_n.mp3"
+  },
+  "ยาก": {
+    "slow": "atai_words/audio/50cc177e2372_s.mp3",
+    "normal": "atai_words/audio/50cc177e2372_n.mp3"
+  },
+  "อย่า": {
+    "slow": "atai_words/audio/c74ca1276efe_s.mp3",
+    "normal": "atai_words/audio/c74ca1276efe_n.mp3"
+  },
+  "ชอบคุณมากที่สุด": {
+    "slow": "atai_words/audio/ce646361ae84_s.mp3",
+    "normal": "atai_words/audio/ce646361ae84_n.mp3"
+  },
+  "ชอบคุณมานานแล้ว": {
+    "slow": "atai_words/audio/b61fb3f8c815_s.mp3",
+    "normal": "atai_words/audio/b61fb3f8c815_n.mp3"
+  },
+  "คุณมีคนที่ชอบไหม": {
+    "slow": "atai_words/audio/120a0a419f01_s.mp3",
+    "normal": "atai_words/audio/120a0a419f01_n.mp3"
+  },
+  "แฟนคลับ": {
+    "slow": "atai_words/audio/3647adf8db3c_s.mp3",
+    "normal": "atai_words/audio/3647adf8db3c_n.mp3"
+  },
+  "ฉันเป็นแฟนคลับของคุณ": {
+    "slow": "atai_words/audio/703726e77afb_s.mp3",
+    "normal": "atai_words/audio/703726e77afb_n.mp3"
+  },
+  "ฉันเคยดูละครของคุณ": {
+    "slow": "atai_words/audio/dbee1e47d1ea_s.mp3",
+    "normal": "atai_words/audio/dbee1e47d1ea_n.mp3"
+  },
+  "อิ่มแล้ว": {
+    "slow": "atai_words/audio/ccda7c2c6d0e_s.mp3",
+    "normal": "atai_words/audio/ccda7c2c6d0e_n.mp3"
+  },
+  "กินอิ่มแล้ว": {
+    "slow": "atai_words/audio/5208db8293dd_s.mp3",
+    "normal": "atai_words/audio/5208db8293dd_n.mp3"
+  },
+  "ยังไม่อิ่ม": {
+    "slow": "atai_words/audio/80abe115cc81_s.mp3",
+    "normal": "atai_words/audio/80abe115cc81_n.mp3"
+  },
+  "เอาอีกจาน": {
+    "slow": "atai_words/audio/0ec664e3910a_s.mp3",
+    "normal": "atai_words/audio/0ec664e3910a_n.mp3"
+  },
+  "คิดไม่ออก": {
+    "slow": "atai_words/audio/9057cdcbce7a_s.mp3",
+    "normal": "atai_words/audio/9057cdcbce7a_n.mp3"
+  },
+  "ยังคิดไม่ออก": {
+    "slow": "atai_words/audio/d5b277c160e9_s.mp3",
+    "normal": "atai_words/audio/d5b277c160e9_n.mp3"
+  },
+  "คิดไม่ออกเลย": {
+    "slow": "atai_words/audio/75b70d5a0d31_s.mp3",
+    "normal": "atai_words/audio/75b70d5a0d31_n.mp3"
+  },
+  "ฝนตก": {
+    "slow": "atai_words/audio/6eb1452450e5_s.mp3",
+    "normal": "atai_words/audio/6eb1452450e5_n.mp3"
+  },
+  "ฝนตกแล้ว": {
+    "slow": "atai_words/audio/bf8d9e9fcaa1_s.mp3",
+    "normal": "atai_words/audio/bf8d9e9fcaa1_n.mp3"
+  },
+  "วันนี้ฝนจะตกไหม": {
+    "slow": "atai_words/audio/4e793a5a0542_s.mp3",
+    "normal": "atai_words/audio/4e793a5a0542_n.mp3"
+  },
+  "หอม": {
+    "slow": "atai_words/audio/2d1c4d0b4eb9_s.mp3",
+    "normal": "atai_words/audio/2d1c4d0b4eb9_n.mp3"
+  },
+  "หอมมาก": {
+    "slow": "atai_words/audio/fcca7387d304_s.mp3",
+    "normal": "atai_words/audio/fcca7387d304_n.mp3"
+  },
+  "อันนี้หอมมาก": {
+    "slow": "atai_words/audio/4810fd2ac546_s.mp3",
+    "normal": "atai_words/audio/4810fd2ac546_n.mp3"
+  },
+  "น้ำหอม": {
+    "slow": "atai_words/audio/0202ee5ccc3b_s.mp3",
+    "normal": "atai_words/audio/0202ee5ccc3b_n.mp3"
+  },
+  "เหม็น": {
+    "slow": "atai_words/audio/f37aa8793d47_s.mp3",
+    "normal": "atai_words/audio/f37aa8793d47_n.mp3"
+  },
+  "เหม็นมาก": {
+    "slow": "atai_words/audio/55e7988155b0_s.mp3",
+    "normal": "atai_words/audio/55e7988155b0_n.mp3"
+  },
+  "กลิ่นเหม็น": {
+    "slow": "atai_words/audio/272a145f625a_s.mp3",
+    "normal": "atai_words/audio/272a145f625a_n.mp3"
+  },
+  "เปิดเทอม": {
+    "slow": "atai_words/audio/1cb6fdcd80c7_s.mp3",
+    "normal": "atai_words/audio/1cb6fdcd80c7_n.mp3"
+  },
+  "เปิดเทอมแล้ว": {
+    "slow": "atai_words/audio/80152b552c2b_s.mp3",
+    "normal": "atai_words/audio/80152b552c2b_n.mp3"
+  },
+  "พรุ่งนี้เปิดเทอม": {
+    "slow": "atai_words/audio/c63f8af325e5_s.mp3",
+    "normal": "atai_words/audio/c63f8af325e5_n.mp3"
+  },
+  "ช่วย": {
+    "slow": "atai_words/audio/d570b4454f43_s.mp3",
+    "normal": "atai_words/audio/d570b4454f43_n.mp3"
+  },
+  "ช่วยฉันหน่อย": {
+    "slow": "atai_words/audio/3bd346548f65_s.mp3",
+    "normal": "atai_words/audio/3bd346548f65_n.mp3"
+  },
+  "มีอะไรให้ช่วยไหม": {
+    "slow": "atai_words/audio/0d31cfb0b75d_s.mp3",
+    "normal": "atai_words/audio/0d31cfb0b75d_n.mp3"
+  },
+  "ขี้เกียจ": {
+    "slow": "atai_words/audio/36f94b3b454c_s.mp3",
+    "normal": "atai_words/audio/36f94b3b454c_n.mp3"
+  },
+  "ขี้เกียจทำงาน": {
+    "slow": "atai_words/audio/9888fd693193_s.mp3",
+    "normal": "atai_words/audio/9888fd693193_n.mp3"
+  },
+  "วันนี้ขี้เกียจมาก": {
+    "slow": "atai_words/audio/4b533ae12b2e_s.mp3",
+    "normal": "atai_words/audio/4b533ae12b2e_n.mp3"
+  },
+  "ขี้เกียจออกไปข้างนอก": {
+    "slow": "atai_words/audio/3f05b94a4e1a_s.mp3",
+    "normal": "atai_words/audio/3f05b94a4e1a_n.mp3"
+  },
+  "มองอะไร": {
+    "slow": "atai_words/audio/e6a48aac01a7_s.mp3",
+    "normal": "atai_words/audio/e6a48aac01a7_n.mp3"
+  },
+  "มองทำไม": {
+    "slow": "atai_words/audio/9623e56835d7_s.mp3",
+    "normal": "atai_words/audio/9623e56835d7_n.mp3"
+  },
+  "มองฉันทำไม": {
+    "slow": "atai_words/audio/662019aa8d84_s.mp3",
+    "normal": "atai_words/audio/662019aa8d84_n.mp3"
+  },
+  "อย่ามอง": {
+    "slow": "atai_words/audio/e3957ac42c4b_s.mp3",
+    "normal": "atai_words/audio/e3957ac42c4b_n.mp3"
+  },
+  "หิว": {
+    "slow": "atai_words/audio/8d31deee5dfe_s.mp3",
+    "normal": "atai_words/audio/8d31deee5dfe_n.mp3"
+  },
+  "หิวแล้ว": {
+    "slow": "atai_words/audio/1dfcbbb21c05_s.mp3",
+    "normal": "atai_words/audio/1dfcbbb21c05_n.mp3"
+  },
+  "หิวมาก": {
+    "slow": "atai_words/audio/decc959d4217_s.mp3",
+    "normal": "atai_words/audio/decc959d4217_n.mp3"
+  },
+  "หิวไหม": {
+    "slow": "atai_words/audio/78f748f56756_s.mp3",
+    "normal": "atai_words/audio/78f748f56756_n.mp3"
+  },
+  "ปัญหา": {
+    "slow": "atai_words/audio/4a47779a754c_s.mp3",
+    "normal": "atai_words/audio/4a47779a754c_n.mp3"
+  },
+  "มีปัญหา": {
+    "slow": "atai_words/audio/ffd2b4dad254_s.mp3",
+    "normal": "atai_words/audio/ffd2b4dad254_n.mp3"
+  },
+  "ไม่มีปัญหา": {
+    "slow": "atai_words/audio/24bf17b7541e_s.mp3",
+    "normal": "atai_words/audio/24bf17b7541e_n.mp3"
+  },
+  "เกิดปัญหา": {
+    "slow": "atai_words/audio/b17dc9e407bd_s.mp3",
+    "normal": "atai_words/audio/b17dc9e407bd_n.mp3"
+  },
+  "ทะเลาะกัน": {
+    "slow": "atai_words/audio/48e0a5e7026e_s.mp3",
+    "normal": "atai_words/audio/48e0a5e7026e_n.mp3"
+  },
+  "อย่าทะเลาะกัน": {
+    "slow": "atai_words/audio/3d653de1fe58_s.mp3",
+    "normal": "atai_words/audio/3d653de1fe58_n.mp3"
+  },
+  "ทะเลาะกับแฟน": {
+    "slow": "atai_words/audio/b5d44edd5021_s.mp3",
+    "normal": "atai_words/audio/b5d44edd5021_n.mp3"
+  },
+  "เราทะเลาะกัน": {
+    "slow": "atai_words/audio/19e761182e86_s.mp3",
+    "normal": "atai_words/audio/19e761182e86_n.mp3"
+  },
+  "ลด": {
+    "slow": "atai_words/audio/b9fe26b64c76_s.mp3",
+    "normal": "atai_words/audio/b9fe26b64c76_n.mp3"
+  },
+  "ลดราคา": {
+    "slow": "atai_words/audio/0cec944bc2e0_s.mp3",
+    "normal": "atai_words/audio/0cec944bc2e0_n.mp3"
+  },
+  "ลดหน่อยได้ไหม": {
+    "slow": "atai_words/audio/fa2f50369071_s.mp3",
+    "normal": "atai_words/audio/fa2f50369071_n.mp3"
+  },
+  "ลดน้ำหนัก": {
+    "slow": "atai_words/audio/54314b106084_s.mp3",
+    "normal": "atai_words/audio/54314b106084_n.mp3"
+  },
+  "เลิกกัน": {
+    "slow": "atai_words/audio/59af227bd197_s.mp3",
+    "normal": "atai_words/audio/59af227bd197_n.mp3"
+  },
+  "เราเลิกกันแล้ว": {
+    "slow": "atai_words/audio/40a21959ecd0_s.mp3",
+    "normal": "atai_words/audio/40a21959ecd0_n.mp3"
+  },
+  "เขาเลิกกันแล้ว": {
+    "slow": "atai_words/audio/536171fa4d3b_s.mp3",
+    "normal": "atai_words/audio/536171fa4d3b_n.mp3"
+  },
+  "เราเลิกกันเถอะ": {
+    "slow": "atai_words/audio/9c8814a54ed8_s.mp3",
+    "normal": "atai_words/audio/9c8814a54ed8_n.mp3"
+  },
+  "ปากเหม็น / ปากเสีย / ปากไม่ดี": {
+    "slow": "atai_words/audio/3eb544adbaf3_s.mp3",
+    "normal": "atai_words/audio/3eb544adbaf3_n.mp3"
+  },
+  "ปากเหม็น": {
+    "slow": "atai_words/audio/0a460c99ab79_s.mp3",
+    "normal": "atai_words/audio/0a460c99ab79_n.mp3"
+  },
+  "ปากเสีย": {
+    "slow": "atai_words/audio/25f52c9d7611_s.mp3",
+    "normal": "atai_words/audio/25f52c9d7611_n.mp3"
+  },
+  "ปากไม่ดี": {
+    "slow": "atai_words/audio/871a9f4a2602_s.mp3",
+    "normal": "atai_words/audio/871a9f4a2602_n.mp3"
+  },
+  "ไม่": {
+    "slow": "atai_words/audio/d73fba748e7c_s.mp3",
+    "normal": "atai_words/audio/d73fba748e7c_n.mp3"
+  },
+  "ไม่กิน": {
+    "slow": "atai_words/audio/d907cccb747e_s.mp3",
+    "normal": "atai_words/audio/d907cccb747e_n.mp3"
+  },
+  "ไม่ไป": {
+    "slow": "atai_words/audio/e6d1927436b4_s.mp3",
+    "normal": "atai_words/audio/e6d1927436b4_n.mp3"
+  },
+  "ไม่รู้": {
+    "slow": "atai_words/audio/7ee94f9230e5_s.mp3",
+    "normal": "atai_words/audio/7ee94f9230e5_n.mp3"
+  },
+  "ไม่ชอบ": {
+    "slow": "atai_words/audio/a00c36f68e64_s.mp3",
+    "normal": "atai_words/audio/a00c36f68e64_n.mp3"
+  },
+  "ไม่เป็นไร": {
+    "slow": "atai_words/audio/e0a814cc4fbf_s.mp3",
+    "normal": "atai_words/audio/e0a814cc4fbf_n.mp3"
+  },
+  "ไม่ใช่": {
+    "slow": "atai_words/audio/193b9f462370_s.mp3",
+    "normal": "atai_words/audio/193b9f462370_n.mp3"
+  },
+  "ไม่เอา": {
+    "slow": "atai_words/audio/1cb167bfa315_s.mp3",
+    "normal": "atai_words/audio/1cb167bfa315_n.mp3"
+  },
+  "ไม่ได้": {
+    "slow": "atai_words/audio/7870ebb563b3_s.mp3",
+    "normal": "atai_words/audio/7870ebb563b3_n.mp3"
+  },
+  "ทำ": {
+    "slow": "atai_words/audio/012a49a1ab33_s.mp3",
+    "normal": "atai_words/audio/012a49a1ab33_n.mp3"
+  },
+  "ทำงาน": {
+    "slow": "atai_words/audio/a2a62e8b3203_s.mp3",
+    "normal": "atai_words/audio/a2a62e8b3203_n.mp3"
+  },
+  "ทำอาหาร": {
+    "slow": "atai_words/audio/9f53c96606bd_s.mp3",
+    "normal": "atai_words/audio/9f53c96606bd_n.mp3"
+  },
+  "ทำอะไร": {
+    "slow": "atai_words/audio/b666bbd0e02c_s.mp3",
+    "normal": "atai_words/audio/b666bbd0e02c_n.mp3"
+  },
+  "ไม่ทำ": {
+    "slow": "atai_words/audio/979987448257_s.mp3",
+    "normal": "atai_words/audio/979987448257_n.mp3"
+  },
+  "สอน": {
+    "slow": "atai_words/audio/2e65b09ad6df_s.mp3",
+    "normal": "atai_words/audio/2e65b09ad6df_n.mp3"
+  },
+  "สอนฉันหน่อย": {
+    "slow": "atai_words/audio/387d1cc29fdc_s.mp3",
+    "normal": "atai_words/audio/387d1cc29fdc_n.mp3"
+  },
+  "สอนอะไร": {
+    "slow": "atai_words/audio/c1399a529ac7_s.mp3",
+    "normal": "atai_words/audio/c1399a529ac7_n.mp3"
+  },
+  "สอนภาษาไทย": {
+    "slow": "atai_words/audio/39f1212982d0_s.mp3",
+    "normal": "atai_words/audio/39f1212982d0_n.mp3"
+  },
+  "ใครสอนคุณ": {
+    "slow": "atai_words/audio/f4ba4b407fd3_s.mp3",
+    "normal": "atai_words/audio/f4ba4b407fd3_n.mp3"
+  },
+  "ถาม": {
+    "slow": "atai_words/audio/1ef70a8eea76_s.mp3",
+    "normal": "atai_words/audio/1ef70a8eea76_n.mp3"
+  },
+  "ถามได้ไหม": {
+    "slow": "atai_words/audio/3fef571b06ce_s.mp3",
+    "normal": "atai_words/audio/3fef571b06ce_n.mp3"
+  },
+  "ขอถามหน่อย": {
+    "slow": "atai_words/audio/41a5bc12aedb_s.mp3",
+    "normal": "atai_words/audio/41a5bc12aedb_n.mp3"
+  },
+  "มีอะไรจะถามไหม": {
+    "slow": "atai_words/audio/076290acc6ce_s.mp3",
+    "normal": "atai_words/audio/076290acc6ce_n.mp3"
+  },
+  "ปากของฉัน": {
+    "slow": "atai_words/audio/c5c7e67e2397_s.mp3",
+    "normal": "atai_words/audio/c5c7e67e2397_n.mp3"
+  },
+  "จมูกของฉัน": {
+    "slow": "atai_words/audio/3521f2cf5b19_s.mp3",
+    "normal": "atai_words/audio/3521f2cf5b19_n.mp3"
+  },
+  "หูของฉัน": {
+    "slow": "atai_words/audio/07f75e6b4646_s.mp3",
+    "normal": "atai_words/audio/07f75e6b4646_n.mp3"
+  },
+  "ตาของฉัน": {
+    "slow": "atai_words/audio/0464e7da204d_s.mp3",
+    "normal": "atai_words/audio/0464e7da204d_n.mp3"
+  },
+  "เบื่อ": {
+    "slow": "atai_words/audio/735f321edcf6_s.mp3",
+    "normal": "atai_words/audio/735f321edcf6_n.mp3"
+  },
+  "เบื่อมาก": {
+    "slow": "atai_words/audio/66c0e8d4e272_s.mp3",
+    "normal": "atai_words/audio/66c0e8d4e272_n.mp3"
+  },
+  "เบื่อไหม": {
+    "slow": "atai_words/audio/9ec052770ad3_s.mp3",
+    "normal": "atai_words/audio/9ec052770ad3_n.mp3"
+  },
+  "ฤดูใบไม้ผลิ": {
+    "slow": "atai_words/audio/514345a7243f_s.mp3",
+    "normal": "atai_words/audio/514345a7243f_n.mp3"
+  },
+  "ฤดูใบไม้ร่วง": {
+    "slow": "atai_words/audio/d8c9f2de9fa5_s.mp3",
+    "normal": "atai_words/audio/d8c9f2de9fa5_n.mp3"
+  },
+  "ฤดูร้อน": {
+    "slow": "atai_words/audio/255deafe57d0_s.mp3",
+    "normal": "atai_words/audio/255deafe57d0_n.mp3"
+  },
+  "ฤดูหนาว": {
+    "slow": "atai_words/audio/5ac63613af33_s.mp3",
+    "normal": "atai_words/audio/5ac63613af33_n.mp3"
+  },
+  "เที่ยว": {
+    "slow": "atai_words/audio/56627f219753_s.mp3",
+    "normal": "atai_words/audio/56627f219753_n.mp3"
+  },
+  "ไปเที่ยว": {
+    "slow": "atai_words/audio/d09a27e21a47_s.mp3",
+    "normal": "atai_words/audio/d09a27e21a47_n.mp3"
+  },
+  "ไปเที่ยวที่ไหน": {
+    "slow": "atai_words/audio/209e5fca5d9e_s.mp3",
+    "normal": "atai_words/audio/209e5fca5d9e_n.mp3"
+  },
+  "เที่ยวคนเดียว": {
+    "slow": "atai_words/audio/cab3941e3ba0_s.mp3",
+    "normal": "atai_words/audio/cab3941e3ba0_n.mp3"
+  },
+  "นอนกลางวัน": {
+    "slow": "atai_words/audio/80e2373e3df1_s.mp3",
+    "normal": "atai_words/audio/80e2373e3df1_n.mp3"
+  },
+  "คุณนอนกลางวันไหม": {
+    "slow": "atai_words/audio/e100b6027907_s.mp3",
+    "normal": "atai_words/audio/e100b6027907_n.mp3"
+  },
+  "คนไทยส่วนใหญ่ไม่นอนกลางวัน": {
+    "slow": "atai_words/audio/ca0983b8a96e_s.mp3",
+    "normal": "atai_words/audio/ca0983b8a96e_n.mp3"
+  },
+  "รอ": {
+    "slow": "atai_words/audio/971fe1e1b414_s.mp3",
+    "normal": "atai_words/audio/971fe1e1b414_n.mp3"
+  },
+  "รอใคร": {
+    "slow": "atai_words/audio/a87a97059640_s.mp3",
+    "normal": "atai_words/audio/a87a97059640_n.mp3"
+  },
+  "รออะไร": {
+    "slow": "atai_words/audio/2532822001fe_s.mp3",
+    "normal": "atai_words/audio/2532822001fe_n.mp3"
+  },
+  "รอนานไหม": {
+    "slow": "atai_words/audio/d7a891bd5cd4_s.mp3",
+    "normal": "atai_words/audio/d7a891bd5cd4_n.mp3"
+  },
+  "นอนดึก": {
+    "slow": "atai_words/audio/43c58ea53894_s.mp3",
+    "normal": "atai_words/audio/43c58ea53894_n.mp3"
+  },
+  "ฉันนอนดึกทุกวัน": {
+    "slow": "atai_words/audio/fc137d463305_s.mp3",
+    "normal": "atai_words/audio/fc137d463305_n.mp3"
+  },
+  "อย่านอนดึกนะ": {
+    "slow": "atai_words/audio/d4152f4de70d_s.mp3",
+    "normal": "atai_words/audio/d4152f4de70d_n.mp3"
+  },
+  "ตด": {
+    "slow": "atai_words/audio/0317e52747c0_s.mp3",
+    "normal": "atai_words/audio/0317e52747c0_n.mp3"
+  },
+  "ใครตด": {
+    "slow": "atai_words/audio/29070106a7ac_s.mp3",
+    "normal": "atai_words/audio/29070106a7ac_n.mp3"
+  },
+  "ฉันตด": {
+    "slow": "atai_words/audio/5b5bc63e43ff_s.mp3",
+    "normal": "atai_words/audio/5b5bc63e43ff_n.mp3"
+  },
+  "ตดเหม็น": {
+    "slow": "atai_words/audio/9bbaf4a7b862_s.mp3",
+    "normal": "atai_words/audio/9bbaf4a7b862_n.mp3"
+  },
+  "กลัว / ฉันกลัว / กลัวอะไร / คุณกลัวไหม / ฉันกลัวผี / อย่ากลัวนะ": {
+    "slow": "atai_words/audio/696342a31221_s.mp3",
+    "normal": "atai_words/audio/696342a31221_n.mp3"
+  },
+  "กลัว": {
+    "slow": "atai_words/audio/8596177c4bdc_s.mp3",
+    "normal": "atai_words/audio/8596177c4bdc_n.mp3"
+  },
+  "ฉันกลัว": {
+    "slow": "atai_words/audio/fb79d018b630_s.mp3",
+    "normal": "atai_words/audio/fb79d018b630_n.mp3"
+  },
+  "กลัวอะไร": {
+    "slow": "atai_words/audio/fadcda6e2a3a_s.mp3",
+    "normal": "atai_words/audio/fadcda6e2a3a_n.mp3"
+  },
+  "คุณกลัวไหม": {
+    "slow": "atai_words/audio/95d510cf4e70_s.mp3",
+    "normal": "atai_words/audio/95d510cf4e70_n.mp3"
+  },
+  "ฉันกลัวผี": {
+    "slow": "atai_words/audio/ecf8f4725486_s.mp3",
+    "normal": "atai_words/audio/ecf8f4725486_n.mp3"
+  },
+  "อย่ากลัวนะ": {
+    "slow": "atai_words/audio/acf96eff50b7_s.mp3",
+    "normal": "atai_words/audio/acf96eff50b7_n.mp3"
+  },
+  "ยิ้ม": {
+    "slow": "atai_words/audio/1fb73e4f10c6_s.mp3",
+    "normal": "atai_words/audio/1fb73e4f10c6_n.mp3"
+  },
+  "ยิ้มหน่อย": {
+    "slow": "atai_words/audio/e5e82fb8c297_s.mp3",
+    "normal": "atai_words/audio/e5e82fb8c297_n.mp3"
+  },
+  "คุณยิ้มสวยมาก": {
+    "slow": "atai_words/audio/9b59393c38a9_s.mp3",
+    "normal": "atai_words/audio/9b59393c38a9_n.mp3"
+  },
+  "บ้า": {
+    "slow": "atai_words/audio/1c5474c89b47_s.mp3",
+    "normal": "atai_words/audio/1c5474c89b47_n.mp3"
+  },
+  "คุณบ้าเหรอ": {
+    "slow": "atai_words/audio/459e236ab007_s.mp3",
+    "normal": "atai_words/audio/459e236ab007_n.mp3"
+  },
+  "บ้าจริง": {
+    "slow": "atai_words/audio/515a77c1ba8a_s.mp3",
+    "normal": "atai_words/audio/515a77c1ba8a_n.mp3"
+  },
+  "ฉันดูออกว่าเขาชอบคุณ": {
+    "slow": "atai_words/audio/864d75020b9f_s.mp3",
+    "normal": "atai_words/audio/864d75020b9f_n.mp3"
+  },
+  "ดูออก": {
+    "slow": "atai_words/audio/a01f2e54c74f_s.mp3",
+    "normal": "atai_words/audio/a01f2e54c74f_n.mp3"
+  },
+  "ฉันดูออก": {
+    "slow": "atai_words/audio/3ff38dc2a040_s.mp3",
+    "normal": "atai_words/audio/3ff38dc2a040_n.mp3"
+  },
+  "ดูออกไหม": {
+    "slow": "atai_words/audio/79d50abd4f34_s.mp3",
+    "normal": "atai_words/audio/79d50abd4f34_n.mp3"
+  },
+  "ฉันดูออกว่าคุณโกหก": {
+    "slow": "atai_words/audio/b0310120d126_s.mp3",
+    "normal": "atai_words/audio/b0310120d126_n.mp3"
+  },
+  "ลอง": {
+    "slow": "atai_words/audio/fd7f17bb1a00_s.mp3",
+    "normal": "atai_words/audio/fd7f17bb1a00_n.mp3"
+  },
+  "ลองดู": {
+    "slow": "atai_words/audio/72e9c57fa2b0_s.mp3",
+    "normal": "atai_words/audio/72e9c57fa2b0_n.mp3"
+  },
+  "ลองทำดู": {
+    "slow": "atai_words/audio/9d1c6f2a499c_s.mp3",
+    "normal": "atai_words/audio/9d1c6f2a499c_n.mp3"
+  },
+  "ลองกินดู": {
+    "slow": "atai_words/audio/483207b59f79_s.mp3",
+    "normal": "atai_words/audio/483207b59f79_n.mp3"
+  },
+  "ลองไหม": {
+    "slow": "atai_words/audio/dab092d41ef4_s.mp3",
+    "normal": "atai_words/audio/dab092d41ef4_n.mp3"
+  },
+  "ลองได้ไหม": {
+    "slow": "atai_words/audio/504d2fad9bf1_s.mp3",
+    "normal": "atai_words/audio/504d2fad9bf1_n.mp3"
+  },
+  "ฉันอยากลอง": {
+    "slow": "atai_words/audio/1a9ffe7f33b1_s.mp3",
+    "normal": "atai_words/audio/1a9ffe7f33b1_n.mp3"
+  },
+  "ลองอันนี้ดู": {
+    "slow": "atai_words/audio/40e96961c7ef_s.mp3",
+    "normal": "atai_words/audio/40e96961c7ef_n.mp3"
+  },
+  "ไม่ลองเหรอ": {
+    "slow": "atai_words/audio/24e478d1f86f_s.mp3",
+    "normal": "atai_words/audio/24e478d1f86f_n.mp3"
+  },
+  "ภรรยา": {
+    "slow": "atai_words/audio/27f6b6d6c4e8_s.mp3",
+    "normal": "atai_words/audio/27f6b6d6c4e8_n.mp3"
+  },
+  "ผัว": {
+    "slow": "atai_words/audio/d229bb85ecdc_s.mp3",
+    "normal": "atai_words/audio/d229bb85ecdc_n.mp3"
+  },
+  "เมีย": {
+    "slow": "atai_words/audio/85cf3c0c1872_s.mp3",
+    "normal": "atai_words/audio/85cf3c0c1872_n.mp3"
+  },
+  "นี่คือสามีของฉัน": {
+    "slow": "atai_words/audio/0937e23918e7_s.mp3",
+    "normal": "atai_words/audio/0937e23918e7_n.mp3"
+  },
+  "นี่คือภรรยาของผม": {
+    "slow": "atai_words/audio/02f391d0d56f_s.mp3",
+    "normal": "atai_words/audio/02f391d0d56f_n.mp3"
+  },
+  "มั่ว": {
+    "slow": "atai_words/audio/d24aa9cc57ad_s.mp3",
+    "normal": "atai_words/audio/d24aa9cc57ad_n.mp3"
+  },
+  "พูดมั่ว": {
+    "slow": "atai_words/audio/d0f63369f93c_s.mp3",
+    "normal": "atai_words/audio/d0f63369f93c_n.mp3"
+  },
+  "ทำมั่ว": {
+    "slow": "atai_words/audio/2716ed4c7d6d_s.mp3",
+    "normal": "atai_words/audio/2716ed4c7d6d_n.mp3"
+  },
+  "ตอบมั่ว": {
+    "slow": "atai_words/audio/b9b1d5e63eb9_s.mp3",
+    "normal": "atai_words/audio/b9b1d5e63eb9_n.mp3"
+  },
+  "เดามั่ว": {
+    "slow": "atai_words/audio/82e13ac158fc_s.mp3",
+    "normal": "atai_words/audio/82e13ac158fc_n.mp3"
+  },
+  "มั่วแล้ว": {
+    "slow": "atai_words/audio/e958ac65702f_s.mp3",
+    "normal": "atai_words/audio/e958ac65702f_n.mp3"
+  },
+  "เย็น": {
+    "slow": "atai_words/audio/e80f54ef8a77_s.mp3",
+    "normal": "atai_words/audio/e80f54ef8a77_n.mp3"
+  },
+  "น้ำเย็น": {
+    "slow": "atai_words/audio/fe3e93bc5c69_s.mp3",
+    "normal": "atai_words/audio/fe3e93bc5c69_n.mp3"
+  },
+  "วันนี้อากาศเย็น": {
+    "slow": "atai_words/audio/9accbe87d2b2_s.mp3",
+    "normal": "atai_words/audio/9accbe87d2b2_n.mp3"
+  },
+  "เย็นนี้กินอะไรดี": {
+    "slow": "atai_words/audio/004ac81360b9_s.mp3",
+    "normal": "atai_words/audio/004ac81360b9_n.mp3"
+  },
+  "ใจเย็นๆ": {
+    "slow": "atai_words/audio/71a9afd64a58_s.mp3",
+    "normal": "atai_words/audio/71a9afd64a58_n.mp3"
+  },
+  "เกรงใจ": {
+    "slow": "atai_words/audio/7017c9884233_s.mp3",
+    "normal": "atai_words/audio/7017c9884233_n.mp3"
+  },
+  "เกรงใจคุณจัง": {
+    "slow": "atai_words/audio/cdbf4cdbb526_s.mp3",
+    "normal": "atai_words/audio/cdbf4cdbb526_n.mp3"
+  },
+  "ไม่ต้องเกรงใจ": {
+    "slow": "atai_words/audio/4a6303c3babd_s.mp3",
+    "normal": "atai_words/audio/4a6303c3babd_n.mp3"
+  },
+  "แต่ละ": {
+    "slow": "atai_words/audio/4397d60bc60e_s.mp3",
+    "normal": "atai_words/audio/4397d60bc60e_n.mp3"
+  },
+  "แต่ละคน": {
+    "slow": "atai_words/audio/eaf37a50fc17_s.mp3",
+    "normal": "atai_words/audio/eaf37a50fc17_n.mp3"
+  },
+  "แต่ละคนมีความคิดเห็นไม่เหมือนกัน": {
+    "slow": "atai_words/audio/7a98dcbb46fa_s.mp3",
+    "normal": "atai_words/audio/7a98dcbb46fa_n.mp3"
+  },
+  "วันไหว้พระจันทร์": {
+    "slow": "atai_words/audio/b77a51063995_s.mp3",
+    "normal": "atai_words/audio/b77a51063995_n.mp3"
+  },
+  "พระจันทร์": {
+    "slow": "atai_words/audio/c980ed3a49f8_s.mp3",
+    "normal": "atai_words/audio/c980ed3a49f8_n.mp3"
+  },
+  "ชมพระจันทร์": {
+    "slow": "atai_words/audio/7236884330d6_s.mp3",
+    "normal": "atai_words/audio/7236884330d6_n.mp3"
+  },
+  "พระจันทร์เต็มดวง": {
+    "slow": "atai_words/audio/1ecc6032fe4f_s.mp3",
+    "normal": "atai_words/audio/1ecc6032fe4f_n.mp3"
+  },
+  "กินขนมไหว้พระจันทร์": {
+    "slow": "atai_words/audio/72efd9a4bef3_s.mp3",
+    "normal": "atai_words/audio/72efd9a4bef3_n.mp3"
+  },
+  "อึดอัด": {
+    "slow": "atai_words/audio/f4bba11ba661_s.mp3",
+    "normal": "atai_words/audio/f4bba11ba661_n.mp3"
+  },
+  "ฉันรู้สึกอึดอัด": {
+    "slow": "atai_words/audio/51e5e0651b6f_s.mp3",
+    "normal": "atai_words/audio/51e5e0651b6f_n.mp3"
+  },
+  "อยู่กับเขาแล้วรู้สึกอึดอัด": {
+    "slow": "atai_words/audio/001171305ba1_s.mp3",
+    "normal": "atai_words/audio/001171305ba1_n.mp3"
+  },
+  "ช่วงนี้ประเทศไทยฝนตกทุกวัน": {
+    "slow": "atai_words/audio/c3245b82c40c_s.mp3",
+    "normal": "atai_words/audio/c3245b82c40c_n.mp3"
+  },
+  "ช่วงนี้": {
+    "slow": "atai_words/audio/57e23b8dd20c_s.mp3",
+    "normal": "atai_words/audio/57e23b8dd20c_n.mp3"
+  },
+  "ฝนตกทุกวัน": {
+    "slow": "atai_words/audio/1ccff76b8be1_s.mp3",
+    "normal": "atai_words/audio/1ccff76b8be1_n.mp3"
+  },
+  "น้ำท่วม": {
+    "slow": "atai_words/audio/9270e42c26b4_s.mp3",
+    "normal": "atai_words/audio/9270e42c26b4_n.mp3"
+  },
+  "น้ำท่วมบ้าน": {
+    "slow": "atai_words/audio/f6984adffa33_s.mp3",
+    "normal": "atai_words/audio/f6984adffa33_n.mp3"
+  },
+  "น้ำท่วมหนักมาก": {
+    "slow": "atai_words/audio/1ea957bd5614_s.mp3",
+    "normal": "atai_words/audio/1ea957bd5614_n.mp3"
+  },
+  "บ้านคุณน้ำท่วมไหม": {
+    "slow": "atai_words/audio/8109761e1252_s.mp3",
+    "normal": "atai_words/audio/8109761e1252_n.mp3"
+  },
+  "กล้วย": {
+    "slow": "atai_words/audio/59a1edc07c80_s.mp3",
+    "normal": "atai_words/audio/59a1edc07c80_n.mp3"
+  },
+  "กล้วยๆ": {
+    "slow": "atai_words/audio/c3ccb3312d25_s.mp3",
+    "normal": "atai_words/audio/c3ccb3312d25_n.mp3"
+  },
+  "เรื่องนี้กล้วยๆ": {
+    "slow": "atai_words/audio/7f31e0b79651_s.mp3",
+    "normal": "atai_words/audio/7f31e0b79651_n.mp3"
+  },
+  "ฝุ่น": {
+    "slow": "atai_words/audio/d07cd89cb7cc_s.mp3",
+    "normal": "atai_words/audio/d07cd89cb7cc_n.mp3"
+  },
+  "ฝุ่นเยอะมาก": {
+    "slow": "atai_words/audio/3745487e345a_s.mp3",
+    "normal": "atai_words/audio/3745487e345a_n.mp3"
+  },
+  "ฝุ่นเข้าตา": {
+    "slow": "atai_words/audio/dab3ba05d5fa_s.mp3",
+    "normal": "atai_words/audio/dab3ba05d5fa_n.mp3"
+  },
+  "วันชาติจีน": {
+    "slow": "atai_words/audio/75aa57300362_s.mp3",
+    "normal": "atai_words/audio/75aa57300362_n.mp3"
+  },
+  "วันที่ 1 ตุลาคม": {
+    "slow": "atai_words/audio/c7bf5c513cf5_s.mp3",
+    "normal": "atai_words/audio/c7bf5c513cf5_n.mp3"
+  },
+  "สุขสันต์วันชาติจีน": {
+    "slow": "atai_words/audio/78be54475eae_s.mp3",
+    "normal": "atai_words/audio/78be54475eae_n.mp3"
+  },
+  "วันนี้เป็นวันหยุด": {
+    "slow": "atai_words/audio/fe65d7a810ee_s.mp3",
+    "normal": "atai_words/audio/fe65d7a810ee_n.mp3"
+  },
+  "วันหยุด": {
+    "slow": "atai_words/audio/c39aff5d798c_s.mp3",
+    "normal": "atai_words/audio/c39aff5d798c_n.mp3"
+  },
+  "วันหยุดยาว": {
+    "slow": "atai_words/audio/4503e86301c6_s.mp3",
+    "normal": "atai_words/audio/4503e86301c6_n.mp3"
+  },
+  "แผนในวันหยุด": {
+    "slow": "atai_words/audio/80b703a6d8e8_s.mp3",
+    "normal": "atai_words/audio/80b703a6d8e8_n.mp3"
+  },
+  "เหงา": {
+    "slow": "atai_words/audio/0e754431f189_s.mp3",
+    "normal": "atai_words/audio/0e754431f189_n.mp3"
+  },
+  "เหงาจังเลย": {
+    "slow": "atai_words/audio/72042ff038bd_s.mp3",
+    "normal": "atai_words/audio/72042ff038bd_n.mp3"
+  },
+  "วันนี้รู้สึกเหงาๆ": {
+    "slow": "atai_words/audio/9347bd8cd247_s.mp3",
+    "normal": "atai_words/audio/9347bd8cd247_n.mp3"
+  },
+  "แปลก": {
+    "slow": "atai_words/audio/df36d18268d9_s.mp3",
+    "normal": "atai_words/audio/df36d18268d9_n.mp3"
+  },
+  "แปลกจังเลย": {
+    "slow": "atai_words/audio/99914da82e7d_s.mp3",
+    "normal": "atai_words/audio/99914da82e7d_n.mp3"
+  },
+  "วันนี้เขาดูแปลกๆ": {
+    "slow": "atai_words/audio/0ce4d5c34c74_s.mp3",
+    "normal": "atai_words/audio/0ce4d5c34c74_n.mp3"
+  },
+  "ชดเชย / เรียนชดเชย / พรุ่งนี้มีเรียนชดเชย / วันหยุดชดเชย / พรุ่งนี้เป็นวันหยุดชดเชย": {
+    "slow": "atai_words/audio/73f86acebb38_s.mp3",
+    "normal": "atai_words/audio/73f86acebb38_n.mp3"
+  },
+  "ชดเชย": {
+    "slow": "atai_words/audio/9939e0686a76_s.mp3",
+    "normal": "atai_words/audio/9939e0686a76_n.mp3"
+  },
+  "เรียนชดเชย": {
+    "slow": "atai_words/audio/2b1ed4cd87c0_s.mp3",
+    "normal": "atai_words/audio/2b1ed4cd87c0_n.mp3"
+  },
+  "พรุ่งนี้มีเรียนชดเชย": {
+    "slow": "atai_words/audio/2345c9a3ace0_s.mp3",
+    "normal": "atai_words/audio/2345c9a3ace0_n.mp3"
+  },
+  "วันหยุดชดเชย": {
+    "slow": "atai_words/audio/e5f001d8a436_s.mp3",
+    "normal": "atai_words/audio/e5f001d8a436_n.mp3"
+  },
+  "พรุ่งนี้เป็นวันหยุดชดเชย": {
+    "slow": "atai_words/audio/61ca125b36ce_s.mp3",
+    "normal": "atai_words/audio/61ca125b36ce_n.mp3"
+  },
+  "ง่าย": {
+    "slow": "atai_words/audio/8aa2140a7b94_s.mp3",
+    "normal": "atai_words/audio/8aa2140a7b94_n.mp3"
+  },
+  "ภาษาไทยไม่ยาก ง่ายมาก": {
+    "slow": "atai_words/audio/76c7241077fd_s.mp3",
+    "normal": "atai_words/audio/76c7241077fd_n.mp3"
+  },
+  "คำนี้จำง่ายมาก": {
+    "slow": "atai_words/audio/8b127274ac94_s.mp3",
+    "normal": "atai_words/audio/8b127274ac94_n.mp3"
+  },
+  "ถ้า": {
+    "slow": "atai_words/audio/4b82a1bc78b3_s.mp3",
+    "normal": "atai_words/audio/4b82a1bc78b3_n.mp3"
+  },
+  "ถ้าฝนตก ก็ไม่ไป": {
+    "slow": "atai_words/audio/71ec744cf3fe_s.mp3",
+    "normal": "atai_words/audio/71ec744cf3fe_n.mp3"
+  },
+  "ถ้าไม่เข้าใจ ถามได้นะ": {
+    "slow": "atai_words/audio/6982d98f2016_s.mp3",
+    "normal": "atai_words/audio/6982d98f2016_n.mp3"
+  },
+  "ลม": {
+    "slow": "atai_words/audio/7c58ffdaa526_s.mp3",
+    "normal": "atai_words/audio/7c58ffdaa526_n.mp3"
+  },
+  "วันนี้ลมแรงมาก": {
+    "slow": "atai_words/audio/54bbfb841767_s.mp3",
+    "normal": "atai_words/audio/54bbfb841767_n.mp3"
+  },
+  "วันนี้ไม่มีลมเลย": {
+    "slow": "atai_words/audio/2818829a873e_s.mp3",
+    "normal": "atai_words/audio/2818829a873e_n.mp3"
+  },
+  "ข้างนอกมีลม": {
+    "slow": "atai_words/audio/257cacdcb5d4_s.mp3",
+    "normal": "atai_words/audio/257cacdcb5d4_n.mp3"
+  },
+  "พื้นฐาน": {
+    "slow": "atai_words/audio/023a7cbde475_s.mp3",
+    "normal": "atai_words/audio/023a7cbde475_n.mp3"
+  },
+  "ภาษาไทยพื้นฐาน": {
+    "slow": "atai_words/audio/4358e72b972e_s.mp3",
+    "normal": "atai_words/audio/4358e72b972e_n.mp3"
+  },
+  "พื้นฐานไม่ดี ต้องฝึกเพิ่ม": {
+    "slow": "atai_words/audio/834f6de7a30c_s.mp3",
+    "normal": "atai_words/audio/834f6de7a30c_n.mp3"
+  },
+  "ด้วยกัน": {
+    "slow": "atai_words/audio/bc606ed4b8a5_s.mp3",
+    "normal": "atai_words/audio/bc606ed4b8a5_n.mp3"
+  },
+  "ไปด้วยกัน": {
+    "slow": "atai_words/audio/cff4d48d47b8_s.mp3",
+    "normal": "atai_words/audio/cff4d48d47b8_n.mp3"
+  },
+  "กินข้าวด้วยกัน": {
+    "slow": "atai_words/audio/b9cc52fd5a9c_s.mp3",
+    "normal": "atai_words/audio/b9cc52fd5a9c_n.mp3"
+  },
+  "ทำด้วยกัน": {
+    "slow": "atai_words/audio/e015eec89378_s.mp3",
+    "normal": "atai_words/audio/e015eec89378_n.mp3"
+  },
+  "เราอยู่ด้วยกัน": {
+    "slow": "atai_words/audio/8a2d2780cf18_s.mp3",
+    "normal": "atai_words/audio/8a2d2780cf18_n.mp3"
+  },
+  "โง่ / ไม่ได้โง่ขนาดนั้น / อย่าคิดว่าฉันโง่": {
+    "slow": "atai_words/audio/3cdcdcc9043f_s.mp3",
+    "normal": "atai_words/audio/3cdcdcc9043f_n.mp3"
+  },
+  "โง่": {
+    "slow": "atai_words/audio/51a50a1ff0e3_s.mp3",
+    "normal": "atai_words/audio/51a50a1ff0e3_n.mp3"
+  },
+  "ไม่ได้โง่ขนาดนั้น": {
+    "slow": "atai_words/audio/3488efbb5c6c_s.mp3",
+    "normal": "atai_words/audio/3488efbb5c6c_n.mp3"
+  },
+  "อย่าคิดว่าฉันโง่": {
+    "slow": "atai_words/audio/a048bcc856a6_s.mp3",
+    "normal": "atai_words/audio/a048bcc856a6_n.mp3"
+  },
+  "ขม": {
+    "slow": "atai_words/audio/ec1c698ec467_s.mp3",
+    "normal": "atai_words/audio/ec1c698ec467_n.mp3"
+  },
+  "กาแฟขมมาก": {
+    "slow": "atai_words/audio/b7479c8f0ebe_s.mp3",
+    "normal": "atai_words/audio/b7479c8f0ebe_n.mp3"
+  },
+  "ฉันไม่ชอบกินของขมๆ": {
+    "slow": "atai_words/audio/583dbdaaa44b_s.mp3",
+    "normal": "atai_words/audio/583dbdaaa44b_n.mp3"
+  },
+  "ไม่รู้อะไรเลย": {
+    "slow": "atai_words/audio/49c6d2a4072d_s.mp3",
+    "normal": "atai_words/audio/49c6d2a4072d_n.mp3"
+  },
+  "เขาไม่รู้อะไรเลย": {
+    "slow": "atai_words/audio/b8d13e50fdd3_s.mp3",
+    "normal": "atai_words/audio/b8d13e50fdd3_n.mp3"
+  },
+  "ฉันไม่รู้อะไรเกี่ยวกับเรื่องนี้เลย": {
+    "slow": "atai_words/audio/3853df5d8ab4_s.mp3",
+    "normal": "atai_words/audio/3853df5d8ab4_n.mp3"
+  },
+  "เธอไม่รู้อะไรเลยเหรอ": {
+    "slow": "atai_words/audio/c1759c88eb51_s.mp3",
+    "normal": "atai_words/audio/c1759c88eb51_n.mp3"
+  },
+  "ฉันไม่รู้อะไรเลยจริงๆ": {
+    "slow": "atai_words/audio/ef566d8206f2_s.mp3",
+    "normal": "atai_words/audio/ef566d8206f2_n.mp3"
+  },
+  "ถ่ายเอกสาร": {
+    "slow": "atai_words/audio/6090f4be5a53_s.mp3",
+    "normal": "atai_words/audio/6090f4be5a53_n.mp3"
+  },
+  "ช่วยถ่ายเอกสารให้หน่อยค่ะ": {
+    "slow": "atai_words/audio/f334231c23b6_s.mp3",
+    "normal": "atai_words/audio/f334231c23b6_n.mp3"
+  },
+  "ฉันต้องการถ่ายเอกสาร": {
+    "slow": "atai_words/audio/4d80d9f9b02d_s.mp3",
+    "normal": "atai_words/audio/4d80d9f9b02d_n.mp3"
+  },
+  "ถ่ายเอกสารกี่ชุด": {
+    "slow": "atai_words/audio/080fb18a683f_s.mp3",
+    "normal": "atai_words/audio/080fb18a683f_n.mp3"
+  },
+  "ถ่ายเอกสารสองชุด": {
+    "slow": "atai_words/audio/b3d36dcadb33_s.mp3",
+    "normal": "atai_words/audio/b3d36dcadb33_n.mp3"
+  },
+  "แต่งงาน": {
+    "slow": "atai_words/audio/bac976155993_s.mp3",
+    "normal": "atai_words/audio/bac976155993_n.mp3"
+  },
+  "แต่งงานกับผมนะครับ": {
+    "slow": "atai_words/audio/431f129c4c89_s.mp3",
+    "normal": "atai_words/audio/431f129c4c89_n.mp3"
+  },
+  "ฉันยังไม่อยากแต่งงาน": {
+    "slow": "atai_words/audio/535c60594cc6_s.mp3",
+    "normal": "atai_words/audio/535c60594cc6_n.mp3"
+  },
+  "เขาจะแต่งงานปีหน้า": {
+    "slow": "atai_words/audio/f4bb174bcb16_s.mp3",
+    "normal": "atai_words/audio/f4bb174bcb16_n.mp3"
+  },
+  "สวัสดีค่ะ": {
+    "slow": "atai_words/audio/8bb5cd7fbc00_s.mp3",
+    "normal": "atai_words/audio/8bb5cd7fbc00_n.mp3"
+  },
+  "ในที่สุดก็ได้เจอคุณแล้ว": {
+    "slow": "atai_words/audio/9180bb5a501d_s.mp3",
+    "normal": "atai_words/audio/9180bb5a501d_n.mp3"
+  },
+  "ดีใจมากที่ได้เจอคุณ": {
+    "slow": "atai_words/audio/41f65d137285_s.mp3",
+    "normal": "atai_words/audio/41f65d137285_n.mp3"
+  },
+  "คิดถึงคุณมากเลย": {
+    "slow": "atai_words/audio/0d3a2037310c_s.mp3",
+    "normal": "atai_words/audio/0d3a2037310c_n.mp3"
+  },
+  "วันนี้คุณน่ารักมาก": {
+    "slow": "atai_words/audio/b74108c6bf12_s.mp3",
+    "normal": "atai_words/audio/b74108c6bf12_n.mp3"
+  },
+  "ฉันชอบคุณมาก": {
+    "slow": "atai_words/audio/60471792d7dd_s.mp3",
+    "normal": "atai_words/audio/60471792d7dd_n.mp3"
+  },
+  "ฉันจะคอยสนับสนุนคุณตลอดไป": {
+    "slow": "atai_words/audio/cacca77524b3_s.mp3",
+    "normal": "atai_words/audio/cacca77524b3_n.mp3"
+  },
+  "ขอให้คุณมีความสุขทุกวันนะคะ": {
+    "slow": "atai_words/audio/b06af463f3a0_s.mp3",
+    "normal": "atai_words/audio/b06af463f3a0_n.mp3"
+  },
+  "อย่าลืมดูแลสุขภาพด้วยนะคะ": {
+    "slow": "atai_words/audio/0bee7f096f94_s.mp3",
+    "normal": "atai_words/audio/0bee7f096f94_n.mp3"
+  },
+  "ตะเกียบ": {
+    "slow": "atai_words/audio/bfc41c77b5d2_s.mp3",
+    "normal": "atai_words/audio/bfc41c77b5d2_n.mp3"
+  },
+  "มีตะเกียบไหมคะ": {
+    "slow": "atai_words/audio/d9d071b6700a_s.mp3",
+    "normal": "atai_words/audio/d9d071b6700a_n.mp3"
+  },
+  "ฉันใช้ตะเกียบกินข้าว": {
+    "slow": "atai_words/audio/edba4866e400_s.mp3",
+    "normal": "atai_words/audio/edba4866e400_n.mp3"
+  },
+  "คุณใช้ตะเกียบเป็นไหม": {
+    "slow": "atai_words/audio/f66bfbf70159_s.mp3",
+    "normal": "atai_words/audio/f66bfbf70159_n.mp3"
+  },
+  "ฉันใช้ตะเกียบไม่เป็น": {
+    "slow": "atai_words/audio/5ba8fa5b66bc_s.mp3",
+    "normal": "atai_words/audio/5ba8fa5b66bc_n.mp3"
+  },
+  "ช้อน": {
+    "slow": "atai_words/audio/878777fb3388_s.mp3",
+    "normal": "atai_words/audio/878777fb3388_n.mp3"
+  },
+  "ฉันชอบใช้ช้อนกินข้าว": {
+    "slow": "atai_words/audio/20f782e04e90_s.mp3",
+    "normal": "atai_words/audio/20f782e04e90_n.mp3"
+  },
+  "ขอช้อนหนึ่งคันค่ะ": {
+    "slow": "atai_words/audio/a5d8180f7f9e_s.mp3",
+    "normal": "atai_words/audio/a5d8180f7f9e_n.mp3"
+  },
+  "ช้อนอยู่บนโต๊ะ": {
+    "slow": "atai_words/audio/bdfdf25347a4_s.mp3",
+    "normal": "atai_words/audio/bdfdf25347a4_n.mp3"
+  },
+  "ไม่เป็นไร ไม่ต้องกังวล": {
+    "slow": "atai_words/audio/d50a7d2b297c_s.mp3",
+    "normal": "atai_words/audio/d50a7d2b297c_n.mp3"
+  },
+  "ขอบคุณค่ะ — ไม่เป็นไรค่ะ": {
+    "slow": "atai_words/audio/da593afd2698_s.mp3",
+    "normal": "atai_words/audio/da593afd2698_n.mp3"
+  },
+  "ไม่เป็นไร ฉันทำเองได้": {
+    "slow": "atai_words/audio/68f183cc09d2_s.mp3",
+    "normal": "atai_words/audio/68f183cc09d2_n.mp3"
+  },
+  "ฉันชอบ": {
+    "slow": "atai_words/audio/0b1470cabd17_s.mp3",
+    "normal": "atai_words/audio/0b1470cabd17_n.mp3"
+  },
+  "สบาย": {
+    "slow": "atai_words/audio/431e1902da00_s.mp3",
+    "normal": "atai_words/audio/431e1902da00_n.mp3"
+  },
+  "ฉันชอบฤดูใบไม้ร่วงเพราะอากาศเย็นสบาย": {
+    "slow": "atai_words/audio/24706c3a91be_s.mp3",
+    "normal": "atai_words/audio/24706c3a91be_n.mp3"
+  },
+  "เร็ว": {
+    "slow": "atai_words/audio/6ad168d93057_s.mp3",
+    "normal": "atai_words/audio/6ad168d93057_n.mp3"
+  },
+  "เร็วๆหน่อย": {
+    "slow": "atai_words/audio/f7204cc9770f_s.mp3",
+    "normal": "atai_words/audio/f7204cc9770f_n.mp3"
+  },
+  "เร็วมากเลย": {
+    "slow": "atai_words/audio/51aa08329f37_s.mp3",
+    "normal": "atai_words/audio/51aa08329f37_n.mp3"
+  },
+  "คุณวิ่งเร็วมาก": {
+    "slow": "atai_words/audio/ac13663088a2_s.mp3",
+    "normal": "atai_words/audio/ac13663088a2_n.mp3"
+  },
+  "เร็วหน่อยได้ไหม": {
+    "slow": "atai_words/audio/3ed49b1fae40_s.mp3",
+    "normal": "atai_words/audio/3ed49b1fae40_n.mp3"
+  },
+  "ช้า": {
+    "slow": "atai_words/audio/e660f159cc15_s.mp3",
+    "normal": "atai_words/audio/e660f159cc15_n.mp3"
+  },
+  "คุณเดินช้ามาก": {
+    "slow": "atai_words/audio/84e4152ee2dd_s.mp3",
+    "normal": "atai_words/audio/84e4152ee2dd_n.mp3"
+  },
+  "พูดช้าๆหน่อย": {
+    "slow": "atai_words/audio/d695e02b6e7a_s.mp3",
+    "normal": "atai_words/audio/d695e02b6e7a_n.mp3"
+  },
+  "ขับรถช้าๆนะ": {
+    "slow": "atai_words/audio/a1a4e3181a08_s.mp3",
+    "normal": "atai_words/audio/a1a4e3181a08_n.mp3"
+  },
+  "อินเทอร์เน็ตช้ามาก": {
+    "slow": "atai_words/audio/5d92c762a7a9_s.mp3",
+    "normal": "atai_words/audio/5d92c762a7a9_n.mp3"
+  },
+  "อะไร": {
+    "slow": "atai_words/audio/b63888f23292_s.mp3",
+    "normal": "atai_words/audio/b63888f23292_n.mp3"
+  },
+  "กินอะไร": {
+    "slow": "atai_words/audio/b537f7d97600_s.mp3",
+    "normal": "atai_words/audio/b537f7d97600_n.mp3"
+  },
+  "ซื้ออะไร": {
+    "slow": "atai_words/audio/ae2c5876f2f7_s.mp3",
+    "normal": "atai_words/audio/ae2c5876f2f7_n.mp3"
+  },
+  "พูดอะไร": {
+    "slow": "atai_words/audio/aa9e965b9fa6_s.mp3",
+    "normal": "atai_words/audio/aa9e965b9fa6_n.mp3"
+  },
+  "เพราะอะไร": {
+    "slow": "atai_words/audio/41fd27a06da3_s.mp3",
+    "normal": "atai_words/audio/41fd27a06da3_n.mp3"
+  },
+  "อะไรนะ": {
+    "slow": "atai_words/audio/15090d9aebe4_s.mp3",
+    "normal": "atai_words/audio/15090d9aebe4_n.mp3"
+  },
+  "มีอะไร": {
+    "slow": "atai_words/audio/c780ab41f5f8_s.mp3",
+    "normal": "atai_words/audio/c780ab41f5f8_n.mp3"
+  },
+  "ฉันไปไม่ได้": {
+    "slow": "atai_words/audio/770042a9cdbc_s.mp3",
+    "normal": "atai_words/audio/770042a9cdbc_n.mp3"
+  },
+  "เข้าไปไม่ได้": {
+    "slow": "atai_words/audio/789ba43e9ff3_s.mp3",
+    "normal": "atai_words/audio/789ba43e9ff3_n.mp3"
+  },
+  "ฉันไม่ได้ทำ": {
+    "slow": "atai_words/audio/5794fab47c2b_s.mp3",
+    "normal": "atai_words/audio/5794fab47c2b_n.mp3"
+  },
+  "สงสัย": {
+    "slow": "atai_words/audio/5980d8a26c31_s.mp3",
+    "normal": "atai_words/audio/5980d8a26c31_n.mp3"
+  },
+  "ฉันสงสัยว่าเขาโกหก": {
+    "slow": "atai_words/audio/fe0b82719866_s.mp3",
+    "normal": "atai_words/audio/fe0b82719866_n.mp3"
+  },
+  "ฉันสงสัยมานานแล้ว": {
+    "slow": "atai_words/audio/a6191d414bdb_s.mp3",
+    "normal": "atai_words/audio/a6191d414bdb_n.mp3"
+  },
+  "ก่อนอื่น": {
+    "slow": "atai_words/audio/589e50baec16_s.mp3",
+    "normal": "atai_words/audio/589e50baec16_n.mp3"
+  },
+  "ก่อนอื่น เรามาแนะนำตัวกันก่อน": {
+    "slow": "atai_words/audio/7c77264c8209_s.mp3",
+    "normal": "atai_words/audio/7c77264c8209_n.mp3"
+  },
+  "ก่อนอื่น คุณต้องล้างมือ": {
+    "slow": "atai_words/audio/f40a43992f6f_s.mp3",
+    "normal": "atai_words/audio/f40a43992f6f_n.mp3"
+  },
+  "ก่อนอื่น ฉันต้องทำการบ้านให้เสร็จ": {
+    "slow": "atai_words/audio/80389e17b82f_s.mp3",
+    "normal": "atai_words/audio/80389e17b82f_n.mp3"
+  },
+  "อย่าลืม": {
+    "slow": "atai_words/audio/910f3ba179ef_s.mp3",
+    "normal": "atai_words/audio/910f3ba179ef_n.mp3"
+  },
+  "อย่าลืมกินข้าวนะ": {
+    "slow": "atai_words/audio/f9575957a3d5_s.mp3",
+    "normal": "atai_words/audio/f9575957a3d5_n.mp3"
+  },
+  "อย่าลืมปิดไฟ": {
+    "slow": "atai_words/audio/6c4c42917031_s.mp3",
+    "normal": "atai_words/audio/6c4c42917031_n.mp3"
+  },
+  "อย่าลืมโทรหาฉันนะ": {
+    "slow": "atai_words/audio/de7a91125be9_s.mp3",
+    "normal": "atai_words/audio/de7a91125be9_n.mp3"
+  },
+  "อย่าลืมทำการบ้าน": {
+    "slow": "atai_words/audio/5653e343156a_s.mp3",
+    "normal": "atai_words/audio/5653e343156a_n.mp3"
+  },
+  "ขี้": {
+    "slow": "atai_words/audio/25f216f9b784_s.mp3",
+    "normal": "atai_words/audio/25f216f9b784_n.mp3"
+  },
+  "ขี้โมโห": {
+    "slow": "atai_words/audio/726533aa48ff_s.mp3",
+    "normal": "atai_words/audio/726533aa48ff_n.mp3"
+  },
+  "ขี้กลัว": {
+    "slow": "atai_words/audio/2126b721b113_s.mp3",
+    "normal": "atai_words/audio/2126b721b113_n.mp3"
+  },
+  "ตากฝน": {
+    "slow": "atai_words/audio/084a24eeda10_s.mp3",
+    "normal": "atai_words/audio/084a24eeda10_n.mp3"
+  },
+  "ฉันตากฝน": {
+    "slow": "atai_words/audio/3fcdad3bad97_s.mp3",
+    "normal": "atai_words/audio/3fcdad3bad97_n.mp3"
+  },
+  "อย่าตากฝนนะ": {
+    "slow": "atai_words/audio/b30bccc3b16b_s.mp3",
+    "normal": "atai_words/audio/b30bccc3b16b_n.mp3"
+  },
+  "ฉันเดินตากฝนกลับบ้าน": {
+    "slow": "atai_words/audio/649fa0b82435_s.mp3",
+    "normal": "atai_words/audio/649fa0b82435_n.mp3"
+  },
+  "เปรี้ยว": {
+    "slow": "atai_words/audio/7b2898e8c8b2_s.mp3",
+    "normal": "atai_words/audio/7b2898e8c8b2_n.mp3"
+  },
+  "มะนาวเปรี้ยวมาก": {
+    "slow": "atai_words/audio/bc5f9440d819_s.mp3",
+    "normal": "atai_words/audio/bc5f9440d819_n.mp3"
+  },
+  "ส้มลูกนี้เปรี้ยวไหม": {
+    "slow": "atai_words/audio/1ce93795e26b_s.mp3",
+    "normal": "atai_words/audio/1ce93795e26b_n.mp3"
+  },
+  "อาหารจานนี้เปรี้ยวไปหน่อย": {
+    "slow": "atai_words/audio/5b84ef76e5ce_s.mp3",
+    "normal": "atai_words/audio/5b84ef76e5ce_n.mp3"
+  },
+  "ประมาณ": {
+    "slow": "atai_words/audio/f94494c2be12_s.mp3",
+    "normal": "atai_words/audio/f94494c2be12_n.mp3"
+  },
+  "ใช้เวลาประมาณ 20 นาที": {
+    "slow": "atai_words/audio/0b754da81369_s.mp3",
+    "normal": "atai_words/audio/0b754da81369_n.mp3"
+  },
+  "ราคาประมาณ 500 บาท": {
+    "slow": "atai_words/audio/683d5195c2ff_s.mp3",
+    "normal": "atai_words/audio/683d5195c2ff_n.mp3"
+  },
+  "เราเรียนภาษาไทยมาประมาณหนึ่งปีแล้ว": {
+    "slow": "atai_words/audio/058b80e66c1f_s.mp3",
+    "normal": "atai_words/audio/058b80e66c1f_n.mp3"
+  },
+  "เขามาถึงประมาณ 6 โมง": {
+    "slow": "atai_words/audio/d577086153a1_s.mp3",
+    "normal": "atai_words/audio/d577086153a1_n.mp3"
+  },
+  "พอดี": {
+    "slow": "atai_words/audio/283800e3da0c_s.mp3",
+    "normal": "atai_words/audio/283800e3da0c_n.mp3"
+  },
+  "วันนี้ฉันว่างพอดี": {
+    "slow": "atai_words/audio/e97de33f8392_s.mp3",
+    "normal": "atai_words/audio/e97de33f8392_n.mp3"
+  },
+  "เรามาถึงพอดี": {
+    "slow": "atai_words/audio/014a5ce01db9_s.mp3",
+    "normal": "atai_words/audio/014a5ce01db9_n.mp3"
+  },
+  "เสื้อตัวนี้ใส่พอดีมาก": {
+    "slow": "atai_words/audio/fde8477a3fa0_s.mp3",
+    "normal": "atai_words/audio/fde8477a3fa0_n.mp3"
+  },
+  "ไม่ค่อย": {
+    "slow": "atai_words/audio/12e9fdb67d58_s.mp3",
+    "normal": "atai_words/audio/12e9fdb67d58_n.mp3"
+  },
+  "ฉันไม่ค่อยสบาย": {
+    "slow": "atai_words/audio/9f1b7c5faddd_s.mp3",
+    "normal": "atai_words/audio/9f1b7c5faddd_n.mp3"
+  },
+  "ฉันไม่ค่อยชอบกินผัก": {
+    "slow": "atai_words/audio/be212dd7ace4_s.mp3",
+    "normal": "atai_words/audio/be212dd7ace4_n.mp3"
+  },
+  "ฉันไม่ค่อยกินกาแฟ": {
+    "slow": "atai_words/audio/5c27bc6e9e79_s.mp3",
+    "normal": "atai_words/audio/5c27bc6e9e79_n.mp3"
+  },
+  "เขาไม่ค่อยโทรหาฉัน": {
+    "slow": "atai_words/audio/8525325ef4b0_s.mp3",
+    "normal": "atai_words/audio/8525325ef4b0_n.mp3"
+  },
+  "ก็ดี": {
+    "slow": "atai_words/audio/e628afda2030_s.mp3",
+    "normal": "atai_words/audio/e628afda2030_n.mp3"
+  },
+  "ร้านนี้ก็ดีนะ": {
+    "slow": "atai_words/audio/d4d2a855f6fe_s.mp3",
+    "normal": "atai_words/audio/d4d2a855f6fe_n.mp3"
+  },
+  "เขาก็ดีนะ": {
+    "slow": "atai_words/audio/aacf74ef16c6_s.mp3",
+    "normal": "atai_words/audio/aacf74ef16c6_n.mp3"
+  },
+  "พักผ่อนบ้างก็ดีนะ": {
+    "slow": "atai_words/audio/3aa3b106a9b4_s.mp3",
+    "normal": "atai_words/audio/3aa3b106a9b4_n.mp3"
+  },
+  "ได้ไหม": {
+    "slow": "atai_words/audio/4acd8848ca39_s.mp3",
+    "normal": "atai_words/audio/4acd8848ca39_n.mp3"
+  },
+  "ฉันเข้าไปได้ไหม": {
+    "slow": "atai_words/audio/e03ebcad1a1c_s.mp3",
+    "normal": "atai_words/audio/e03ebcad1a1c_n.mp3"
+  },
+  "ช่วยฉันหน่อยได้ไหม": {
+    "slow": "atai_words/audio/3d46df92bc84_s.mp3",
+    "normal": "atai_words/audio/3d46df92bc84_n.mp3"
+  },
+  "พรุ่งนี้ไปได้ไหม": {
+    "slow": "atai_words/audio/d1d02aff4685_s.mp3",
+    "normal": "atai_words/audio/d1d02aff4685_n.mp3"
+  },
+  "ขอ": {
+    "slow": "atai_words/audio/7306e1707ee6_s.mp3",
+    "normal": "atai_words/audio/7306e1707ee6_n.mp3"
+  },
+  "ขอเมนูหน่อยค่ะ": {
+    "slow": "atai_words/audio/c00f7656b392_s.mp3",
+    "normal": "atai_words/audio/c00f7656b392_n.mp3"
+  },
+  "ขอเวลาหน่อย": {
+    "slow": "atai_words/audio/09f4d4e309b4_s.mp3",
+    "normal": "atai_words/audio/09f4d4e309b4_n.mp3"
+  },
+  "ขอคิดดูก่อน": {
+    "slow": "atai_words/audio/ed05e3be0b57_s.mp3",
+    "normal": "atai_words/audio/ed05e3be0b57_n.mp3"
+  },
+  "ขอเงินหน่อย": {
+    "slow": "atai_words/audio/f112e108a6fd_s.mp3",
+    "normal": "atai_words/audio/f112e108a6fd_n.mp3"
+  },
+  "เรียก": {
+    "slow": "atai_words/audio/cd11512c624c_s.mp3",
+    "normal": "atai_words/audio/cd11512c624c_n.mp3"
+  },
+  "ฉันจะเรียกแท็กซี่": {
+    "slow": "atai_words/audio/cc346d2e2f5b_s.mp3",
+    "normal": "atai_words/audio/cc346d2e2f5b_n.mp3"
+  },
+  "เขาเรียกชื่อฉัน": {
+    "slow": "atai_words/audio/5bb6c53313ab_s.mp3",
+    "normal": "atai_words/audio/5bb6c53313ab_n.mp3"
+  },
+  "ช่วยเรียกหมอให้หน่อย": {
+    "slow": "atai_words/audio/6006556fbf4b_s.mp3",
+    "normal": "atai_words/audio/6006556fbf4b_n.mp3"
+  },
+  "แม่เรียกฉันกลับบ้าน": {
+    "slow": "atai_words/audio/ca456bd793b6_s.mp3",
+    "normal": "atai_words/audio/ca456bd793b6_n.mp3"
+  },
+  "ฉันซื้อโทรศัพท์ใหม่": {
+    "slow": "atai_words/audio/5c5aa722eb20_s.mp3",
+    "normal": "atai_words/audio/5c5aa722eb20_n.mp3"
+  },
+  "ลองทำใหม่อีกครั้ง": {
+    "slow": "atai_words/audio/6de79b2c185d_s.mp3",
+    "normal": "atai_words/audio/6de79b2c185d_n.mp3"
+  },
+  "ฉันมีงานใหม่แล้ว": {
+    "slow": "atai_words/audio/f8165e4acbee_s.mp3",
+    "normal": "atai_words/audio/f8165e4acbee_n.mp3"
+  },
+  "เพราะว่า": {
+    "slow": "atai_words/audio/dd61d082841c_s.mp3",
+    "normal": "atai_words/audio/dd61d082841c_n.mp3"
+  },
+  "ฉันไม่ไปเพราะว่าฉันไม่สบาย": {
+    "slow": "atai_words/audio/5fcd5d0d1e6d_s.mp3",
+    "normal": "atai_words/audio/5fcd5d0d1e6d_n.mp3"
+  },
+  "ฉันซื้ออันนี้เพราะว่าราคาถูก": {
+    "slow": "atai_words/audio/78b155ed7c33_s.mp3",
+    "normal": "atai_words/audio/78b155ed7c33_n.mp3"
+  },
+  "หรือยัง": {
+    "slow": "atai_words/audio/7138a5767e27_s.mp3",
+    "normal": "atai_words/audio/7138a5767e27_n.mp3"
+  },
+  "กินข้าวหรือยัง": {
+    "slow": "atai_words/audio/057458988ab8_s.mp3",
+    "normal": "atai_words/audio/057458988ab8_n.mp3"
+  },
+  "ทำงานเสร็จหรือยัง": {
+    "slow": "atai_words/audio/3f88b56f46cf_s.mp3",
+    "normal": "atai_words/audio/3f88b56f46cf_n.mp3"
+  },
+  "นอนหรือยัง": {
+    "slow": "atai_words/audio/bb2f66050912_s.mp3",
+    "normal": "atai_words/audio/bb2f66050912_n.mp3"
+  },
+  "นา": {
+    "slow": "atai_words/audio/0ee11323b035_s.mp3",
+    "normal": "atai_words/audio/0ee11323b035_n.mp3"
+  },
+  "ตา": {
+    "slow": "atai_words/audio/f03eb06044b8_s.mp3",
+    "normal": "atai_words/audio/f03eb06044b8_n.mp3"
+  },
+  "อา": {
+    "slow": "atai_words/audio/76e19543f946_s.mp3",
+    "normal": "atai_words/audio/76e19543f946_n.mp3"
+  },
+  "ชา": {
+    "slow": "atai_words/audio/e4b513baaa8b_s.mp3",
+    "normal": "atai_words/audio/e4b513baaa8b_n.mp3"
+  },
+  "ยา": {
+    "slow": "atai_words/audio/9db6d07c01c5_s.mp3",
+    "normal": "atai_words/audio/9db6d07c01c5_n.mp3"
+  },
+  "ปา": {
+    "slow": "atai_words/audio/85521cf2f4cb_s.mp3",
+    "normal": "atai_words/audio/85521cf2f4cb_n.mp3"
+  },
+  "ขา": {
+    "slow": "atai_words/audio/e5621333ca0b_s.mp3",
+    "normal": "atai_words/audio/e5621333ca0b_n.mp3"
+  },
+  "คา": {
+    "slow": "atai_words/audio/bca8142c09aa_s.mp3",
+    "normal": "atai_words/audio/bca8142c09aa_n.mp3"
+  },
+  "ปู": {
+    "slow": "atai_words/audio/259418f84302_s.mp3",
+    "normal": "atai_words/audio/259418f84302_n.mp3"
+  },
+  "หู": {
+    "slow": "atai_words/audio/a50a1b8ba69a_s.mp3",
+    "normal": "atai_words/audio/a50a1b8ba69a_n.mp3"
+  },
+  "งู": {
+    "slow": "atai_words/audio/e4fa65bb82c8_s.mp3",
+    "normal": "atai_words/audio/e4fa65bb82c8_n.mp3"
+  },
+  "ครู": {
+    "slow": "atai_words/audio/df028b04211b_s.mp3",
+    "normal": "atai_words/audio/df028b04211b_n.mp3"
+  },
+  "รู": {
+    "slow": "atai_words/audio/162b130b9142_s.mp3",
+    "normal": "atai_words/audio/162b130b9142_n.mp3"
+  },
+  "โต": {
+    "slow": "atai_words/audio/71841cce4eb9_s.mp3",
+    "normal": "atai_words/audio/71841cce4eb9_n.mp3"
+  },
+  "โบ": {
+    "slow": "atai_words/audio/4f49ca421e89_s.mp3",
+    "normal": "atai_words/audio/4f49ca421e89_n.mp3"
+  },
+  "โมโห": {
+    "slow": "atai_words/audio/0de43c23cdae_s.mp3",
+    "normal": "atai_words/audio/0de43c23cdae_n.mp3"
+  },
+  "ตาโต": {
+    "slow": "atai_words/audio/853b4f372b34_s.mp3",
+    "normal": "atai_words/audio/853b4f372b34_n.mp3"
+  },
+  "ปูนา": {
+    "slow": "atai_words/audio/de00fed8a2de_s.mp3",
+    "normal": "atai_words/audio/de00fed8a2de_n.mp3"
+  },
+  "อาดูปู": {
+    "slow": "atai_words/audio/9602372ffe16_s.mp3",
+    "normal": "atai_words/audio/9602372ffe16_n.mp3"
+  },
+  "ดูดีดี": {
+    "slow": "atai_words/audio/e3aba373097d_s.mp3",
+    "normal": "atai_words/audio/e3aba373097d_n.mp3"
+  },
+  "หูตา": {
+    "slow": "atai_words/audio/3c2cf76c0cf7_s.mp3",
+    "normal": "atai_words/audio/3c2cf76c0cf7_n.mp3"
+  },
+  "งูมีตา": {
+    "slow": "atai_words/audio/592766c8af9f_s.mp3",
+    "normal": "atai_words/audio/592766c8af9f_n.mp3"
+  },
+  "นี่คือ": {
+    "slow": "atai_words/audio/add3c2184d9f_s.mp3",
+    "normal": "atai_words/audio/add3c2184d9f_n.mp3"
+  },
+  "กาแฟ": {
+    "slow": "atai_words/audio/60726f774034_s.mp3",
+    "normal": "atai_words/audio/60726f774034_n.mp3"
+  },
+  "ซุป": {
+    "slow": "atai_words/audio/a9a2d7c015ab_s.mp3",
+    "normal": "atai_words/audio/a9a2d7c015ab_n.mp3"
+  },
+  "โจ๊ก": {
+    "slow": "atai_words/audio/19e8f7106449_s.mp3",
+    "normal": "atai_words/audio/19e8f7106449_n.mp3"
+  },
+  "น้ำร้อน": {
+    "slow": "atai_words/audio/7386f56e53c3_s.mp3",
+    "normal": "atai_words/audio/7386f56e53c3_n.mp3"
+  },
+  "ข้าว": {
+    "slow": "atai_words/audio/0d256b54d909_s.mp3",
+    "normal": "atai_words/audio/0d256b54d909_n.mp3"
+  },
+  "เต้าหู้": {
+    "slow": "atai_words/audio/70ee3b1848d3_s.mp3",
+    "normal": "atai_words/audio/70ee3b1848d3_n.mp3"
+  },
+  "ชานม": {
+    "slow": "atai_words/audio/1a872b729880_s.mp3",
+    "normal": "atai_words/audio/1a872b729880_n.mp3"
+  },
+  "แก้ว": {
+    "slow": "atai_words/audio/9b621855aef8_s.mp3",
+    "normal": "atai_words/audio/9b621855aef8_n.mp3"
+  },
+  "ขอบคุณ": {
+    "slow": "atai_words/audio/87eeb6a8c32c_s.mp3",
+    "normal": "atai_words/audio/87eeb6a8c32c_n.mp3"
+  },
+  "เอา": {
+    "slow": "atai_words/audio/bd47c8ff3ddf_s.mp3",
+    "normal": "atai_words/audio/bd47c8ff3ddf_n.mp3"
+  },
+  "ก็": {
+    "slow": "atai_words/audio/d10b03aa2782_s.mp3",
+    "normal": "atai_words/audio/d10b03aa2782_n.mp3"
+  },
+  "ชอบ": {
+    "slow": "atai_words/audio/109eb055b433_s.mp3",
+    "normal": "atai_words/audio/109eb055b433_n.mp3"
+  },
+  "ใช่": {
+    "slow": "atai_words/audio/2d09568c105e_s.mp3",
+    "normal": "atai_words/audio/2d09568c105e_n.mp3"
+  },
+  "ประเทศ": {
+    "slow": "atai_words/audio/862f10aa040b_s.mp3",
+    "normal": "atai_words/audio/862f10aa040b_n.mp3"
+  },
+  "ประเทศจีน": {
+    "slow": "atai_words/audio/aee4594b4644_s.mp3",
+    "normal": "atai_words/audio/aee4594b4644_n.mp3"
+  },
+  "ประเทศไทย": {
+    "slow": "atai_words/audio/0eb75f960899_s.mp3",
+    "normal": "atai_words/audio/0eb75f960899_n.mp3"
+  },
+  "คนจีน": {
+    "slow": "atai_words/audio/633a2155d1b8_s.mp3",
+    "normal": "atai_words/audio/633a2155d1b8_n.mp3"
+  },
+  "ญี่ปุ่น": {
+    "slow": "atai_words/audio/8603dff5e1bb_s.mp3",
+    "normal": "atai_words/audio/8603dff5e1bb_n.mp3"
+  },
+  "เกาหลี": {
+    "slow": "atai_words/audio/61792e866630_s.mp3",
+    "normal": "atai_words/audio/61792e866630_n.mp3"
+  },
+  "สวัสดี": {
+    "slow": "atai_words/audio/c7bcb12d8b1e_s.mp3",
+    "normal": "atai_words/audio/c7bcb12d8b1e_n.mp3"
+  },
+  "ภาษาไทย": {
+    "slow": "atai_words/audio/42e72492ebb9_s.mp3",
+    "normal": "atai_words/audio/42e72492ebb9_n.mp3"
+  },
+  "หมอ": {
+    "slow": "atai_words/audio/b7a7cc65af00_s.mp3",
+    "normal": "atai_words/audio/b7a7cc65af00_n.mp3"
+  },
+  "นักร้อง": {
+    "slow": "atai_words/audio/cee1d43d12f9_s.mp3",
+    "normal": "atai_words/audio/cee1d43d12f9_n.mp3"
+  },
+  "นักเรียน": {
+    "slow": "atai_words/audio/d0c3a20c1074_s.mp3",
+    "normal": "atai_words/audio/d0c3a20c1074_n.mp3"
+  },
+  "เป็น": {
+    "slow": "atai_words/audio/f15d6f0da2ab_s.mp3",
+    "normal": "atai_words/audio/f15d6f0da2ab_n.mp3"
+  },
+  "นักศึกษา": {
+    "slow": "atai_words/audio/233f6428948f_s.mp3",
+    "normal": "atai_words/audio/233f6428948f_n.mp3"
+  },
+  "พูด": {
+    "slow": "atai_words/audio/5bc9b7819e8b_s.mp3",
+    "normal": "atai_words/audio/5bc9b7819e8b_n.mp3"
+  },
+  "ภาษาจีน": {
+    "slow": "atai_words/audio/e9bb44775591_s.mp3",
+    "normal": "atai_words/audio/e9bb44775591_n.mp3"
+  },
+  "เรียน": {
+    "slow": "atai_words/audio/fa050566d54c_s.mp3",
+    "normal": "atai_words/audio/fa050566d54c_n.mp3"
+  },
+  "คาบ": {
+    "slow": "atai_words/audio/ca212b2183de_s.mp3",
+    "normal": "atai_words/audio/ca212b2183de_n.mp3"
+  },
+  "คณิตศาสตร์": {
+    "slow": "atai_words/audio/3194614f040d_s.mp3",
+    "normal": "atai_words/audio/3194614f040d_n.mp3"
+  },
+  "ดนตรี": {
+    "slow": "atai_words/audio/c77e6fa063de_s.mp3",
+    "normal": "atai_words/audio/c77e6fa063de_n.mp3"
+  },
+  "เขา": {
+    "slow": "atai_words/audio/8f1e1a4e42e2_s.mp3",
+    "normal": "atai_words/audio/8f1e1a4e42e2_n.mp3"
+  },
+  "เธอ": {
+    "slow": "atai_words/audio/4191728cfa9b_s.mp3",
+    "normal": "atai_words/audio/4191728cfa9b_n.mp3"
+  },
+  "ของ": {
+    "slow": "atai_words/audio/e6346d1ff013_s.mp3",
+    "normal": "atai_words/audio/e6346d1ff013_n.mp3"
+  },
+  "ลูกชาย": {
+    "slow": "atai_words/audio/820eb0643466_s.mp3",
+    "normal": "atai_words/audio/820eb0643466_n.mp3"
+  },
+  "แคนาดา": {
+    "slow": "atai_words/audio/c9cf0b5c2730_s.mp3",
+    "normal": "atai_words/audio/c9cf0b5c2730_n.mp3"
+  },
+  "ชื่อ": {
+    "slow": "atai_words/audio/0b1fcfc40793_s.mp3",
+    "normal": "atai_words/audio/0b1fcfc40793_n.mp3"
+  },
+  "มะม่วง": {
+    "slow": "atai_words/audio/d14c9bfa38f9_s.mp3",
+    "normal": "atai_words/audio/d14c9bfa38f9_n.mp3"
+  },
+  "รู้จัก": {
+    "slow": "atai_words/audio/0f02bea766b4_s.mp3",
+    "normal": "atai_words/audio/0f02bea766b4_n.mp3"
+  },
+  "เพื่อนร่วมชั้น": {
+    "slow": "atai_words/audio/9854c466713a_s.mp3",
+    "normal": "atai_words/audio/9854c466713a_n.mp3"
+  },
+  "เพื่อน": {
+    "slow": "atai_words/audio/50f037b5d9d1_s.mp3",
+    "normal": "atai_words/audio/50f037b5d9d1_n.mp3"
+  },
+  "ทะเล": {
+    "slow": "atai_words/audio/f4c5c757bb90_s.mp3",
+    "normal": "atai_words/audio/f4c5c757bb90_n.mp3"
+  },
+  "สวนสาธารณะ": {
+    "slow": "atai_words/audio/dcc1fddbf281_s.mp3",
+    "normal": "atai_words/audio/dcc1fddbf281_n.mp3"
+  },
+  "ซูเปอร์มาร์เก็ต": {
+    "slow": "atai_words/audio/833c727eb5f6_s.mp3",
+    "normal": "atai_words/audio/833c727eb5f6_n.mp3"
+  },
+  "บ่อยๆ": {
+    "slow": "atai_words/audio/8e3d62d0b7fb_s.mp3",
+    "normal": "atai_words/audio/8e3d62d0b7fb_n.mp3"
+  },
+  "ร้านหนังสือ": {
+    "slow": "atai_words/audio/9629456e7a79_s.mp3",
+    "normal": "atai_words/audio/9629456e7a79_n.mp3"
+  },
+  "ภาษาอังกฤษ": {
+    "slow": "atai_words/audio/6ee153808a1c_s.mp3",
+    "normal": "atai_words/audio/6ee153808a1c_n.mp3"
+  },
+  "อยู่บ้าน": {
+    "slow": "atai_words/audio/c9665d832bc0_s.mp3",
+    "normal": "atai_words/audio/c9665d832bc0_n.mp3"
+  },
+  "ร้านอาหาร": {
+    "slow": "atai_words/audio/2f49c79caa0c_s.mp3",
+    "normal": "atai_words/audio/2f49c79caa0c_n.mp3"
+  },
+  "ว่ายน้ำ": {
+    "slow": "atai_words/audio/9ab334b6beb8_s.mp3",
+    "normal": "atai_words/audio/9ab334b6beb8_n.mp3"
+  },
+  "เล่น": {
+    "slow": "atai_words/audio/7e361eaab932_s.mp3",
+    "normal": "atai_words/audio/7e361eaab932_n.mp3"
+  },
+  "บาสเกตบอล": {
+    "slow": "atai_words/audio/bacad5edf17f_s.mp3",
+    "normal": "atai_words/audio/bacad5edf17f_n.mp3"
+  },
+  "พวกเรา": {
+    "slow": "atai_words/audio/e938f53657ef_s.mp3",
+    "normal": "atai_words/audio/e938f53657ef_n.mp3"
+  },
+  "วิ่ง": {
+    "slow": "atai_words/audio/f682068564a3_s.mp3",
+    "normal": "atai_words/audio/f682068564a3_n.mp3"
+  },
+  "เตะ": {
+    "slow": "atai_words/audio/651d5deb6b95_s.mp3",
+    "normal": "atai_words/audio/651d5deb6b95_n.mp3"
+  },
+  "ฟุตบอล": {
+    "slow": "atai_words/audio/784e1a2b29d0_s.mp3",
+    "normal": "atai_words/audio/784e1a2b29d0_n.mp3"
+  },
+  "ฟิตเนส": {
+    "slow": "atai_words/audio/7b3c9c7cc971_s.mp3",
+    "normal": "atai_words/audio/7b3c9c7cc971_n.mp3"
+  },
+  "มาก": {
+    "slow": "atai_words/audio/8d2b538d3c4a_s.mp3",
+    "normal": "atai_words/audio/8d2b538d3c4a_n.mp3"
+  },
+  "ห้องน้ำ": {
+    "slow": "atai_words/audio/089cf102a2fc_s.mp3",
+    "normal": "atai_words/audio/089cf102a2fc_n.mp3"
+  },
+  "อยู่": {
+    "slow": "atai_words/audio/906ad03eb0ea_s.mp3",
+    "normal": "atai_words/audio/906ad03eb0ea_n.mp3"
+  },
+  "สถานีรถไฟ": {
+    "slow": "atai_words/audio/39f68322d260_s.mp3",
+    "normal": "atai_words/audio/39f68322d260_n.mp3"
+  },
+  "โรงพยาบาล": {
+    "slow": "atai_words/audio/0635f16b796a_s.mp3",
+    "normal": "atai_words/audio/0635f16b796a_n.mp3"
+  },
+  "กระเป๋าเดินทาง": {
+    "slow": "atai_words/audio/2c134060bd60_s.mp3",
+    "normal": "atai_words/audio/2c134060bd60_n.mp3"
+  },
+  "ใคร": {
+    "slow": "atai_words/audio/7763561eb358_s.mp3",
+    "normal": "atai_words/audio/7763561eb358_n.mp3"
+  },
+  "จะ": {
+    "slow": "atai_words/audio/cc634c1a7cea_s.mp3",
+    "normal": "atai_words/audio/cc634c1a7cea_n.mp3"
+  },
+  "ไหน": {
+    "slow": "atai_words/audio/6122d34bed26_s.mp3",
+    "normal": "atai_words/audio/6122d34bed26_n.mp3"
+  },
+  "ดอกไม้": {
+    "slow": "atai_words/audio/f5b4100fb3e0_s.mp3",
+    "normal": "atai_words/audio/f5b4100fb3e0_n.mp3"
+  },
+  "โทรทัศน์": {
+    "slow": "atai_words/audio/02cd7a150ef1_s.mp3",
+    "normal": "atai_words/audio/02cd7a150ef1_n.mp3"
+  },
+  "บ้าน": {
+    "slow": "atai_words/audio/e36aa7216630_s.mp3",
+    "normal": "atai_words/audio/e36aa7216630_n.mp3"
+  },
+  "เทศกาล": {
+    "slow": "atai_words/audio/cabb84f34119_s.mp3",
+    "normal": "atai_words/audio/cabb84f34119_n.mp3"
+  },
+  "บ๊ะจ่าง": {
+    "slow": "atai_words/audio/69eec2fd78bb_s.mp3",
+    "normal": "atai_words/audio/69eec2fd78bb_n.mp3"
+  },
+  "กิน": {
+    "slow": "atai_words/audio/f75afbf51fc1_s.mp3",
+    "normal": "atai_words/audio/f75afbf51fc1_n.mp3"
+  },
+  "พิพิธภัณฑ์": {
+    "slow": "atai_words/audio/1c8010cab7e1_s.mp3",
+    "normal": "atai_words/audio/1c8010cab7e1_n.mp3"
+  },
+  "วันนี้": {
+    "slow": "atai_words/audio/cdf390d5bde2_s.mp3",
+    "normal": "atai_words/audio/cdf390d5bde2_n.mp3"
+  },
+  "ว่าง": {
+    "slow": "atai_words/audio/732c2516a8cb_s.mp3",
+    "normal": "atai_words/audio/732c2516a8cb_n.mp3"
+  },
+  "สุดสัปดาห์": {
+    "slow": "atai_words/audio/6f84aa6b53ba_s.mp3",
+    "normal": "atai_words/audio/6f84aa6b53ba_n.mp3"
+  },
+  "ดื่ม": {
+    "slow": "atai_words/audio/b8d93fc1afd9_s.mp3",
+    "normal": "atai_words/audio/b8d93fc1afd9_n.mp3"
+  },
+  "ดูหนัง": {
+    "slow": "atai_words/audio/0124d75eb7da_s.mp3",
+    "normal": "atai_words/audio/0124d75eb7da_n.mp3"
+  },
+  "กันเถอะ": {
+    "slow": "atai_words/audio/4851ede419e9_s.mp3",
+    "normal": "atai_words/audio/4851ede419e9_n.mp3"
+  },
+  "ผัก": {
+    "slow": "atai_words/audio/c528261c9076_s.mp3",
+    "normal": "atai_words/audio/c528261c9076_n.mp3"
+  },
+  "เยอะๆ": {
+    "slow": "atai_words/audio/8e7c88f009c0_s.mp3",
+    "normal": "atai_words/audio/8e7c88f009c0_n.mp3"
+  },
+  "พักผ่อน": {
+    "slow": "atai_words/audio/40dc0f597b3f_s.mp3",
+    "normal": "atai_words/audio/40dc0f597b3f_n.mp3"
+  },
+  "โทรศัพท์": {
+    "slow": "atai_words/audio/35b4d30553e1_s.mp3",
+    "normal": "atai_words/audio/35b4d30553e1_n.mp3"
+  },
+  "เสียงดัง": {
+    "slow": "atai_words/audio/7cd9eaa6e038_s.mp3",
+    "normal": "atai_words/audio/7cd9eaa6e038_n.mp3"
+  },
+  "เปียโน": {
+    "slow": "atai_words/audio/76f00dce8f25_s.mp3",
+    "normal": "atai_words/audio/76f00dce8f25_n.mp3"
+  },
+  "กีตาร์": {
+    "slow": "atai_words/audio/bd4f275c36d9_s.mp3",
+    "normal": "atai_words/audio/bd4f275c36d9_n.mp3"
+  },
+  "ได้": {
+    "slow": "atai_words/audio/d45e7f861da0_s.mp3",
+    "normal": "atai_words/audio/d45e7f861da0_n.mp3"
+  },
+  "ร้องเพลง": {
+    "slow": "atai_words/audio/bd59a0d59b36_s.mp3",
+    "normal": "atai_words/audio/bd59a0d59b36_n.mp3"
+  },
+  "มา": {
+    "slow": "atai_words/audio/648cd43a0584_s.mp3",
+    "normal": "atai_words/audio/648cd43a0584_n.mp3"
+  },
+  "โรงเรียน": {
+    "slow": "atai_words/audio/5814c602e74f_s.mp3",
+    "normal": "atai_words/audio/5814c602e74f_n.mp3"
+  },
+  "สถานีรถไฟฟ้าใต้ดิน": {
+    "slow": "atai_words/audio/0d7e800b4e83_s.mp3",
+    "normal": "atai_words/audio/0d7e800b4e83_n.mp3"
+  },
+  "ห้องสมุด": {
+    "slow": "atai_words/audio/3cf2a36556fe_s.mp3",
+    "normal": "atai_words/audio/3cf2a36556fe_n.mp3"
+  },
+  "ทาง": {
+    "slow": "atai_words/audio/7db9aa59de8a_s.mp3",
+    "normal": "atai_words/audio/7db9aa59de8a_n.mp3"
+  },
+  "รถไฟ": {
+    "slow": "atai_words/audio/12d54a889f93_s.mp3",
+    "normal": "atai_words/audio/12d54a889f93_n.mp3"
+  },
+  "กว่า": {
+    "slow": "atai_words/audio/7c77faa2a99d_s.mp3",
+    "normal": "atai_words/audio/7c77faa2a99d_n.mp3"
+  },
+  "รถเมล์": {
+    "slow": "atai_words/audio/f269961f5a93_s.mp3",
+    "normal": "atai_words/audio/f269961f5a93_n.mp3"
+  },
+  "พี่สาว": {
+    "slow": "atai_words/audio/ac41074d0fbb_s.mp3",
+    "normal": "atai_words/audio/ac41074d0fbb_n.mp3"
+  },
+  "อันนี้": {
+    "slow": "atai_words/audio/c1d4a4751171_s.mp3",
+    "normal": "atai_words/audio/c1d4a4751171_n.mp3"
+  },
+  "ถูก": {
+    "slow": "atai_words/audio/ec3a29b05722_s.mp3",
+    "normal": "atai_words/audio/ec3a29b05722_n.mp3"
+  },
+  "แพง": {
+    "slow": "atai_words/audio/0f8da0e4d226_s.mp3",
+    "normal": "atai_words/audio/0f8da0e4d226_n.mp3"
+  },
+  "พรุ่งนี้": {
+    "slow": "atai_words/audio/443675820fd3_s.mp3",
+    "normal": "atai_words/audio/443675820fd3_n.mp3"
+  },
+  "ซื้อของ": {
+    "slow": "atai_words/audio/c655f0b8f431_s.mp3",
+    "normal": "atai_words/audio/c655f0b8f431_n.mp3"
+  },
+  "ซื้อ": {
+    "slow": "atai_words/audio/bd821deefa34_s.mp3",
+    "normal": "atai_words/audio/bd821deefa34_n.mp3"
+  },
+  "ตอนนี้": {
+    "slow": "atai_words/audio/e8cce6065fdd_s.mp3",
+    "normal": "atai_words/audio/e8cce6065fdd_n.mp3"
+  },
+  "กี่โมง": {
+    "slow": "atai_words/audio/7f0301837b9c_s.mp3",
+    "normal": "atai_words/audio/7f0301837b9c_n.mp3"
+  },
+  "ตื่น": {
+    "slow": "atai_words/audio/cd7e503780d9_s.mp3",
+    "normal": "atai_words/audio/cd7e503780d9_n.mp3"
+  },
+  "เจ็ด": {
+    "slow": "atai_words/audio/8939c3186613_s.mp3",
+    "normal": "atai_words/audio/8939c3186613_n.mp3"
+  },
+  "นอน": {
+    "slow": "atai_words/audio/f61e39bed07f_s.mp3",
+    "normal": "atai_words/audio/f61e39bed07f_n.mp3"
+  },
+  "สี่ทุ่ม": {
+    "slow": "atai_words/audio/70ec93e898e6_s.mp3",
+    "normal": "atai_words/audio/70ec93e898e6_n.mp3"
+  },
+  "รองเท้า": {
+    "slow": "atai_words/audio/304a44d09824_s.mp3",
+    "normal": "atai_words/audio/304a44d09824_n.mp3"
+  },
+  "กางเกง": {
+    "slow": "atai_words/audio/01b411118f8e_s.mp3",
+    "normal": "atai_words/audio/01b411118f8e_n.mp3"
+  },
+  "ห้องลองเสื้อผ้า": {
+    "slow": "atai_words/audio/7eb9a055930f_s.mp3",
+    "normal": "atai_words/audio/7eb9a055930f_n.mp3"
+  },
+  "เสื้อผ้า": {
+    "slow": "atai_words/audio/e3ee2e02f469_s.mp3",
+    "normal": "atai_words/audio/e3ee2e02f469_n.mp3"
+  },
+  "คอนเสิร์ต": {
+    "slow": "atai_words/audio/b728d07c74f8_s.mp3",
+    "normal": "atai_words/audio/b728d07c74f8_n.mp3"
+  },
+  "ตั๋ว": {
+    "slow": "atai_words/audio/885ff4ab31ea_s.mp3",
+    "normal": "atai_words/audio/885ff4ab31ea_n.mp3"
+  },
+  "ออนไลน์": {
+    "slow": "atai_words/audio/5a91be40986a_s.mp3",
+    "normal": "atai_words/audio/5a91be40986a_n.mp3"
+  },
+  "หรือเปล่า": {
+    "slow": "atai_words/audio/1d74a8d4817e_s.mp3",
+    "normal": "atai_words/audio/1d74a8d4817e_n.mp3"
+  },
+  "เริ่ม": {
+    "slow": "atai_words/audio/71925fa24ea9_s.mp3",
+    "normal": "atai_words/audio/71925fa24ea9_n.mp3"
+  },
+  "ที่สุด": {
+    "slow": "atai_words/audio/edb9f5914b04_s.mp3",
+    "normal": "atai_words/audio/edb9f5914b04_n.mp3"
+  },
+  "หมา": {
+    "slow": "atai_words/audio/03be241a20d2_s.mp3",
+    "normal": "atai_words/audio/03be241a20d2_n.mp3"
+  },
+  "มี": {
+    "slow": "atai_words/audio/5e79e325bad4_s.mp3",
+    "normal": "atai_words/audio/5e79e325bad4_n.mp3"
+  },
+  "กี่คน": {
+    "slow": "atai_words/audio/498761e9293a_s.mp3",
+    "normal": "atai_words/audio/498761e9293a_n.mp3"
+  },
+  "หนึ่ง": {
+    "slow": "atai_words/audio/27ff8aebddfd_s.mp3",
+    "normal": "atai_words/audio/27ff8aebddfd_n.mp3"
+  },
+  "ปกติ": {
+    "slow": "atai_words/audio/e06429855867_s.mp3",
+    "normal": "atai_words/audio/e06429855867_n.mp3"
+  },
+  "ดี": {
+    "slow": "atai_words/audio/f0e9044c1958_s.mp3",
+    "normal": "atai_words/audio/f0e9044c1958_n.mp3"
+  },
+  "เช่า": {
+    "slow": "atai_words/audio/7712d813f50b_s.mp3",
+    "normal": "atai_words/audio/7712d813f50b_n.mp3"
+  },
+  "ค่าเช่า": {
+    "slow": "atai_words/audio/e5324a98a922_s.mp3",
+    "normal": "atai_words/audio/e5324a98a922_n.mp3"
+  },
+  "เท่าไหร่": {
+    "slow": "atai_words/audio/e8c762951b22_s.mp3",
+    "normal": "atai_words/audio/e8c762951b22_n.mp3"
+  },
+  "ห้อง": {
+    "slow": "atai_words/audio/90e8bbb9326a_s.mp3",
+    "normal": "atai_words/audio/90e8bbb9326a_n.mp3"
+  },
+  "รวม": {
+    "slow": "atai_words/audio/7b26ac9581dc_s.mp3",
+    "normal": "atai_words/audio/7b26ac9581dc_n.mp3"
+  },
+  "ค่าน้ำ": {
+    "slow": "atai_words/audio/1b14ff183662_s.mp3",
+    "normal": "atai_words/audio/1b14ff183662_n.mp3"
+  },
+  "ค่าไฟ": {
+    "slow": "atai_words/audio/482dbb7f0db8_s.mp3",
+    "normal": "atai_words/audio/482dbb7f0db8_n.mp3"
+  },
+  "อ่านหนังสือ": {
+    "slow": "atai_words/audio/4be4feaef886_s.mp3",
+    "normal": "atai_words/audio/4be4feaef886_n.mp3"
+  },
+  "ส่ง": {
+    "slow": "atai_words/audio/d6ace3a87f13_s.mp3",
+    "normal": "atai_words/audio/d6ace3a87f13_n.mp3"
+  },
+  "การบ้าน": {
+    "slow": "atai_words/audio/adc8990e1057_s.mp3",
+    "normal": "atai_words/audio/adc8990e1057_n.mp3"
+  },
+  "วิชา": {
+    "slow": "atai_words/audio/0e2c3ce7f8f1_s.mp3",
+    "normal": "atai_words/audio/0e2c3ce7f8f1_n.mp3"
+  },
+  "ขอโทษ": {
+    "slow": "atai_words/audio/fd047e167960_s.mp3",
+    "normal": "atai_words/audio/fd047e167960_n.mp3"
+  },
+  "ร้านสะดวกซื้อ": {
+    "slow": "atai_words/audio/20f610e66900_s.mp3",
+    "normal": "atai_words/audio/20f610e66900_n.mp3"
+  },
+  "เลี้ยว": {
+    "slow": "atai_words/audio/2e1ac5394ff0_s.mp3",
+    "normal": "atai_words/audio/2e1ac5394ff0_n.mp3"
+  },
+  "แล้ว": {
+    "slow": "atai_words/audio/354ea34dd510_s.mp3",
+    "normal": "atai_words/audio/354ea34dd510_n.mp3"
+  },
+  "เดิน": {
+    "slow": "atai_words/audio/abc3015b17ae_s.mp3",
+    "normal": "atai_words/audio/abc3015b17ae_n.mp3"
+  },
+  "ตรงไป": {
+    "slow": "atai_words/audio/a3d597704d22_s.mp3",
+    "normal": "atai_words/audio/a3d597704d22_n.mp3"
+  },
+  "ใช้เวลา": {
+    "slow": "atai_words/audio/edfb62de8443_s.mp3",
+    "normal": "atai_words/audio/edfb62de8443_n.mp3"
+  },
+  "นาที": {
+    "slow": "atai_words/audio/b1ac4c44befe_s.mp3",
+    "normal": "atai_words/audio/b1ac4c44befe_n.mp3"
+  },
+  "ผลไม้": {
+    "slow": "atai_words/audio/6e74842236d9_s.mp3",
+    "normal": "atai_words/audio/6e74842236d9_n.mp3"
+  },
+  "ขาย": {
+    "slow": "atai_words/audio/1e878b5c4074_s.mp3",
+    "normal": "atai_words/audio/1e878b5c4074_n.mp3"
+  },
+  "ยังไง": {
+    "slow": "atai_words/audio/f9d4ed97e89a_s.mp3",
+    "normal": "atai_words/audio/f9d4ed97e89a_n.mp3"
+  },
+  "ถุง": {
+    "slow": "atai_words/audio/12482644ee13_s.mp3",
+    "normal": "atai_words/audio/12482644ee13_n.mp3"
+  },
+  "บาท": {
+    "slow": "atai_words/audio/36346b7102b4_s.mp3",
+    "normal": "atai_words/audio/36346b7102b4_n.mp3"
+  },
+  "เผ็ด": {
+    "slow": "atai_words/audio/f29312f51251_s.mp3",
+    "normal": "atai_words/audio/f29312f51251_n.mp3"
+  },
+  "รสชาติ": {
+    "slow": "atai_words/audio/a432c5a8ab12_s.mp3",
+    "normal": "atai_words/audio/a432c5a8ab12_n.mp3"
+  },
+  "หวาน": {
+    "slow": "atai_words/audio/96571c9aebb5_s.mp3",
+    "normal": "atai_words/audio/96571c9aebb5_n.mp3"
+  },
+  "เข้าใจ": {
+    "slow": "atai_words/audio/474d9aa750c2_s.mp3",
+    "normal": "atai_words/audio/474d9aa750c2_n.mp3"
+  },
+  "คำ": {
+    "slow": "atai_words/audio/a63f39f2c623_s.mp3",
+    "normal": "atai_words/audio/a63f39f2c623_n.mp3"
+  },
+  "หมายความว่า": {
+    "slow": "atai_words/audio/3ad9d9dd7215_s.mp3",
+    "normal": "atai_words/audio/3ad9d9dd7215_n.mp3"
+  },
+  "ยกตัวอย่าง": {
+    "slow": "atai_words/audio/6b7dc3942d68_s.mp3",
+    "normal": "atai_words/audio/6b7dc3942d68_n.mp3"
+  },
+  "บรรยากาศ": {
+    "slow": "atai_words/audio/b07c5bb8eb0d_s.mp3",
+    "normal": "atai_words/audio/b07c5bb8eb0d_n.mp3"
+  },
+  "กรุงเทพ": {
+    "slow": "atai_words/audio/d97377b04719_s.mp3",
+    "normal": "atai_words/audio/d97377b04719_n.mp3"
+  },
+  "คึกคัก": {
+    "slow": "atai_words/audio/c0f7b182a9d3_s.mp3",
+    "normal": "atai_words/audio/c0f7b182a9d3_n.mp3"
+  },
+  "เป็นพิเศษ": {
+    "slow": "atai_words/audio/8d65cc600467_s.mp3",
+    "normal": "atai_words/audio/8d65cc600467_n.mp3"
+  },
+  "เยอะ": {
+    "slow": "atai_words/audio/dffc0a0079b8_s.mp3",
+    "normal": "atai_words/audio/dffc0a0079b8_n.mp3"
+  },
+  "แต่": {
+    "slow": "atai_words/audio/0044f89f2117_s.mp3",
+    "normal": "atai_words/audio/0044f89f2117_n.mp3"
+  },
+  "สนุก": {
+    "slow": "atai_words/audio/8e20040c02b8_s.mp3",
+    "normal": "atai_words/audio/8e20040c02b8_n.mp3"
+  },
+  "หนัก": {
+    "slow": "atai_words/audio/a91f500f7c29_s.mp3",
+    "normal": "atai_words/audio/a91f500f7c29_n.mp3"
+  },
+  "เดือน": {
+    "slow": "atai_words/audio/7a3dfb29575d_s.mp3",
+    "normal": "atai_words/audio/7a3dfb29575d_n.mp3"
+  },
+  "หนึ่งเดือน": {
+    "slow": "atai_words/audio/b42974addbc5_s.mp3",
+    "normal": "atai_words/audio/b42974addbc5_n.mp3"
+  },
+  "ไอมากี่วันแล้ว": {
+    "slow": "atai_words/audio/c6f47a7ca19f_s.mp3",
+    "normal": "atai_words/audio/c6f47a7ca19f_n.mp3"
+  },
+  "น่ารัก": {
+    "slow": "atai_words/audio/a337a338ca2e_s.mp3",
+    "normal": "atai_words/audio/a337a338ca2e_n.mp3"
+  },
+  "หล่อ": {
+    "slow": "atai_words/audio/09ffa0e5a8ed_s.mp3",
+    "normal": "atai_words/audio/09ffa0e5a8ed_n.mp3"
+  },
+  "หุ่นดี": {
+    "slow": "atai_words/audio/22b000ff1e6e_s.mp3",
+    "normal": "atai_words/audio/22b000ff1e6e_n.mp3"
+  },
+  "วีแชท": {
+    "slow": "atai_words/audio/877dbc53916e_s.mp3",
+    "normal": "atai_words/audio/877dbc53916e_n.mp3"
+  },
+  "โทรหา": {
+    "slow": "atai_words/audio/1c11942b87eb_s.mp3",
+    "normal": "atai_words/audio/1c11942b87eb_n.mp3"
+  },
+  "เห็น": {
+    "slow": "atai_words/audio/8b5d1d432e8e_s.mp3",
+    "normal": "atai_words/audio/8b5d1d432e8e_n.mp3"
+  },
+  "ใน": {
+    "slow": "atai_words/audio/80e99ae4e119_s.mp3",
+    "normal": "atai_words/audio/80e99ae4e119_n.mp3"
+  },
+  "โต่วอิน": {
+    "slow": "atai_words/audio/fdf23a6693ef_s.mp3",
+    "normal": "atai_words/audio/fdf23a6693ef_n.mp3"
+  },
+  "แฟน": {
+    "slow": "atai_words/audio/2702921e311f_s.mp3",
+    "normal": "atai_words/audio/2702921e311f_n.mp3"
+  },
+  "โสด": {
+    "slow": "atai_words/audio/c4a942fd92c8_s.mp3",
+    "normal": "atai_words/audio/c4a942fd92c8_n.mp3"
+  },
+  "คิดถึง": {
+    "slow": "atai_words/audio/399101d650c5_s.mp3",
+    "normal": "atai_words/audio/399101d650c5_n.mp3"
+  },
+  "รัก": {
+    "slow": "atai_words/audio/f21ddef41523_s.mp3",
+    "normal": "atai_words/audio/f21ddef41523_n.mp3"
+  },
+  "ค่ะ": {
+    "slow": "atai_words/audio/fbd3f12059e6_s.mp3",
+    "normal": "atai_words/audio/fbd3f12059e6_n.mp3"
+  },
+  "สัตว์เลี้ยง": {
+    "slow": "atai_words/audio/018b634ebe77_s.mp3",
+    "normal": "atai_words/audio/018b634ebe77_n.mp3"
+  },
+  "แมว": {
+    "slow": "atai_words/audio/1d7ced57ce8c_s.mp3",
+    "normal": "atai_words/audio/1d7ced57ce8c_n.mp3"
+  },
+  "ตาย": {
+    "slow": "atai_words/audio/92091726eac0_s.mp3",
+    "normal": "atai_words/audio/92091726eac0_n.mp3"
+  },
+  "จะบ้าตาย": {
+    "slow": "atai_words/audio/1e14ce2b55e3_s.mp3",
+    "normal": "atai_words/audio/1e14ce2b55e3_n.mp3"
+  },
+  "ไม่ไหว": {
+    "slow": "atai_words/audio/5ef034d178e3_s.mp3",
+    "normal": "atai_words/audio/5ef034d178e3_n.mp3"
+  },
+  "อร่อย": {
+    "slow": "atai_words/audio/b0aa12723eb1_s.mp3",
+    "normal": "atai_words/audio/b0aa12723eb1_n.mp3"
+  },
+  "ต้นหอม": {
+    "slow": "atai_words/audio/1ee3ff0e94a4_s.mp3",
+    "normal": "atai_words/audio/1ee3ff0e94a4_n.mp3"
+  },
+  "เผ็ดน้อย": {
+    "slow": "atai_words/audio/b1bf43bc0127_s.mp3",
+    "normal": "atai_words/audio/b1bf43bc0127_n.mp3"
+  },
+  "ผักชี": {
+    "slow": "atai_words/audio/e01249905635_s.mp3",
+    "normal": "atai_words/audio/e01249905635_n.mp3"
+  },
+  "ผี": {
+    "slow": "atai_words/audio/f23138d7120d_s.mp3",
+    "normal": "atai_words/audio/f23138d7120d_n.mp3"
+  },
+  "สี": {
+    "slow": "atai_words/audio/f39e5c0432d9_s.mp3",
+    "normal": "atai_words/audio/f39e5c0432d9_n.mp3"
+  },
+  "สีแดง": {
+    "slow": "atai_words/audio/7378a4e89ef5_s.mp3",
+    "normal": "atai_words/audio/7378a4e89ef5_n.mp3"
+  },
+  "สีฟ้า": {
+    "slow": "atai_words/audio/0ba4bed94f67_s.mp3",
+    "normal": "atai_words/audio/0ba4bed94f67_n.mp3"
+  },
+  "ดีใจ": {
+    "slow": "atai_words/audio/b3a63c3fbd63_s.mp3",
+    "normal": "atai_words/audio/b3a63c3fbd63_n.mp3"
+  },
+  "เสียใจ": {
+    "slow": "atai_words/audio/d7681ab89a08_s.mp3",
+    "normal": "atai_words/audio/d7681ab89a08_n.mp3"
+  },
+  "ร้องไห้": {
+    "slow": "atai_words/audio/b79772a14f98_s.mp3",
+    "normal": "atai_words/audio/b79772a14f98_n.mp3"
+  },
+  "อยากจะ": {
+    "slow": "atai_words/audio/026506b1989b_s.mp3",
+    "normal": "atai_words/audio/026506b1989b_n.mp3"
+  },
+  "ให้": {
+    "slow": "atai_words/audio/8a50fc91dbaf_s.mp3",
+    "normal": "atai_words/audio/8a50fc91dbaf_n.mp3"
+  },
+  "หน่อย": {
+    "slow": "atai_words/audio/690b0837ce72_s.mp3",
+    "normal": "atai_words/audio/690b0837ce72_n.mp3"
+  },
+  "แพงไป": {
+    "slow": "atai_words/audio/2ecc6758ac6d_s.mp3",
+    "normal": "atai_words/audio/2ecc6758ac6d_n.mp3"
+  },
+  "ถูกกว่านี้": {
+    "slow": "atai_words/audio/726431a9144e_s.mp3",
+    "normal": "atai_words/audio/726431a9144e_n.mp3"
+  },
+  "ขนม": {
+    "slow": "atai_words/audio/0e3a3a14af0d_s.mp3",
+    "normal": "atai_words/audio/0e3a3a14af0d_n.mp3"
+  },
+  "ไก่ทอด": {
+    "slow": "atai_words/audio/a2babb46548a_s.mp3",
+    "normal": "atai_words/audio/a2babb46548a_n.mp3"
+  },
+  "เปิด": {
+    "slow": "atai_words/audio/22aadbcdfd23_s.mp3",
+    "normal": "atai_words/audio/22aadbcdfd23_n.mp3"
+  },
+  "ปิด": {
+    "slow": "atai_words/audio/96d79d763f12_s.mp3",
+    "normal": "atai_words/audio/96d79d763f12_n.mp3"
+  },
+  "ไฟ": {
+    "slow": "atai_words/audio/482d00f3d3b2_s.mp3",
+    "normal": "atai_words/audio/482d00f3d3b2_n.mp3"
+  },
+  "ประตู": {
+    "slow": "atai_words/audio/45b6d457cd72_s.mp3",
+    "normal": "atai_words/audio/45b6d457cd72_n.mp3"
+  },
+  "หน้าต่าง": {
+    "slow": "atai_words/audio/ead842a55903_s.mp3",
+    "normal": "atai_words/audio/ead842a55903_n.mp3"
+  },
+  "ดู": {
+    "slow": "atai_words/audio/27ef78088a1e_s.mp3",
+    "normal": "atai_words/audio/27ef78088a1e_n.mp3"
+  },
+  "สนามบิน": {
+    "slow": "atai_words/audio/e0188c94459a_s.mp3",
+    "normal": "atai_words/audio/e0188c94459a_n.mp3"
+  },
+  "จอด": {
+    "slow": "atai_words/audio/9bbe12dd1ee2_s.mp3",
+    "normal": "atai_words/audio/9bbe12dd1ee2_n.mp3"
+  },
+  "ตรงนี้": {
+    "slow": "atai_words/audio/3c8e82267ff1_s.mp3",
+    "normal": "atai_words/audio/3c8e82267ff1_n.mp3"
+  },
+  "ค่าโดยสาร": {
+    "slow": "atai_words/audio/4c07e51bb1a9_s.mp3",
+    "normal": "atai_words/audio/4c07e51bb1a9_n.mp3"
+  },
+  "ใส่": {
+    "slow": "atai_words/audio/f3f7661e54bd_s.mp3",
+    "normal": "atai_words/audio/f3f7661e54bd_n.mp3"
+  },
+  "กระเทียม": {
+    "slow": "atai_words/audio/2895ea856c99_s.mp3",
+    "normal": "atai_words/audio/2895ea856c99_n.mp3"
+  },
+  "ง่วง": {
+    "slow": "atai_words/audio/e6437ecef718_s.mp3",
+    "normal": "atai_words/audio/e6437ecef718_n.mp3"
+  },
+  "ตอบ": {
+    "slow": "atai_words/audio/4c4ee65ace52_s.mp3",
+    "normal": "atai_words/audio/4c4ee65ace52_n.mp3"
+  },
+  "ข้อความ": {
+    "slow": "atai_words/audio/84cb1dc96f25_s.mp3",
+    "normal": "atai_words/audio/84cb1dc96f25_n.mp3"
+  },
+  "เดี๋ยว": {
+    "slow": "atai_words/audio/28da9ff77724_s.mp3",
+    "normal": "atai_words/audio/28da9ff77724_n.mp3"
+  },
+  "นะ": {
+    "slow": "atai_words/audio/97dee3ff62f7_s.mp3",
+    "normal": "atai_words/audio/97dee3ff62f7_n.mp3"
+  },
+  "อยู่ไม่ไหว": {
+    "slow": "atai_words/audio/5015e916ff12_s.mp3",
+    "normal": "atai_words/audio/5015e916ff12_n.mp3"
+  },
+  "ตรงไหน": {
+    "slow": "atai_words/audio/70825c1becad_s.mp3",
+    "normal": "atai_words/audio/70825c1becad_n.mp3"
+  },
+  "นิดหน่อย": {
+    "slow": "atai_words/audio/a7aef1949488_s.mp3",
+    "normal": "atai_words/audio/a7aef1949488_n.mp3"
+  },
+  "ต้นไม้": {
+    "slow": "atai_words/audio/fb2d102ea915_s.mp3",
+    "normal": "atai_words/audio/fb2d102ea915_n.mp3"
+  },
+  "สุนัข": {
+    "slow": "atai_words/audio/6bb6e86eb2bd_s.mp3",
+    "normal": "atai_words/audio/6bb6e86eb2bd_n.mp3"
+  },
+  "กระเป๋า": {
+    "slow": "atai_words/audio/005144477a48_s.mp3",
+    "normal": "atai_words/audio/005144477a48_n.mp3"
+  },
+  "ปากกา": {
+    "slow": "atai_words/audio/70d0d4b6c607_s.mp3",
+    "normal": "atai_words/audio/70d0d4b6c607_n.mp3"
+  },
+  "รู้": {
+    "slow": "atai_words/audio/ad399247a35e_s.mp3",
+    "normal": "atai_words/audio/ad399247a35e_n.mp3"
+  },
+  "เหมือนกัน": {
+    "slow": "atai_words/audio/bc94a57944a7_s.mp3",
+    "normal": "atai_words/audio/bc94a57944a7_n.mp3"
+  },
+  "จริงๆ": {
+    "slow": "atai_words/audio/fb0f91b97e93_s.mp3",
+    "normal": "atai_words/audio/fb0f91b97e93_n.mp3"
+  },
+  "คิด": {
+    "slow": "atai_words/audio/cc7cc1167c55_s.mp3",
+    "normal": "atai_words/audio/cc7cc1167c55_n.mp3"
+  },
+  "เหรอ": {
+    "slow": "atai_words/audio/06e05a667329_s.mp3",
+    "normal": "atai_words/audio/06e05a667329_n.mp3"
+  },
+  "ต้อง": {
+    "slow": "atai_words/audio/8a20e67252fb_s.mp3",
+    "normal": "atai_words/audio/8a20e67252fb_n.mp3"
+  },
+  "อย่างไร": {
+    "slow": "atai_words/audio/f06ef988e90b_s.mp3",
+    "normal": "atai_words/audio/f06ef988e90b_n.mp3"
+  },
+  "เช้า": {
+    "slow": "atai_words/audio/6dc7837f1f96_s.mp3",
+    "normal": "atai_words/audio/6dc7837f1f96_n.mp3"
+  },
+  "มากที่สุด": {
+    "slow": "atai_words/audio/750add8f1a3d_s.mp3",
+    "normal": "atai_words/audio/750add8f1a3d_n.mp3"
+  },
+  "นาน": {
+    "slow": "atai_words/audio/b35a429e9e18_s.mp3",
+    "normal": "atai_words/audio/b35a429e9e18_n.mp3"
+  },
+  "มานานแล้ว": {
+    "slow": "atai_words/audio/521f5605032f_s.mp3",
+    "normal": "atai_words/audio/521f5605032f_n.mp3"
+  },
+  "คนที่ชอบ": {
+    "slow": "atai_words/audio/86838d2b61e3_s.mp3",
+    "normal": "atai_words/audio/86838d2b61e3_n.mp3"
+  },
+  "เคย": {
+    "slow": "atai_words/audio/2c2032098443_s.mp3",
+    "normal": "atai_words/audio/2c2032098443_n.mp3"
+  },
+  "ละคร": {
+    "slow": "atai_words/audio/c82d2066754f_s.mp3",
+    "normal": "atai_words/audio/c82d2066754f_n.mp3"
+  },
+  "อิ่ม": {
+    "slow": "atai_words/audio/e1e28e354d87_s.mp3",
+    "normal": "atai_words/audio/e1e28e354d87_n.mp3"
+  },
+  "ยังไม่": {
+    "slow": "atai_words/audio/baa0abaf838a_s.mp3",
+    "normal": "atai_words/audio/baa0abaf838a_n.mp3"
+  },
+  "อีก": {
+    "slow": "atai_words/audio/d660f1cba98e_s.mp3",
+    "normal": "atai_words/audio/d660f1cba98e_n.mp3"
+  },
+  "จาน": {
+    "slow": "atai_words/audio/22191ea096be_s.mp3",
+    "normal": "atai_words/audio/22191ea096be_n.mp3"
+  },
+  "เลย": {
+    "slow": "atai_words/audio/f280dff6b7e6_s.mp3",
+    "normal": "atai_words/audio/f280dff6b7e6_n.mp3"
+  },
+  "ฝน": {
+    "slow": "atai_words/audio/8edad26cc8f4_s.mp3",
+    "normal": "atai_words/audio/8edad26cc8f4_n.mp3"
+  },
+  "กลิ่น": {
+    "slow": "atai_words/audio/f499d1c13332_s.mp3",
+    "normal": "atai_words/audio/f499d1c13332_n.mp3"
+  },
+  "ปิดเทอม": {
+    "slow": "atai_words/audio/b2d46985e0a5_s.mp3",
+    "normal": "atai_words/audio/b2d46985e0a5_n.mp3"
+  },
+  "ข้างนอก": {
+    "slow": "atai_words/audio/3d8f0023e606_s.mp3",
+    "normal": "atai_words/audio/3d8f0023e606_n.mp3"
+  },
+  "ออกไป": {
+    "slow": "atai_words/audio/a6db29e8f9f2_s.mp3",
+    "normal": "atai_words/audio/a6db29e8f9f2_n.mp3"
+  },
+  "มอง": {
+    "slow": "atai_words/audio/7c646aa8d327_s.mp3",
+    "normal": "atai_words/audio/7c646aa8d327_n.mp3"
+  },
+  "ทำไม": {
+    "slow": "atai_words/audio/57742d76191b_s.mp3",
+    "normal": "atai_words/audio/57742d76191b_n.mp3"
+  },
+  "เกิด": {
+    "slow": "atai_words/audio/2e26c38f0884_s.mp3",
+    "normal": "atai_words/audio/2e26c38f0884_n.mp3"
+  },
+  "ทะเลาะ": {
+    "slow": "atai_words/audio/f4cf34d9b7ba_s.mp3",
+    "normal": "atai_words/audio/f4cf34d9b7ba_n.mp3"
+  },
+  "กับ": {
+    "slow": "atai_words/audio/9a18880dbd2f_s.mp3",
+    "normal": "atai_words/audio/9a18880dbd2f_n.mp3"
+  },
+  "เรา": {
+    "slow": "atai_words/audio/f82494e8cdb2_s.mp3",
+    "normal": "atai_words/audio/f82494e8cdb2_n.mp3"
+  },
+  "ราคา": {
+    "slow": "atai_words/audio/90f8318d4f9e_s.mp3",
+    "normal": "atai_words/audio/90f8318d4f9e_n.mp3"
+  },
+  "น้ำหนัก": {
+    "slow": "atai_words/audio/10516f178e19_s.mp3",
+    "normal": "atai_words/audio/10516f178e19_n.mp3"
+  },
+  "เลิก": {
+    "slow": "atai_words/audio/1c7043f601b7_s.mp3",
+    "normal": "atai_words/audio/1c7043f601b7_n.mp3"
+  },
+  "ปาก": {
+    "slow": "atai_words/audio/265d9ef5fc21_s.mp3",
+    "normal": "atai_words/audio/265d9ef5fc21_n.mp3"
+  },
+  "อาหาร": {
+    "slow": "atai_words/audio/a5a1bd8e87e7_s.mp3",
+    "normal": "atai_words/audio/a5a1bd8e87e7_n.mp3"
+  },
+  "จมูก": {
+    "slow": "atai_words/audio/5fcc68d7739f_s.mp3",
+    "normal": "atai_words/audio/5fcc68d7739f_n.mp3"
+  },
+  "ฤดู": {
+    "slow": "atai_words/audio/c9e149d071c1_s.mp3",
+    "normal": "atai_words/audio/c9e149d071c1_n.mp3"
+  },
+  "ใบไม้": {
+    "slow": "atai_words/audio/96c7193791a3_s.mp3",
+    "normal": "atai_words/audio/96c7193791a3_n.mp3"
+  },
+  "คนเดียว": {
+    "slow": "atai_words/audio/f67e9989c794_s.mp3",
+    "normal": "atai_words/audio/f67e9989c794_n.mp3"
+  },
+  "กลางวัน": {
+    "slow": "atai_words/audio/14ef16c9ab40_s.mp3",
+    "normal": "atai_words/audio/14ef16c9ab40_n.mp3"
+  },
+  "ส่วนใหญ่": {
+    "slow": "atai_words/audio/e523346044ae_s.mp3",
+    "normal": "atai_words/audio/e523346044ae_n.mp3"
+  },
+  "คนไทย": {
+    "slow": "atai_words/audio/62156cf4c06a_s.mp3",
+    "normal": "atai_words/audio/62156cf4c06a_n.mp3"
+  },
+  "รอนาน": {
+    "slow": "atai_words/audio/c1fe83737138_s.mp3",
+    "normal": "atai_words/audio/c1fe83737138_n.mp3"
+  },
+  "ทุกวัน": {
+    "slow": "atai_words/audio/09580e9d0b4a_s.mp3",
+    "normal": "atai_words/audio/09580e9d0b4a_n.mp3"
+  },
+  "ยิ้มสวย": {
+    "slow": "atai_words/audio/6537c1238efa_s.mp3",
+    "normal": "atai_words/audio/6537c1238efa_n.mp3"
+  },
+  "จริง": {
+    "slow": "atai_words/audio/4b387c55d5e3_s.mp3",
+    "normal": "atai_words/audio/4b387c55d5e3_n.mp3"
+  },
+  "ว่า": {
+    "slow": "atai_words/audio/4fa5ea4c5102_s.mp3",
+    "normal": "atai_words/audio/4fa5ea4c5102_n.mp3"
+  },
+  "โกหก": {
+    "slow": "atai_words/audio/4861fd6f6e1d_s.mp3",
+    "normal": "atai_words/audio/4861fd6f6e1d_n.mp3"
+  },
+  "ผม": {
+    "slow": "atai_words/audio/da56ad55c1c6_s.mp3",
+    "normal": "atai_words/audio/da56ad55c1c6_n.mp3"
+  },
+  "อากาศ": {
+    "slow": "atai_words/audio/1cfbadccb80f_s.mp3",
+    "normal": "atai_words/audio/1cfbadccb80f_n.mp3"
+  },
+  "เย็นนี้": {
+    "slow": "atai_words/audio/9e0d486ea0d1_s.mp3",
+    "normal": "atai_words/audio/9e0d486ea0d1_n.mp3"
+  },
+  "จัง": {
+    "slow": "atai_words/audio/cce2af1c6b1b_s.mp3",
+    "normal": "atai_words/audio/cce2af1c6b1b_n.mp3"
+  },
+  "ไม่ต้อง": {
+    "slow": "atai_words/audio/f403fb34e070_s.mp3",
+    "normal": "atai_words/audio/f403fb34e070_n.mp3"
+  },
+  "ความคิดเห็น": {
+    "slow": "atai_words/audio/185ba70ac491_s.mp3",
+    "normal": "atai_words/audio/185ba70ac491_n.mp3"
+  },
+  "ไม่เหมือนกัน": {
+    "slow": "atai_words/audio/04024bd84eca_s.mp3",
+    "normal": "atai_words/audio/04024bd84eca_n.mp3"
+  },
+  "ชม": {
+    "slow": "atai_words/audio/a426feb556bf_s.mp3",
+    "normal": "atai_words/audio/a426feb556bf_n.mp3"
+  },
+  "เต็มดวง": {
+    "slow": "atai_words/audio/af89af27aa59_s.mp3",
+    "normal": "atai_words/audio/af89af27aa59_n.mp3"
+  },
+  "ขนมไหว้พระจันทร์": {
+    "slow": "atai_words/audio/2b8effd3bca4_s.mp3",
+    "normal": "atai_words/audio/2b8effd3bca4_n.mp3"
+  },
+  "รู้สึก": {
+    "slow": "atai_words/audio/4ba8d0f81bd0_s.mp3",
+    "normal": "atai_words/audio/4ba8d0f81bd0_n.mp3"
+  },
+  "อยู่กับ": {
+    "slow": "atai_words/audio/55ee3ac54bed_s.mp3",
+    "normal": "atai_words/audio/55ee3ac54bed_n.mp3"
+  },
+  "ท่วม": {
+    "slow": "atai_words/audio/49d0e9a4a69d_s.mp3",
+    "normal": "atai_words/audio/49d0e9a4a69d_n.mp3"
+  },
+  "เรื่อง": {
+    "slow": "atai_words/audio/a0a6cb120da2_s.mp3",
+    "normal": "atai_words/audio/a0a6cb120da2_n.mp3"
+  },
+  "เข้า": {
+    "slow": "atai_words/audio/fa237e31f178_s.mp3",
+    "normal": "atai_words/audio/fa237e31f178_n.mp3"
+  },
+  "วันชาติ": {
+    "slow": "atai_words/audio/2a42a326e595_s.mp3",
+    "normal": "atai_words/audio/2a42a326e595_n.mp3"
+  },
+  "ตุลาคม": {
+    "slow": "atai_words/audio/d21796bba393_s.mp3",
+    "normal": "atai_words/audio/d21796bba393_n.mp3"
+  },
+  "วันที่": {
+    "slow": "atai_words/audio/4ac5b419712b_s.mp3",
+    "normal": "atai_words/audio/4ac5b419712b_n.mp3"
+  },
+  "สุขสันต์": {
+    "slow": "atai_words/audio/db8c81452f7e_s.mp3",
+    "normal": "atai_words/audio/db8c81452f7e_n.mp3"
+  },
+  "แผน": {
+    "slow": "atai_words/audio/d4af8cc2dbd8_s.mp3",
+    "normal": "atai_words/audio/d4af8cc2dbd8_n.mp3"
+  },
+  "จังเลย": {
+    "slow": "atai_words/audio/e3d1c11e8a35_s.mp3",
+    "normal": "atai_words/audio/e3d1c11e8a35_n.mp3"
+  },
+  "แปลกๆ": {
+    "slow": "atai_words/audio/f9315b51fc83_s.mp3",
+    "normal": "atai_words/audio/f9315b51fc83_n.mp3"
+  },
+  "จำ": {
+    "slow": "atai_words/audio/fcbce1bff219_s.mp3",
+    "normal": "atai_words/audio/fcbce1bff219_n.mp3"
+  },
+  "จำง่าย": {
+    "slow": "atai_words/audio/2535c3a4b3b6_s.mp3",
+    "normal": "atai_words/audio/2535c3a4b3b6_n.mp3"
+  },
+  "ถ้า…ก็…": {
+    "slow": "atai_words/audio/ab47729eb790_s.mp3",
+    "normal": "atai_words/audio/ab47729eb790_n.mp3"
+  },
+  "แรง": {
+    "slow": "atai_words/audio/90d9621716bd_s.mp3",
+    "normal": "atai_words/audio/90d9621716bd_n.mp3"
+  },
+  "ลมแรง": {
+    "slow": "atai_words/audio/b6cec68401e0_s.mp3",
+    "normal": "atai_words/audio/b6cec68401e0_n.mp3"
+  },
+  "ฝึก": {
+    "slow": "atai_words/audio/8ab4de046b4e_s.mp3",
+    "normal": "atai_words/audio/8ab4de046b4e_n.mp3"
+  },
+  "เพิ่ม": {
+    "slow": "atai_words/audio/cf84a9d05be9_s.mp3",
+    "normal": "atai_words/audio/cf84a9d05be9_n.mp3"
+  },
+  "ฝึกเพิ่ม": {
+    "slow": "atai_words/audio/19233779bd16_s.mp3",
+    "normal": "atai_words/audio/19233779bd16_n.mp3"
+  },
+  "ขนาดนั้น": {
+    "slow": "atai_words/audio/bc80a6f4c0a9_s.mp3",
+    "normal": "atai_words/audio/bc80a6f4c0a9_n.mp3"
+  },
+  "คิดว่า": {
+    "slow": "atai_words/audio/4cd17a3c0252_s.mp3",
+    "normal": "atai_words/audio/4cd17a3c0252_n.mp3"
+  },
+  "ของขมๆ": {
+    "slow": "atai_words/audio/b95bfd81226d_s.mp3",
+    "normal": "atai_words/audio/b95bfd81226d_n.mp3"
+  },
+  "ไม่…อะไรเลย": {
+    "slow": "atai_words/audio/a361e76c51a1_s.mp3",
+    "normal": "atai_words/audio/a361e76c51a1_n.mp3"
+  },
+  "เกี่ยวกับ": {
+    "slow": "atai_words/audio/ea8c4c01a29c_s.mp3",
+    "normal": "atai_words/audio/ea8c4c01a29c_n.mp3"
+  },
+  "เอกสาร": {
+    "slow": "atai_words/audio/b21e618d8dd2_s.mp3",
+    "normal": "atai_words/audio/b21e618d8dd2_n.mp3"
+  },
+  "ต้องการ": {
+    "slow": "atai_words/audio/986558813ba1_s.mp3",
+    "normal": "atai_words/audio/986558813ba1_n.mp3"
+  },
+  "ชุด": {
+    "slow": "atai_words/audio/32d88f147ad5_s.mp3",
+    "normal": "atai_words/audio/32d88f147ad5_n.mp3"
+  },
+  "ครับ": {
+    "slow": "atai_words/audio/2dce0151d656_s.mp3",
+    "normal": "atai_words/audio/2dce0151d656_n.mp3"
+  },
+  "ปีหน้า": {
+    "slow": "atai_words/audio/5de4e6242891_s.mp3",
+    "normal": "atai_words/audio/5de4e6242891_n.mp3"
+  },
+  "ในที่สุด": {
+    "slow": "atai_words/audio/2497b88e7f9d_s.mp3",
+    "normal": "atai_words/audio/2497b88e7f9d_n.mp3"
+  },
+  "เจอ": {
+    "slow": "atai_words/audio/64cfbf6c0521_s.mp3",
+    "normal": "atai_words/audio/64cfbf6c0521_n.mp3"
+  },
+  "คอย": {
+    "slow": "atai_words/audio/b1e77396d75b_s.mp3",
+    "normal": "atai_words/audio/b1e77396d75b_n.mp3"
+  },
+  "สนับสนุน": {
+    "slow": "atai_words/audio/bbb899ce1627_s.mp3",
+    "normal": "atai_words/audio/bbb899ce1627_n.mp3"
+  },
+  "ตลอดไป": {
+    "slow": "atai_words/audio/0cd90c217b33_s.mp3",
+    "normal": "atai_words/audio/0cd90c217b33_n.mp3"
+  },
+  "ขอให้": {
+    "slow": "atai_words/audio/f37e8e514026_s.mp3",
+    "normal": "atai_words/audio/f37e8e514026_n.mp3"
+  },
+  "ความสุข": {
+    "slow": "atai_words/audio/89312eee58c3_s.mp3",
+    "normal": "atai_words/audio/89312eee58c3_n.mp3"
+  },
+  "ลืม": {
+    "slow": "atai_words/audio/3f540ef93e78_s.mp3",
+    "normal": "atai_words/audio/3f540ef93e78_n.mp3"
+  },
+  "ดูแล": {
+    "slow": "atai_words/audio/1c3508240980_s.mp3",
+    "normal": "atai_words/audio/1c3508240980_n.mp3"
+  },
+  "สุขภาพ": {
+    "slow": "atai_words/audio/940419749eb0_s.mp3",
+    "normal": "atai_words/audio/940419749eb0_n.mp3"
+  },
+  "ใช้": {
+    "slow": "atai_words/audio/71454d49daf0_s.mp3",
+    "normal": "atai_words/audio/71454d49daf0_n.mp3"
+  },
+  "คัน": {
+    "slow": "atai_words/audio/65babb6c3af3_s.mp3",
+    "normal": "atai_words/audio/65babb6c3af3_n.mp3"
+  },
+  "บน": {
+    "slow": "atai_words/audio/5902700c988a_s.mp3",
+    "normal": "atai_words/audio/5902700c988a_n.mp3"
+  },
+  "โต๊ะ": {
+    "slow": "atai_words/audio/03829205b81a_s.mp3",
+    "normal": "atai_words/audio/03829205b81a_n.mp3"
+  },
+  "กังวล": {
+    "slow": "atai_words/audio/2fb4cf4dabca_s.mp3",
+    "normal": "atai_words/audio/2fb4cf4dabca_n.mp3"
+  },
+  "เอง": {
+    "slow": "atai_words/audio/7d9e12150122_s.mp3",
+    "normal": "atai_words/audio/7d9e12150122_n.mp3"
+  },
+  "เพราะ": {
+    "slow": "atai_words/audio/9f759ed34c1b_s.mp3",
+    "normal": "atai_words/audio/9f759ed34c1b_n.mp3"
+  },
+  "ขับรถ": {
+    "slow": "atai_words/audio/916c502c6a8d_s.mp3",
+    "normal": "atai_words/audio/916c502c6a8d_n.mp3"
+  },
+  "อินเทอร์เน็ต": {
+    "slow": "atai_words/audio/c8bad0a23c23_s.mp3",
+    "normal": "atai_words/audio/c8bad0a23c23_n.mp3"
+  },
+  "เข้าไป": {
+    "slow": "atai_words/audio/b7e626ad4a0c_s.mp3",
+    "normal": "atai_words/audio/b7e626ad4a0c_n.mp3"
+  },
+  "แนะนำตัว": {
+    "slow": "atai_words/audio/df51abc038d9_s.mp3",
+    "normal": "atai_words/audio/df51abc038d9_n.mp3"
+  },
+  "ล้างมือ": {
+    "slow": "atai_words/audio/256d2687ff9c_s.mp3",
+    "normal": "atai_words/audio/256d2687ff9c_n.mp3"
+  },
+  "เสร็จ": {
+    "slow": "atai_words/audio/d78fb3866baa_s.mp3",
+    "normal": "atai_words/audio/d78fb3866baa_n.mp3"
+  },
+  "ทำ…ให้เสร็จ": {
+    "slow": "atai_words/audio/a7a2996facb0_s.mp3",
+    "normal": "atai_words/audio/a7a2996facb0_n.mp3"
+  },
+  "ปิดไฟ": {
+    "slow": "atai_words/audio/fdb4fd4250de_s.mp3",
+    "normal": "atai_words/audio/fdb4fd4250de_n.mp3"
+  },
+  "กลับบ้าน": {
+    "slow": "atai_words/audio/fcb856c95e39_s.mp3",
+    "normal": "atai_words/audio/fcb856c95e39_n.mp3"
+  },
+  "มะนาว": {
+    "slow": "atai_words/audio/d30f6e93246f_s.mp3",
+    "normal": "atai_words/audio/d30f6e93246f_n.mp3"
+  },
+  "ส้ม": {
+    "slow": "atai_words/audio/171520c9c926_s.mp3",
+    "normal": "atai_words/audio/171520c9c926_n.mp3"
+  },
+  "ลูก": {
+    "slow": "atai_words/audio/266096ab2c29_s.mp3",
+    "normal": "atai_words/audio/266096ab2c29_n.mp3"
+  },
+  "เปรี้ยวไปหน่อย": {
+    "slow": "atai_words/audio/235ba748b6ef_s.mp3",
+    "normal": "atai_words/audio/235ba748b6ef_n.mp3"
+  },
+  "มาถึง": {
+    "slow": "atai_words/audio/d353ad82ee16_s.mp3",
+    "normal": "atai_words/audio/d353ad82ee16_n.mp3"
+  },
+  "โมง": {
+    "slow": "atai_words/audio/a5e130a362e2_s.mp3",
+    "normal": "atai_words/audio/a5e130a362e2_n.mp3"
+  },
+  "เสื้อ": {
+    "slow": "atai_words/audio/5352118bf3ce_s.mp3",
+    "normal": "atai_words/audio/5352118bf3ce_n.mp3"
+  },
+  "ตัว": {
+    "slow": "atai_words/audio/9eb70cd0fc6f_s.mp3",
+    "normal": "atai_words/audio/9eb70cd0fc6f_n.mp3"
+  },
+  "ร้าน": {
+    "slow": "atai_words/audio/0ff21b9cd6a6_s.mp3",
+    "normal": "atai_words/audio/0ff21b9cd6a6_n.mp3"
+  },
+  "บ้าง": {
+    "slow": "atai_words/audio/7b377eddbdf9_s.mp3",
+    "normal": "atai_words/audio/7b377eddbdf9_n.mp3"
+  },
+  "เมนู": {
+    "slow": "atai_words/audio/62d123cbab58_s.mp3",
+    "normal": "atai_words/audio/62d123cbab58_n.mp3"
+  },
+  "เวลา": {
+    "slow": "atai_words/audio/7a2292c5b331_s.mp3",
+    "normal": "atai_words/audio/7a2292c5b331_n.mp3"
+  },
+  "คิดดู": {
+    "slow": "atai_words/audio/2490da993b92_s.mp3",
+    "normal": "atai_words/audio/2490da993b92_n.mp3"
+  },
+  "ก่อน": {
+    "slow": "atai_words/audio/1f7968bc64fc_s.mp3",
+    "normal": "atai_words/audio/1f7968bc64fc_n.mp3"
+  },
+  "เงิน": {
+    "slow": "atai_words/audio/27c7e48b235a_s.mp3",
+    "normal": "atai_words/audio/27c7e48b235a_n.mp3"
+  },
+  "แท็กซี่": {
+    "slow": "atai_words/audio/098eb0ee6e5d_s.mp3",
+    "normal": "atai_words/audio/098eb0ee6e5d_n.mp3"
+  },
+  "ให้หน่อย": {
+    "slow": "atai_words/audio/2a2edaa26200_s.mp3",
+    "normal": "atai_words/audio/2a2edaa26200_n.mp3"
+  },
+  "อีกครั้ง": {
+    "slow": "atai_words/audio/42a37a31b900_s.mp3",
+    "normal": "atai_words/audio/42a37a31b900_n.mp3"
+  },
+  "งาน": {
+    "slow": "atai_words/audio/18d2ce007d4c_s.mp3",
+    "normal": "atai_words/audio/18d2ce007d4c_n.mp3"
+  },
+  "ชานมสองแก้ว": {
+    "slow": "atai_words/audio/d92f26506273_s.mp3",
+    "normal": "atai_words/audio/d92f26506273_n.mp3"
+  },
+  "ฉันก็เอากาแฟ": {
+    "slow": "atai_words/audio/715e1660246e_s.mp3",
+    "normal": "atai_words/audio/715e1660246e_n.mp3"
+  },
+  "ฉันเป็นคนจีน": {
+    "slow": "atai_words/audio/209bb4212012_s.mp3",
+    "normal": "atai_words/audio/209bb4212012_n.mp3"
+  },
+  "แม่ของเธอ": {
+    "slow": "atai_words/audio/386310305af3_s.mp3",
+    "normal": "atai_words/audio/386310305af3_n.mp3"
+  },
+  "สวยมาก": {
+    "slow": "atai_words/audio/1cb15e82b495_s.mp3",
+    "normal": "atai_words/audio/1cb15e82b495_n.mp3"
+  },
+  "ครูใหม่ของฉัน": {
+    "slow": "atai_words/audio/3d4211d0aa5c_s.mp3",
+    "normal": "atai_words/audio/3d4211d0aa5c_n.mp3"
+  },
+  "ห้องนี้": {
+    "slow": "atai_words/audio/30767fccdcad_s.mp3",
+    "normal": "atai_words/audio/30767fccdcad_n.mp3"
+  }
+}
