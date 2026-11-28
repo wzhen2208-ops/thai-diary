@@ -1,0 +1,574 @@
+{
+  "ฉันยอมทิ้งทุกอย่าง": {
+    "slow": "songs/mai_chai_khon_thai/audio/5d190e9d92a0_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/5d190e9d92a0_n.mp3"
+  },
+  "เพื่อจะเป็นคนที่เธอชอบ": {
+    "slow": "songs/mai_chai_khon_thai/audio/23d59998c777_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/23d59998c777_n.mp3"
+  },
+  "ที่ฉันต้องการก็เพียงแค่คำตอบ": {
+    "slow": "songs/mai_chai_khon_thai/audio/6272981e694c_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/6272981e694c_n.mp3"
+  },
+  "ถ้าบอกว่าฉันไม่ใช่คนไทย": {
+    "slow": "songs/mai_chai_khon_thai/audio/e1bc1c5ace9e_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/e1bc1c5ace9e_n.mp3"
+  },
+  "แล้วฉันยังมีโอกาสไหม": {
+    "slow": "songs/mai_chai_khon_thai/audio/0d2269d5b2d5_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/0d2269d5b2d5_n.mp3"
+  },
+  "ถ้าพูดมาไม่เข้าใจ": {
+    "slow": "songs/mai_chai_khon_thai/audio/5921bcc0f488_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/5921bcc0f488_n.mp3"
+  },
+  "ฉันจะไปเรียนภาษาไทย": {
+    "slow": "songs/mai_chai_khon_thai/audio/1a25bc565520_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/1a25bc565520_n.mp3"
+  },
+  "แต่มันก็ยากชิบหาย": {
+    "slow": "songs/mai_chai_khon_thai/audio/b14e17cbe257_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/b14e17cbe257_n.mp3"
+  },
+  "ฉันขอเวลาหน่อยได้ไหม": {
+    "slow": "songs/mai_chai_khon_thai/audio/33f11c8ae551_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/33f11c8ae551_n.mp3"
+  },
+  "ด.ต.บ.": {
+    "slow": "songs/mai_chai_khon_thai/audio/6669791a6a34_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/6669791a6a34_n.mp3"
+  },
+  "สวัสดีสบายดีไหม": {
+    "slow": "songs/mai_chai_khon_thai/audio/95fa26427169_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/95fa26427169_n.mp3"
+  },
+  "เธอชอบหนุ่มจีนหรือเปล่า": {
+    "slow": "songs/mai_chai_khon_thai/audio/da41324e3d1d_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/da41324e3d1d_n.mp3"
+  },
+  "เธอชอบ me จริงหรือเปล่า": {
+    "slow": "songs/mai_chai_khon_thai/audio/d358e6364ce2_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/d358e6364ce2_n.mp3"
+  },
+  "ถ้าชอบ me จริงก็ต้องพูด我爱你ไม่ใช่你好": {
+    "slow": "songs/mai_chai_khon_thai/audio/d342b0a66be6_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/d342b0a66be6_n.mp3"
+  },
+  "เธอเคยไปเมืองจีนหรือเปล่า": {
+    "slow": "songs/mai_chai_khon_thai/audio/ca7bf0ed9a57_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/ca7bf0ed9a57_n.mp3"
+  },
+  "หรือจะไปกับฉันright now": {
+    "slow": "songs/mai_chai_khon_thai/audio/10e47576dc7e_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/10e47576dc7e_n.mp3"
+  },
+  "เล่นหิมะที่哈尔滨แล้วไปดูทะเลที่青岛": {
+    "slow": "songs/mai_chai_khon_thai/audio/4c81e8e58c9a_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/4c81e8e58c9a_n.mp3"
+  },
+  "ฉันมีสำเนียงแปลก": {
+    "slow": "songs/mai_chai_khon_thai/audio/5a8acf9072c2_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/5a8acf9072c2_n.mp3"
+  },
+  "บางทีก็เลยfeel sad": {
+    "slow": "songs/mai_chai_khon_thai/audio/9878dd3e9ba3_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/9878dd3e9ba3_n.mp3"
+  },
+  "ไม่ได้เป็นครั้งแรก": {
+    "slow": "songs/mai_chai_khon_thai/audio/b5703be70e1b_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/b5703be70e1b_n.mp3"
+  },
+  "ที่ฉันget so mad": {
+    "slow": "songs/mai_chai_khon_thai/audio/2c3a7da0b2a8_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/2c3a7da0b2a8_n.mp3"
+  },
+  "ฉันพูดผิดตรงไหน": {
+    "slow": "songs/mai_chai_khon_thai/audio/bb762e9ef2b2_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/bb762e9ef2b2_n.mp3"
+  },
+  "ก็จะmake it right": {
+    "slow": "songs/mai_chai_khon_thai/audio/89407946ed03_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/89407946ed03_n.mp3"
+  },
+  "บอกว่าฉันรักเธอ": {
+    "slow": "songs/mai_chai_khon_thai/audio/2ddd2d7f505a_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/2ddd2d7f505a_n.mp3"
+  },
+  "ทำไมเธอไม่เข้าใจ": {
+    "slow": "songs/mai_chai_khon_thai/audio/c0ab824fdc0b_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/c0ab824fdc0b_n.mp3"
+  },
+  "baby tell me what you want นักหนา": {
+    "slow": "songs/mai_chai_khon_thai/audio/6e8cae225d01_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/6e8cae225d01_n.mp3"
+  },
+  "เธอมองเห็นความพยายามแล้วนะ": {
+    "slow": "songs/mai_chai_khon_thai/audio/9d99ccb28caf_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/9d99ccb28caf_n.mp3"
+  },
+  "So just take your time and just let me know": {
+    "slow": "songs/mai_chai_khon_thai/audio/f4aacfd45c59_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/f4aacfd45c59_n.mp3"
+  },
+  "เล่นหิมะที่哈尔滨": {
+    "slow": "songs/mai_chai_khon_thai/audio/99ee896e2f7e_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/99ee896e2f7e_n.mp3"
+  },
+  "แล้วไปดูทะเลที่青岛": {
+    "slow": "songs/mai_chai_khon_thai/audio/a54951f2c52a_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/a54951f2c52a_n.mp3"
+  },
+  "สัญชาติเราไม่เหมือนกันแล้วไง": {
+    "slow": "songs/mai_chai_khon_thai/audio/7b79aa763fcb_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/7b79aa763fcb_n.mp3"
+  },
+  "ฉันเป็นคนจีนแล้วไง": {
+    "slow": "songs/mai_chai_khon_thai/audio/90c379b147ef_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/90c379b147ef_n.mp3"
+  },
+  "ฉันก็รักเธอหมดหัวใจ": {
+    "slow": "songs/mai_chai_khon_thai/audio/3186def8a025_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/3186def8a025_n.mp3"
+  },
+  "ภาษาไทยฉันก็พอพูดได้": {
+    "slow": "songs/mai_chai_khon_thai/audio/eaeb0693210d_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/eaeb0693210d_n.mp3"
+  },
+  "ถ้าบอกว่าเพลงนี้แต่งให้เธอ": {
+    "slow": "songs/mai_chai_khon_thai/audio/d0c99e51abd8_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/d0c99e51abd8_n.mp3"
+  },
+  "เธอจะเชื่อไหม": {
+    "slow": "songs/mai_chai_khon_thai/audio/aaf5573c5acc_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/aaf5573c5acc_n.mp3"
+  },
+  "I'll do everything for u": {
+    "slow": "songs/mai_chai_khon_thai/audio/325c042eedf7_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/325c042eedf7_n.mp3"
+  },
+  "แล้วส่วนเธอจะรักฉันขนาดไหน": {
+    "slow": "songs/mai_chai_khon_thai/audio/c3e31393e3be_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/c3e31393e3be_n.mp3"
+  },
+  "Listen up": {
+    "slow": "songs/mai_chai_khon_thai/audio/2f6d64dc765d_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/2f6d64dc765d_n.mp3"
+  },
+  "รักฉันหน่อยได้ไหม": {
+    "slow": "songs/mai_chai_khon_thai/audio/54a886d11bbe_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/54a886d11bbe_n.mp3"
+  },
+  "คิดถึงเธอทุกวันจนฉันไม่ไหว": {
+    "slow": "songs/mai_chai_khon_thai/audio/686776c2b962_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/686776c2b962_n.mp3"
+  },
+  "ทำไมทรมานอย่างนี้ฉันไม่เข้าใจ": {
+    "slow": "songs/mai_chai_khon_thai/audio/5ca4fc214cec_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/5ca4fc214cec_n.mp3"
+  },
+  "เธอมาอธิบายให้หน่อยได้ไหม": {
+    "slow": "songs/mai_chai_khon_thai/audio/37e692e5edf6_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/37e692e5edf6_n.mp3"
+  },
+  "ฉัน": {
+    "slow": "songs/mai_chai_khon_thai/audio/011539b90db6_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/011539b90db6_n.mp3"
+  },
+  "ยอม": {
+    "slow": "songs/mai_chai_khon_thai/audio/67a6afb5aa9f_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/67a6afb5aa9f_n.mp3"
+  },
+  "ทิ้ง": {
+    "slow": "songs/mai_chai_khon_thai/audio/ce676e0e8cf6_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/ce676e0e8cf6_n.mp3"
+  },
+  "ทุกอย่าง": {
+    "slow": "songs/mai_chai_khon_thai/audio/1be4c7fd0975_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/1be4c7fd0975_n.mp3"
+  },
+  "เพื่อ": {
+    "slow": "songs/mai_chai_khon_thai/audio/3e4c48dd9acb_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/3e4c48dd9acb_n.mp3"
+  },
+  "จะ": {
+    "slow": "songs/mai_chai_khon_thai/audio/cc634c1a7cea_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/cc634c1a7cea_n.mp3"
+  },
+  "เป็น": {
+    "slow": "songs/mai_chai_khon_thai/audio/f15d6f0da2ab_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/f15d6f0da2ab_n.mp3"
+  },
+  "คน": {
+    "slow": "songs/mai_chai_khon_thai/audio/98ac1686cfa9_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/98ac1686cfa9_n.mp3"
+  },
+  "ที่": {
+    "slow": "songs/mai_chai_khon_thai/audio/2bcfc8ec12f0_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/2bcfc8ec12f0_n.mp3"
+  },
+  "เธอ": {
+    "slow": "songs/mai_chai_khon_thai/audio/4191728cfa9b_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/4191728cfa9b_n.mp3"
+  },
+  "ชอบ": {
+    "slow": "songs/mai_chai_khon_thai/audio/109eb055b433_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/109eb055b433_n.mp3"
+  },
+  "ต้องการ": {
+    "slow": "songs/mai_chai_khon_thai/audio/986558813ba1_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/986558813ba1_n.mp3"
+  },
+  "ก็": {
+    "slow": "songs/mai_chai_khon_thai/audio/d10b03aa2782_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/d10b03aa2782_n.mp3"
+  },
+  "เพียงแค่": {
+    "slow": "songs/mai_chai_khon_thai/audio/22dd3917538b_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/22dd3917538b_n.mp3"
+  },
+  "คำตอบ": {
+    "slow": "songs/mai_chai_khon_thai/audio/6273dda078fc_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/6273dda078fc_n.mp3"
+  },
+  "ถ้า": {
+    "slow": "songs/mai_chai_khon_thai/audio/4b82a1bc78b3_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/4b82a1bc78b3_n.mp3"
+  },
+  "บอก": {
+    "slow": "songs/mai_chai_khon_thai/audio/41c52b5a6360_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/41c52b5a6360_n.mp3"
+  },
+  "ว่า": {
+    "slow": "songs/mai_chai_khon_thai/audio/4fa5ea4c5102_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/4fa5ea4c5102_n.mp3"
+  },
+  "ไม่ใช่": {
+    "slow": "songs/mai_chai_khon_thai/audio/193b9f462370_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/193b9f462370_n.mp3"
+  },
+  "คนไทย": {
+    "slow": "songs/mai_chai_khon_thai/audio/62156cf4c06a_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/62156cf4c06a_n.mp3"
+  },
+  "แล้ว": {
+    "slow": "songs/mai_chai_khon_thai/audio/354ea34dd510_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/354ea34dd510_n.mp3"
+  },
+  "ยัง": {
+    "slow": "songs/mai_chai_khon_thai/audio/567945c6ad4f_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/567945c6ad4f_n.mp3"
+  },
+  "มี": {
+    "slow": "songs/mai_chai_khon_thai/audio/5e79e325bad4_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/5e79e325bad4_n.mp3"
+  },
+  "โอกาส": {
+    "slow": "songs/mai_chai_khon_thai/audio/bd241baaabdc_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/bd241baaabdc_n.mp3"
+  },
+  "ไหม": {
+    "slow": "songs/mai_chai_khon_thai/audio/4a80f2d01629_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/4a80f2d01629_n.mp3"
+  },
+  "พูด": {
+    "slow": "songs/mai_chai_khon_thai/audio/5bc9b7819e8b_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/5bc9b7819e8b_n.mp3"
+  },
+  "มา": {
+    "slow": "songs/mai_chai_khon_thai/audio/648cd43a0584_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/648cd43a0584_n.mp3"
+  },
+  "ไม่": {
+    "slow": "songs/mai_chai_khon_thai/audio/d73fba748e7c_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/d73fba748e7c_n.mp3"
+  },
+  "เข้าใจ": {
+    "slow": "songs/mai_chai_khon_thai/audio/474d9aa750c2_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/474d9aa750c2_n.mp3"
+  },
+  "ไป": {
+    "slow": "songs/mai_chai_khon_thai/audio/ed56a62b357b_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/ed56a62b357b_n.mp3"
+  },
+  "เรียน": {
+    "slow": "songs/mai_chai_khon_thai/audio/fa050566d54c_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/fa050566d54c_n.mp3"
+  },
+  "ภาษาไทย": {
+    "slow": "songs/mai_chai_khon_thai/audio/42e72492ebb9_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/42e72492ebb9_n.mp3"
+  },
+  "แต่": {
+    "slow": "songs/mai_chai_khon_thai/audio/0044f89f2117_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/0044f89f2117_n.mp3"
+  },
+  "มัน": {
+    "slow": "songs/mai_chai_khon_thai/audio/f41d0965c8f6_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/f41d0965c8f6_n.mp3"
+  },
+  "ยาก": {
+    "slow": "songs/mai_chai_khon_thai/audio/50cc177e2372_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/50cc177e2372_n.mp3"
+  },
+  "ชิบหาย": {
+    "slow": "songs/mai_chai_khon_thai/audio/8ad6e7865048_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/8ad6e7865048_n.mp3"
+  },
+  "ขอ": {
+    "slow": "songs/mai_chai_khon_thai/audio/7306e1707ee6_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/7306e1707ee6_n.mp3"
+  },
+  "เวลา": {
+    "slow": "songs/mai_chai_khon_thai/audio/7a2292c5b331_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/7a2292c5b331_n.mp3"
+  },
+  "หน่อย": {
+    "slow": "songs/mai_chai_khon_thai/audio/690b0837ce72_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/690b0837ce72_n.mp3"
+  },
+  "ได้": {
+    "slow": "songs/mai_chai_khon_thai/audio/d45e7f861da0_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/d45e7f861da0_n.mp3"
+  },
+  "สวัสดี": {
+    "slow": "songs/mai_chai_khon_thai/audio/c7bcb12d8b1e_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/c7bcb12d8b1e_n.mp3"
+  },
+  "สบายดี": {
+    "slow": "songs/mai_chai_khon_thai/audio/d34a46e071e5_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/d34a46e071e5_n.mp3"
+  },
+  "หนุ่มจีน": {
+    "slow": "songs/mai_chai_khon_thai/audio/a4a10702b1fe_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/a4a10702b1fe_n.mp3"
+  },
+  "หรือเปล่า": {
+    "slow": "songs/mai_chai_khon_thai/audio/1d74a8d4817e_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/1d74a8d4817e_n.mp3"
+  },
+  "me": {
+    "slow": "songs/mai_chai_khon_thai/audio/b1c1d8736f20_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/b1c1d8736f20_n.mp3"
+  },
+  "จริง": {
+    "slow": "songs/mai_chai_khon_thai/audio/4b387c55d5e3_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/4b387c55d5e3_n.mp3"
+  },
+  "ต้อง": {
+    "slow": "songs/mai_chai_khon_thai/audio/8a20e67252fb_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/8a20e67252fb_n.mp3"
+  },
+  "我爱你": {
+    "slow": "songs/mai_chai_khon_thai/audio/5890a73fed38_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/5890a73fed38_n.mp3"
+  },
+  "你好": {
+    "slow": "songs/mai_chai_khon_thai/audio/440ee0853ad1_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/440ee0853ad1_n.mp3"
+  },
+  "เคย": {
+    "slow": "songs/mai_chai_khon_thai/audio/2c2032098443_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/2c2032098443_n.mp3"
+  },
+  "เมืองจีน": {
+    "slow": "songs/mai_chai_khon_thai/audio/5e1493587a2c_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/5e1493587a2c_n.mp3"
+  },
+  "หรือ": {
+    "slow": "songs/mai_chai_khon_thai/audio/a998ca499bb3_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/a998ca499bb3_n.mp3"
+  },
+  "กับ": {
+    "slow": "songs/mai_chai_khon_thai/audio/9a18880dbd2f_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/9a18880dbd2f_n.mp3"
+  },
+  "right now": {
+    "slow": "songs/mai_chai_khon_thai/audio/6b6d41551a4f_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/6b6d41551a4f_n.mp3"
+  },
+  "เล่น": {
+    "slow": "songs/mai_chai_khon_thai/audio/7e361eaab932_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/7e361eaab932_n.mp3"
+  },
+  "หิมะ": {
+    "slow": "songs/mai_chai_khon_thai/audio/f047854ad46f_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/f047854ad46f_n.mp3"
+  },
+  "哈尔滨": {
+    "slow": "songs/mai_chai_khon_thai/audio/e813a348b70e_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/e813a348b70e_n.mp3"
+  },
+  "ดู": {
+    "slow": "songs/mai_chai_khon_thai/audio/27ef78088a1e_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/27ef78088a1e_n.mp3"
+  },
+  "ทะเล": {
+    "slow": "songs/mai_chai_khon_thai/audio/f4c5c757bb90_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/f4c5c757bb90_n.mp3"
+  },
+  "青岛": {
+    "slow": "songs/mai_chai_khon_thai/audio/aa7343a45b47_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/aa7343a45b47_n.mp3"
+  },
+  "สำเนียง": {
+    "slow": "songs/mai_chai_khon_thai/audio/ae4b55e0aa2d_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/ae4b55e0aa2d_n.mp3"
+  },
+  "แปลก": {
+    "slow": "songs/mai_chai_khon_thai/audio/df36d18268d9_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/df36d18268d9_n.mp3"
+  },
+  "บางที": {
+    "slow": "songs/mai_chai_khon_thai/audio/969cbbaafdfc_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/969cbbaafdfc_n.mp3"
+  },
+  "เลย": {
+    "slow": "songs/mai_chai_khon_thai/audio/f280dff6b7e6_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/f280dff6b7e6_n.mp3"
+  },
+  "feel sad": {
+    "slow": "songs/mai_chai_khon_thai/audio/0b467b8da595_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/0b467b8da595_n.mp3"
+  },
+  "ไม่ได้": {
+    "slow": "songs/mai_chai_khon_thai/audio/7870ebb563b3_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/7870ebb563b3_n.mp3"
+  },
+  "ครั้งแรก": {
+    "slow": "songs/mai_chai_khon_thai/audio/74f0a91b586a_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/74f0a91b586a_n.mp3"
+  },
+  "get so mad": {
+    "slow": "songs/mai_chai_khon_thai/audio/c6616cc38560_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/c6616cc38560_n.mp3"
+  },
+  "ผิด": {
+    "slow": "songs/mai_chai_khon_thai/audio/1f8c234793fe_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/1f8c234793fe_n.mp3"
+  },
+  "ตรงไหน": {
+    "slow": "songs/mai_chai_khon_thai/audio/70825c1becad_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/70825c1becad_n.mp3"
+  },
+  "make it right": {
+    "slow": "songs/mai_chai_khon_thai/audio/5a915d0b062b_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/5a915d0b062b_n.mp3"
+  },
+  "รัก": {
+    "slow": "songs/mai_chai_khon_thai/audio/f21ddef41523_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/f21ddef41523_n.mp3"
+  },
+  "ทำไม": {
+    "slow": "songs/mai_chai_khon_thai/audio/57742d76191b_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/57742d76191b_n.mp3"
+  },
+  "baby tell me what you want": {
+    "slow": "songs/mai_chai_khon_thai/audio/55c0257a3839_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/55c0257a3839_n.mp3"
+  },
+  "นักหนา": {
+    "slow": "songs/mai_chai_khon_thai/audio/d5fa36b732bb_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/d5fa36b732bb_n.mp3"
+  },
+  "มองเห็น": {
+    "slow": "songs/mai_chai_khon_thai/audio/d65a6ffc05e0_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/d65a6ffc05e0_n.mp3"
+  },
+  "ความพยายาม": {
+    "slow": "songs/mai_chai_khon_thai/audio/675925e1a292_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/675925e1a292_n.mp3"
+  },
+  "นะ": {
+    "slow": "songs/mai_chai_khon_thai/audio/97dee3ff62f7_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/97dee3ff62f7_n.mp3"
+  },
+  "สัญชาติ": {
+    "slow": "songs/mai_chai_khon_thai/audio/c813c713f5b5_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/c813c713f5b5_n.mp3"
+  },
+  "เรา": {
+    "slow": "songs/mai_chai_khon_thai/audio/f82494e8cdb2_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/f82494e8cdb2_n.mp3"
+  },
+  "เหมือนกัน": {
+    "slow": "songs/mai_chai_khon_thai/audio/bc94a57944a7_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/bc94a57944a7_n.mp3"
+  },
+  "แล้วไง": {
+    "slow": "songs/mai_chai_khon_thai/audio/1be4cdbd12ac_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/1be4cdbd12ac_n.mp3"
+  },
+  "คนจีน": {
+    "slow": "songs/mai_chai_khon_thai/audio/633a2155d1b8_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/633a2155d1b8_n.mp3"
+  },
+  "หมด": {
+    "slow": "songs/mai_chai_khon_thai/audio/976dd4b8384a_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/976dd4b8384a_n.mp3"
+  },
+  "หัวใจ": {
+    "slow": "songs/mai_chai_khon_thai/audio/8dd8a6348b9b_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/8dd8a6348b9b_n.mp3"
+  },
+  "พอ": {
+    "slow": "songs/mai_chai_khon_thai/audio/54434e58e349_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/54434e58e349_n.mp3"
+  },
+  "เพลง": {
+    "slow": "songs/mai_chai_khon_thai/audio/a86340bd448c_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/a86340bd448c_n.mp3"
+  },
+  "นี้": {
+    "slow": "songs/mai_chai_khon_thai/audio/a92b237a0efc_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/a92b237a0efc_n.mp3"
+  },
+  "แต่ง": {
+    "slow": "songs/mai_chai_khon_thai/audio/c48997318c99_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/c48997318c99_n.mp3"
+  },
+  "ให้": {
+    "slow": "songs/mai_chai_khon_thai/audio/8a50fc91dbaf_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/8a50fc91dbaf_n.mp3"
+  },
+  "เชื่อ": {
+    "slow": "songs/mai_chai_khon_thai/audio/a679e2c676f1_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/a679e2c676f1_n.mp3"
+  },
+  "ส่วน": {
+    "slow": "songs/mai_chai_khon_thai/audio/eba55a3803e4_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/eba55a3803e4_n.mp3"
+  },
+  "ขนาดไหน": {
+    "slow": "songs/mai_chai_khon_thai/audio/2820842da676_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/2820842da676_n.mp3"
+  },
+  "คิดถึง": {
+    "slow": "songs/mai_chai_khon_thai/audio/399101d650c5_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/399101d650c5_n.mp3"
+  },
+  "ทุกวัน": {
+    "slow": "songs/mai_chai_khon_thai/audio/09580e9d0b4a_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/09580e9d0b4a_n.mp3"
+  },
+  "จน": {
+    "slow": "songs/mai_chai_khon_thai/audio/e1a3d055a126_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/e1a3d055a126_n.mp3"
+  },
+  "ไม่ไหว": {
+    "slow": "songs/mai_chai_khon_thai/audio/5ef034d178e3_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/5ef034d178e3_n.mp3"
+  },
+  "ทรมาน": {
+    "slow": "songs/mai_chai_khon_thai/audio/30380c3187e4_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/30380c3187e4_n.mp3"
+  },
+  "อย่างนี้": {
+    "slow": "songs/mai_chai_khon_thai/audio/ad6483d9d0b8_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/ad6483d9d0b8_n.mp3"
+  },
+  "อธิบาย": {
+    "slow": "songs/mai_chai_khon_thai/audio/3c02660edac7_s.mp3",
+    "normal": "songs/mai_chai_khon_thai/audio/3c02660edac7_n.mp3"
+  }
+}
